@@ -1,0 +1,34 @@
+css structure
+selector{
+property:value;
+}
+-----------------------------------------
+selector 3 types
+predefine   > h1,p,table
+user define > id,class,custom_attribute
+global      > *
+-----------------------------------------
+property > fixed(color,border);
+value>
+predefine
+user defined
+-----------------------------------------
+inline css> under element h2,p
+style="background-color:red;height:20px"
+----------------------------------------
+internal css> under head tag
+ <style>
+        div{
+            height: 300px;
+            width: 300px;
+            background-color: red;
+            }
+    </style>
+----------------------------------------
+external css> new file
+        div{
+            height: 300px;
+            width: 300px;
+            background-color: red;
+            }
+----------------------------------------
