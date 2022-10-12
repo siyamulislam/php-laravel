@@ -1,0 +1,18 @@
+https://github.com/alamin40
+elahirahat24@gmail.com
+
+
+git config --global --unset user.name
+git config --global --unset user.email
+git config --global --unset credential.helper
+
+git config --global --unset-all
+
+git config --list
+git config credential.helper "" 
+
+siam-cse
+#idT886!
+
+git config --global user.name "your_username"
+git config --global user.email "your_email_address@example.com"
