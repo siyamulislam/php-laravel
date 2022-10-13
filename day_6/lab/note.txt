@@ -1,8 +1,15 @@
 Responsive Page.
 
 1.control width
-1.control position hide
+2. show/hide content
+3.change position
 
+Position (2)
+Relative
+Absolute
+Fixes
+Sticky
+Static > by default
 
 
 hote/theke min

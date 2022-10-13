@@ -1,0 +1,21 @@
+*{ padding: 0;margin: 0;}
+
+.box{height: 200px;width:
+     150px;background-color: red;
+      position: sticky;
+      right: 10px;
+      top: 50px;
+    }
+    .box2{height: 50px;width:
+     50px;background-color: rgb(30, 133, 17);
+      position: fixed;
+      right: 10px;
+      bottom: 0px;
+    }
+h2{
+    position: absolute;
+    color: white;
+    bottom: 0;
+    right: 0;
+    font-size: 50px;
+}
