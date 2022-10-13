@@ -1,0 +1,93 @@
+.row {
+    float: left;
+  }
+.row {
+    contain: '';
+    clear: both;
+    display: block;
+  }
+.box-one{
+    height: 300px;
+    width: 500px;
+    background-color: #006747;
+    position: relative;
+}.box-two{
+    height: 200px;
+    width: 200px;
+    background-color: #DA291C;
+    position:absolute;
+    top: 50%;
+    left: 50%; 
+    border-radius: 50%;
+     transform: translate(-50%, -50%);
+}
+.box-three{
+    height: 200px;
+    width: 200px;
+    float: left;
+    background-color:greenyellow;   
+    transition: 2s;
+    margin: 150px;
+}
+.box-three:hover{
+    background-color:greenyellow;
+    transform: scale(1.5,3);
+} 
+ 
+
+.box-four{
+    height: 200px; 
+    width: 200px;
+    float: left;
+    margin-left: 100px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    background-color:green; 
+    transition: 2s;
+}.box-four:hover{
+    background-color:red; 
+    transform: rotateX(360deg);
+    transform: rotateY(360deg);
+    transform: rotate(360deg);
+    border-radius: 50%;
+}
+.box-five{
+    height: 200px; 
+    width: 200px;
+    float: left;
+    background-color:chocolate; 
+    margin: 50px;
+    transition: 1s;
+}.box-five:hover{
+    transform: translate(200px);
+    transform: translateY(200px);
+    transform: translateY(-200px);
+    transform: translate(200px,-150px);
+}.box-six{
+    height: 300px; 
+    width: 200px;
+    float: left;
+    background-color:rgb(159, 30, 210); 
+    margin: 50px;
+    transition: 3s;
+}.box-six:hover{
+    transform: skewX(360deg) ;
+}
+
+.div1{
+    margin-left: 100px;
+    margin-bottom: 200px;
+    height: 200px; 
+    width: 200px;
+    background-color:green; 
+    float: left;
+    transform: skewX(45deg) ;
+}.div2{
+    margin-left: 10px;
+    height: 200px; 
+    width: 200px;
+    background-color:chocolate; 
+    float: left;
+    transform: skewX(-45deg) ;
+}
+ 
