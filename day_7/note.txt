@@ -1,9 +1,20 @@
 Responsive Page.
 
 1.control width
-1.change position
-3 show/hide content
+2. show/hide content
+3.change position
+
+Position (2)
+Relative >parernt 
+Absolute >child
+Fixes > fixed
+Sticky >
+Static > by default
 
 
 cis.basic.seip@gmail.com    - Hasib 
 mainul125011@gmail.com      - Muhammad Ali
+
+01711805110 Habibur Rahman
+
+01646688970 Muhammad Ali
