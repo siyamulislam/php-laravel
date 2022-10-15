@@ -22,11 +22,7 @@ body{
     justify-content: center;
     align-items: center; */
 }
-.row::after{
-  contain: '';
-  clear: both;
-  display: block;
-}
+
 .container{
   width: 82%;
   height: auto;
@@ -153,7 +149,8 @@ button{background-color: white;padding: 5px 20px; font-size: 15px; font-weight: 
 hr{border-width:0; width: 100%;  background: rgb(231, 231, 231);}
 dl, ol, ul { margin: 0; padding: 0; list-style: none;display: flex;align-items: center; justify-content: center;}
 li{float: left; }
-li>a{line-height: 1.8; color: #121212e6; font-size: 13px;font-weight: 600;  display: block; margin: 10px 20px; font-family:'SiyamRupali','Shurjo','SolaimanLipi' ; }
+li>a{line-height: 1.8; color: #121212e6; font-size: 13px;font-weight: 600;  display: block; margin: 10px 20px;
+    font-family: 'SiyamRupali', 'Shurjo', 'SolaimanLipi', serif ; }
 li>a:hover{color: #0573e6; }
 header{margin-top: 5px;}
 h2:hover,h3:hover,h4:hover,.h-hov:hover{color: #0573e6;}
@@ -163,9 +160,9 @@ header>.container>.row{
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    padding: 15px 0px;
+    padding: 15px 0;
 }
-headerLogo{
+.headerLogo{
 float: left;
 }
 .headerLeft{
