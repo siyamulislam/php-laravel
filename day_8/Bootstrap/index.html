@@ -11,18 +11,55 @@
 </head>
 
 <body>
-    <div class="row">
-        <h1>Hello World</h1>
-        <nav>
-            <ul>
-                <li><a href="">Home</a></li> 
-                <li><a href="">Service</a></li>
-                <li><a href="">Blogs</a></li>
-                <li><a href="">About</a></li>
-                <li><a href="">Contact</a></li>
-            </ul>
+        <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+          <div class="container">
+              <a href="" class="navbar-brand">LOGO</a>
+              <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#mainMenu">
+                  <span class="navbar-toggler-icon"></span></button>
+              <div class="collapse navbar-collapse" id="mainMenu">
+                  <ul class="navbar-nav me-auto">
+                      <li><a href="" class="nav-link">Home</a></li>
+                      <li class="nav-item dropdown">
+                          <a href=""class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                              Service</a>
+                          <ul class="dropdown-menu">
+                              <li><a class="dropdown-item" href="#">Service 1</a></li>
+                              <li><a class="dropdown-item" href="#">Service 2</a></li>
+                              <li><a class="dropdown-item" href="#">Service 3</a></li>
+                              <li><a class="dropdown-item" href="#">Service 4</a></li>
+
+                          </ul>
+                      </li>
+                      <li><a href=""class="nav-link">Blogs</a></li>
+                      <li><a href=""class="nav-link">About</a></li>
+                      <li><a href=""class="nav-link">Contact</a></li>
+                      <li class="nav-item dropdown">
+                          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                              Dropdown link
+                          </a>
+                          <ul class="dropdown-menu">
+                              <li><a class="dropdown-item" href="#">Action</a></li>
+                              <li><a class="dropdown-item" href="#">Another action</a></li>
+                              <li><a class="dropdown-item" href="#">Something else here</a></li>
+
+                          </ul>
+                      </li>
+                  </ul>
+                  <form class="d-flex" role="search">
+                      <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                      <button class="btn btn-outline-success" type="submit">Search</button>
+                  </form>
+              </div>
+          </div>
         </nav>
-    </div>
+        <!--            carosoul inner > content, indicator, control-->
+        <div class="carousel slide" data-bs-ride="carousel" data-bs-interval="2000">
+            <div class="carousel-inner">
+                <div class="carousel-item active"><img src="./img/1.jpg" class="w-100 h-450" alt=""> </div>
+                <div class="carousel-item"><img src="./img/2.jpg" class="w-100 h-450" alt=""> </div>
+                <div class="carousel-item"><img src="./img/3.jpg" class="w-100 h-450" alt=""> </div>
+            </div>
+        </div>
     <script src="./js/jquery-3.6.1.js"></script>
     <script src="./js/bootstrap.bundle.js"></script>
 </body>
