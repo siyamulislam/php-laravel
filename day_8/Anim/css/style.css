@@ -1,0 +1,62 @@
+*{ box-sizing: border-box; padding: 0;margin: 0;}
+
+.div1{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 220px;
+  width: 220px;
+  margin: 50px;
+  background-color: red;
+  animation-name: bitm ;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+
+  position: absolute;
+}
+.div2{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 150px;
+  width: 150px;
+  background-color: rgb(181, 246, 59);
+  animation-name: seip ;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+}
+@keyframes seip {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(3600deg); }
+}
+
+@keyframes bitm {
+  /* 0%{border-color: red;}
+  25%{background-color: green;}
+  50%{background-color: blue;}
+  100%{background-color: rgb(115, 19, 91);}  */
+   0% { top: 0px;left: 0px; border-color: red;}
+  25% { top: 0px; left: 1500px;background-color: green;}
+  50% { top: 600px; left: 1500px; background-color: blue;}
+  75% { top: 600px; left: 0px;  background-color: blue;}
+  100%{ top: 0px; left: 0px;   background-color: rgb(115, 19, 91);}
+
+
+}
+
+.slider{
+  height: 600px;
+  width: 100%;
+  background-image: url('../images/1.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position:  center;
+  animation-name: sld ;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+}
+@keyframes sld{
+0%  {background-image: url('../images/2.jpg');}
+50% {background-image: url('../images/3.jpg');}
+100%{background-image: url('../images/4.jpg');}
+}

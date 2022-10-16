@@ -99,7 +99,7 @@
     margin-left: 150px;
     margin-top: 10px;
     margin-bottom: 50px;
-    animation: seip 10s infinite;
+    animation: seip 3s infinite;
     /*animation-name: seip;*/
     /*animation-duration: 4s;*/
     /*animation-iteration-count: infinite;*/
