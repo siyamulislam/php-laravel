@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bootstrap </title>
+
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+<nav class="navbar navbar-expand-md bg-dark navbar-dark">
+    <div class="container">
+        <a href="" class="navbar-brand">Movie Flix</a>
+        <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#mainMenu">
+            <span class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="mainMenu">
+            <ul class="navbar-nav me-auto">
+                <li><a href="" class="nav-link">Home</a></li>
+                <li class="nav-item dropdown">
+                    <a href="" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"
+                       aria-expanded="false">
+                        Genre</a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Animation</a></li>
+                        <li><a class="dropdown-item" href="#">Comedy</a></li>
+                        <li><a class="dropdown-item" href="#">Crime</a></li>
+                        <li><a class="dropdown-item" href="#">Music</a></li>
+                        <li><a class="dropdown-item" href="#">Short</a></li>
+
+                    </ul>
+                </li>
+                <li><a href="" class="nav-link">Country</a></li>
+                <li><a href="" class="nav-link">TV-Series</a></li>
+                <li><a href="" class="nav-link">Top IMDp</a></li>
+                <li><a href="" class="nav-link">A-Z List</a></li>
+<!--                <li><a href="" class="nav-link" data-bs-toggle="modal" data-bs-target="#modal_1">Click</a></li>-->
+                <li><a href="#modal_1" class="nav-link" data-bs-toggle="modal" >Ad</a></li>
+
+            </ul>
+            <form class="d-flex" role="search">
+                <input class="form-control me-2" type="search" placeholder="Movie Search" aria-label="Search">
+                <button class="btn btn-success" type="submit">Search</button>
+            </form>
+        </div>
+    </div>
+</nav>
+
+
+<!--            carosoul inner > content, indicator, control-->
+
+<div id="carousel1" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2000">
+    <div class="carousel-indicators">
+        <button class="active" type="button" data-bs-slide-to="0" data-bs-target="#carousel1"></button>
+        <button type="button" data-bs-slide-to="1" data-bs-target="#carousel1"></button>
+        <button type="button" data-bs-slide-to="2" data-bs-target="#carousel1"></button>
+        <button type="button" data-bs-slide-to="3" data-bs-target="#carousel1"></button>
+    </div>
+
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="./img/1.jpg" class="w-100 h-550" alt="">
+            <div class="carousel-caption my-caption">
+                <h1 class="text-info">Dark Fox v13</h1>
+                <p>Lorem ipsum dolor sit ame pisicing elit. Aut, natus!Lorem ipsum dolor sit amet, consectetur
+                    adipisicing elit. Aut, natus consectetur adipisicing elit. Aut, natus!</p>
+                <a href="" class="btn btn-success">watch now</a>
+            </div>
+        </div>
+
+        <div class="carousel-item">
+            <img src="./img/2.jpg" class="w-100 h-550" alt="">
+            <div class="carousel-caption my-caption">
+                <h1 class="text-info">Hungry Zone 2</h1>
+                <p>Lorem ipsum dolor si icing elit. Aut, natus!Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Aut, natus consectetur adipisicing elit. Aut, natus!</p>
+                <a href="" class="btn btn-success">watch now</a>
+            </div>
+        </div>
+
+        <div class="carousel-item">
+            <img src="./img/3.jpg" class="w-100 h-550" alt="">
+            <div class="carousel-caption my-caption">
+                <h1 class="text-info">Red Tiger 3</h1>
+                <p>Lorem ipsum dolor sit amet, consect natus!Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Aut, natus consectetur adipisicing elit. Aut, natus!</p>
+                <a href="" class="btn btn-success">watch now</a>
+            </div>
+        </div>
+
+        <div class="carousel-item">
+            <img src="./img/4.jpg" class="w-100 h-550" alt="">
+            <div class="carousel-caption my-caption">
+                <h1 class="text-info"> Jungle Book 4</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. sum dolor sit amet, consectetur adipisicing
+                    elit. Aut, natus consectetur adipisicing elit. Aut, natus!</p>
+                <a href="" class="btn btn-success">watch now</a>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="carousel-control">
+        <button class="carousel-control-prev" type="button" data-bs-target="#carousel1" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="false"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carousel1" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+</div>
+<section class="py-3">
+    <div class="container-fluid">
+
+        <div class="row">
+            <div class="col-md-4  ">
+                <div class="card">
+                    <div class="card-header">
+                        <h1>Hello Bangladesh</h1>
+                    </div>
+                    <div class="card-body">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime provident vel
+                            voluptates?</p>
+                    </div>
+                    <div class="card-footer">
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6">
+                <div class="card">
+                    <div class="card-header">
+                        <h1>Hello Ghana</h1>
+                    </div>
+                    <div class="card-body">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime provident vel
+                            voluptates?</p>
+                    </div>
+                    <div class="card-footer">
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6">
+                <div class="card">
+                    <div class="card-header">
+                        <h1>Hello Uganda</h1>
+                    </div>
+                    <div class="card-body">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime provident vel
+                            voluptates?</p>
+                    </div>
+                    <div class="card-footer">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+<section class="py-3">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="card">
+                    <img src="./img/movie1.webp" alt="" class="card-img-top img-fluid h-200">
+                    <div class="card-body">
+                        <h6> Kalo Projapoti (2022) Bengali Binge WEB-DL – 480P | 720P | 1080P – x264 – 300MB | 900MB |
+                            1.6GB</h6>
+                        <a href="https://mlsbd.shop/kalo-projapoti-2022-bengali-binge-web-dl-480p-720p-1080p-x264-300mb-900mb-1-6gb-download-watch-online/"
+                           class="btn btn-success float-end"> Download & Watch Online </a>
+                    </div>
+                    <div class="card-footer">
+                        <h6> MLSBD TEAM | 4 months ago | 28,129 Views.</h6>
+                        <p>No comment</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <img src="./img/movie2.webp" alt="" class="card-img-top img-fluid h-200">
+                    <div class="card-body">
+                        <h6> Isaac Liton (2022) S01 Complete Bengali Binge WEB-DL – 480P | 720P | 1080P – x264 – 350MB |
+                            1.2GB | 2.3GB</h6>
+                        <a href="https://mlsbd.shop/isaac-liton-2022-s01-complete-bengali-binge-web-dl-480p-720p-1080p-x264-350mb-1-2gb-2-3gb-esub-download-watch-online/"
+                           class="btn btn-success float-end"> Download & Watch Online </a>
+                    </div>
+                    <div class="card-footer">
+                        <h6> MLSBD TEAM | 6 months ago | 54,194 Views.</h6>
+                        <p>No comment</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <img src="./img/movie3.webp" alt="" class="card-img-top img-fluid h-200">
+                    <div class="card-body">
+                        <h6>Kurulus: Osman (2022–) S03 Complete Bengali Dubbed ORG WEB-DL – 480P | 720P | 1080P – x264 –
+                            1.2GB</h6>
+                        <a href="https://mlsbd.shop/kurulus-osman-2022-s03-complete-bengali-dubbed-org-web-dl-480p-720p-1080p-x264-1-2gb-600mb-300mb-download-watch-online-added-epi-01/"
+                           class="btn btn-success float-end"> Download & Watch Online </a>
+                    </div>
+                    <div class="card-footer">
+                        <h6> MLSBD TEAM | 4 week ago | 45,754 Views.</h6>
+                        <p>No comment</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <img src="./img/movie2.webp" alt="" class="card-img-top img-fluid h-200">
+                    <div class="card-body">
+                        <h6> Isaac Liton (2022) S01 Complete Bengali Binge WEB-DL – 480P | 720P | 1080P – x264 – 350MB |
+                            1.2GB | 2.3GB</h6>
+                        <a href="https://mlsbd.shop/isaac-liton-2022-s01-complete-bengali-binge-web-dl-480p-720p-1080p-x264-350mb-1-2gb-2-3gb-esub-download-watch-online/"
+                           class="btn btn-success float-end"> Download & Watch Online </a>
+                    </div>
+                    <div class="card-footer">
+                        <h6> MLSBD TEAM | 6 months ago | 54,194 Views.</h6>
+                        <p>No comment</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section class="py-3">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col">
+                <div class="card">
+                    <img src="./img/movie1.webp" alt="" class="card-img-top img-fluid h-100">
+                    <div class="card-header">
+                        <h3 class="card-title">Bengali Binge</h3>
+                    </div>
+                    <div class="card-body">
+                        <h6 class="card-text"> Kalo Projapoti (2022) Bengali Binge WEB-DL – 480P | 720P | 1080P – x264 –
+                            300MB | 900MB | 1.6GB</h6>
+                    </div>
+                    <div class="card-footer ">
+                        <div class="d-flex ">
+                            <a href="https://mlsbd.shop/kalo-projapoti-2022-bengali-binge-web-dl-480p-720p-1080p-x264-300mb-900mb-1-6gb-download-watch-online/"
+                               class="btn btn-success mx-auto "> Download </a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <img src="./img/movie2.webp" alt="" class="card-img-top img-fluid h-100">
+                    <div class="card-header">
+                        <h3 class="card-title">Bengali Binge</h3>
+                    </div>
+                    <div class="card-body">
+                        <h6> Isaac Liton (2022) S01 Bengali Binge WEB-DL – 480P | 720P | 1080P – x264 – 350MB | 1.2GB |
+                            2.3GB</h6>
+                    </div>
+                    <div class="card-footer ">
+                        <div class="d-flex ">
+                            <a href="https://mlsbd.shop/isaac-liton-2022-s01-complete-bengali-binge-web-dl-480p-720p-1080p-x264-350mb-1-2gb-2-3gb-esub-download-watch-online/"
+                               class="btn btn-success mx-auto"> Download</a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <img src="./img/movie1.webp" alt="" class="card-img-top img-fluid h-100">
+                    <div class="card-header">
+                        <h3 class="card-title">Bengali Binge</h3>
+                    </div>
+                    <div class="card-body">
+                        <h6 class="card-text"> Kalo Projapoti (2022) Bengali Binge WEB-DL – 480P | 720P | 1080P – x264 –
+                            300MB | 900MB | 1.6GB</h6>
+                    </div>
+                    <div class="card-footer ">
+                        <div class="d-flex ">
+                            <a href="https://mlsbd.shop/kalo-projapoti-2022-bengali-binge-web-dl-480p-720p-1080p-x264-300mb-900mb-1-6gb-download-watch-online/"
+                               class="btn btn-success mx-auto "> Download </a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <img src="./img/movie2.webp" alt="" class="card-img-top img-fluid h-100">
+                    <div class="card-header">
+                        <h3 class="card-title">Bengali Binge</h3>
+                    </div>
+                    <div class="card-body">
+                        <h6> Isaac Liton (2022) S01 Bengali Binge WEB-DL – 480P | 720P | 1080P – x264 – 350MB | 1.2GB |
+                            2.3GB</h6>
+                    </div>
+                    <div class="card-footer ">
+                        <div class="d-flex ">
+                            <a href="https://mlsbd.shop/isaac-liton-2022-s01-complete-bengali-binge-web-dl-480p-720p-1080p-x264-350mb-1-2gb-2-3gb-esub-download-watch-online/"
+                               class="btn btn-success mx-auto"> Download</a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <img src="./img/movie1.webp" alt="" class="card-img-top img-fluid h-100">
+                    <div class="card-header">
+                        <h3 class="card-title">Bengali Binge</h3>
+                    </div>
+                    <div class="card-body">
+                        <h6 class="card-text"> Kalo Projapoti (2022) Bengali Binge WEB-DL – 480P | 720P | 1080P – x264 –
+                            300MB | 900MB | 1.6GB</h6>
+                    </div>
+                    <div class="card-footer ">
+                        <div class="d-flex ">
+                            <a href="https://mlsbd.shop/kalo-projapoti-2022-bengali-binge-web-dl-480p-720p-1080p-x264-300mb-900mb-1-6gb-download-watch-online/"
+                               class="btn btn-success mx-auto "> Download </a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="py-3">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="row">
+                        <div class="col-md-5">
+                            <img src="./img/movie1.webp" alt="" class=" img-fluid rounded-start h-150">
+                        </div>
+                        <div class="col-md-7 ">
+                            <h5 class="card-text py-2"> Kalo Projapoti (2022) Bengali Binge WEB-DL – 480P |
+                            720P | 1080P – x264 – 300MB | 900MB | 1.6GB</h5>
+                            <div class="d-flex ">
+                                <a href="https://mlsbd.shop/kalo-projapoti-2022-bengali-binge-web-dl-480p-720p-1080p-x264-300mb-900mb-1-6gb-download-watch-online/"
+                                   class="btn btn-success mx-auto "> Download </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div><div class="col-md-6">
+                <div class="card">
+                    <div class="row">
+                        <div class="col-md-5">
+                            <img src="./img/movie2.webp" alt="" class=" img-fluid rounded-start h-150">
+                        </div>
+                        <div class="col-md-7 ">
+                            <h5 class="card-text py-2">Isaac Liton (2022) S01 Bengali Binge WEB-DL – 480P | 720P | 1080P – x264 – 350MB | 1.2GB |
+                                2.3GB</h5>
+                            <div class="d-flex ">
+                                <a href="https://mlsbd.shop/isaac-liton-2022-s01-complete-bengali-binge-web-dl-480p-720p-1080p-x264-350mb-1-2gb-2-3gb-esub-download-watch-online/"
+                                   class="btn btn-success mx-auto "> Download </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="py-3">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <div class="card-group">
+
+                    <div class="card text-bg-danger">
+                        <div class="card-header">
+                            <h1>Header 3</h1>
+                        </div>
+                        <div class="card-body">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime provident vel
+                                voluptates?</p>
+                        </div>
+
+                    </div>
+                    <div class="card text-bg-light">
+                        <div class="card-header">
+                            <h1>Header 3</h1>
+                        </div>
+                        <div class="card-body">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime provident vel
+                                voluptates?</p>
+                        </div>
+
+                    </div>
+                    <div class="card text-bg-success">
+                        <div class="card-header">
+                            <h1>Header 1</h1>
+                        </div>
+                        <div class="card-body">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime provident vel
+                                voluptates?</p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!--modals-->
+<div class="modal fade" data-bs-backdrop="static" id="modal_1">
+<!--    <div class="modal-dialog modal-dialog-centered modal-lg">-->
+    <div class="modal-dialog modal-dialog-centered ">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Watch Ad</h3>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci asperiores, consequatur
+                    dignissimos eligendi illum nam odio omnis! Incidunt laborum nostrum reiciendis repellat.</p>
+            </div>
+            <div class="modal-footer">
+                <a href="" class="btn btn-danger" data-bs-dismiss="modal">Close</a>
+                <a href="" class="btn btn-success">Watch</a>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="./js/jquery-3.6.1.js"></script>
+<script src="./js/bootstrap.bundle.js"></script>
+</body>
+
+</html>
