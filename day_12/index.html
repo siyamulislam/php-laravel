@@ -5,9 +5,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>bootstrap </title>
+    <title>Movie Flix </title>
     <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="./css/bootstrap.css">
+    <link rel="stylesheet" href="./css/datatables.min.css">
     <link rel="stylesheet" href="./css/style.css">
 </head>
 
@@ -47,53 +48,59 @@
             </div>
         </div>
     </nav>
-
-
-
+<!--day11-->
     <section class="py-3">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-12">
-                    <div class="card card-body">
-                        <div class="accordion" id="accordionEX">
-                            <div class="accordion-item ">
-                                <h2 class="accordion-header">
-                                    <button type="button" class="accordion-button" data-bs-toggle="collapse"
-                                        data-bs-target="#div1">
-                                        Lorem ipsuonsequuntur maiores mollitia nemo neque?
-                                    </button>
-                                </h2>
-                                <div class="collapse accordion-collapse show " id="div1" data-bs-parent="#accordionEX">
-                                    <div class="accordion-body bg-info">
-                                        <P class="text-white">I am adipisicing Lorem ipsum dolor sit amet, consectetur elit.</P>
-                                    </div>
-                                </div>
+                    <div>
+                        <ul class="nav nav-tabs">
+                            <li><a href="" class="nav-link " data-bs-toggle="tab" data-bs-target="#bitm">BITM</a></li>
+                            <li><a href="" class="nav-link active" data-bs-toggle="tab" data-bs-target="#basis">Basis</a>
+                            </li>
+                            <li><a href="#batch" class="nav-link" data-bs-toggle="tab">Batch-14</a></li>
+                            <li><a href="#short" class="nav-link" data-bs-toggle="tab">Shorts</a></li>
+                            <li><a href="#tube" class="nav-link" data-bs-toggle="tab">Youtube</a></li>
+                            <li><a href="#port" class="nav-link" data-bs-toggle="tab">Portfolio</a></li>
+                        </ul>
+                        <div class="tab-content">
+                            <div class="tab-pane fade  " id="bitm">
+                                <h3>BITM </h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit quas, rerum.</p>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit quas, rerum.</p>
                             </div>
-                            <div class="accordion-item ">
-                                <h2 class="accordion-header">
-                                    <button type="button" class="accordion-button" data-bs-toggle="collapse"
-                                        data-bs-target="#div2">
-                                        Lorem ipsuonsequuntur maiore?
-                                    </button>
-                                </h2>
-                                <div class="collapse  accordion-collapse  " id="div2"  data-bs-parent="#accordionEX">
-                                    <div class="accordion-body bg-secondary">
-                                        <P class="text-white">I am adipisicing Lorem iptur elit.</P>
-                                    </div>
-                                </div>
+                            <div class="tab-pane fade show active" id="basis">
+                                <h3>Basis</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur elit. Fugit quas, rerum.</p>
+                                <p>Lorem ipsum dolor sit amet, consectetur elit. Fugit quas, rerum.</p>
                             </div>
-                            <div class="accordion-item ">
-                                <h2 class="accordion-header">
-                                    <button type="button" class="accordion-button" data-bs-toggle="collapse"
-                                        data-bs-target="#div3">
-                                        Lorem maiore?
-                                    </button>
-                                </h2>
-                                <div class="collapse accordion-collapse " id="div3"  data-bs-parent="#accordionEX">
-                                    <div class="accordion-body bg-success">
-                                        <P class="text-white">I am Lorem iptur elit.</P>
-                                    </div>
-                                </div>
+                            <div class="tab-pane show fade " id="batch">
+                                <h3>Batch-14</h3>
+                                <p>Lorem ipsum dolor sitsitsitsit amet, consead ipisicing ctetur adipisicing elit. Fugit
+                                    quas, rerum.</p>
+                                <p>Lorem ipsum dolor sitsitsitsit amet, consead ipisicing ctetur adipisicing elit. Fugit
+                                    quas, rerum.</p>
+                                <p>Lorem ipsum dolor sitsitsitsit amet, consead ipisicing ctetur adipisicing elit. Fugit
+                                    quas, rerum.</p>
+                            </div>
+                            <div class="tab-pane show fade " id="short">
+                                <h3>Shorts</h3>
+                                <iframe width="320" height="497" src="https://www.youtube.com/embed/8jxks1lkLug"
+                                        title="Pencil drawing✏️" frameborder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                        allowfullscreen></iframe>
+                            </div>
+                            <div class="tab-pane show fade " id="tube">
+                                <h3>Youtube</h3>
+                                <iframe width="800px" height="350" src="https://www.youtube.com/embed/CLeZyIID9Bo"
+                                        title="Chill Lofi Mix [chill lo-fi hip hop beats]" frameborder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                        allowfullscreen></iframe>
+                            </div>
+                            <div class="tab-pane show fade " id="port">
+                                <h3>PortFolio</h3>
+                                <iframe src="https://siyamul.netlify.app/"
+                                        onload="this.width=screen.width;this.height=screen.height;"></iframe>
                             </div>
                         </div>
                     </div>
@@ -101,6 +108,375 @@
             </div>
         </div>
     </section>
+    <section class="py-3">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <div>
+                        <ul class="nav nav-pills justify-content-center ">
+                            <li><a href="" class="nav-link active" data-bs-toggle="tab" data-bs-target="#domain">Domain</a></li>
+                            <li><a href="" class="nav-link " data-bs-toggle="tab"
+                                   data-bs-target="#hosting">Hosting</a></li>
+                            <li><a href="#ssl" class="nav-link" data-bs-toggle="tab">SSL</a></li>
+                        </ul>
+                        <div class="tab-content mt-3 ">
+                            <div class="tab-pane fade  show active" id="domain">
+                                <h3 class="text-center">Domain</h3>
+                                <div class="row mt-3">
+                                    <div class="col-md-3">
+                                        <div class="card">
+                                            <img src="./img/2.jpg" alt="" class="card-img-top h-200">
+                                        </div>
+                                        <div class="card-body">
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, cum delectus
+                                                dicta doloremque eveniet explicabo iusto, laborum modi non odio praesentium
+                                                quia?</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="card">
+                                            <img src="./img/3.jpg" alt="" class="card-img-top h-200">
+                                        </div>
+                                        <div class="card-body">
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, cum delectus
+                                                dicta doloremque eveniet explicabo iusto, laborum modi non odio praesentium
+                                                quia?</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="card">
+                                            <img src="./img/1.jpg" alt="" class="card-img-top h-200">
+                                        </div>
+                                        <div class="card-body">
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, cum delectus
+                                                dicta doloremque eveniet explicabo iusto, laborum modi non odio praesentium
+                                                quia?</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="card">
+                                            <img src="./img/4.jpg" alt="" class="card-img-top h-200">
+                                        </div>
+                                        <div class="card-body">
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, cum delectus
+                                                dicta doloremque eveniet explicabo iusto, laborum modi non odio praesentium
+                                                quia?</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade " id="hosting">
+                                <h3 class="text-center">Hosting</h3>
+                                <div class="row  mt-3">
+                                    <div class="col-md-4">
+                                        <div class="card">
+                                            <img src="./img/2.jpg" alt="" class="card-img-top h-250">
+                                        </div>
+                                        <div class="card-body">
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, cum delectus
+                                                dicta doloremque eveniet explicabo iusto, laborum modi non odio praesentium
+                                                quia?</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="card">
+                                            <img src="./img/3.jpg" alt="" class="card-img-top h-250">
+                                        </div>
+                                        <div class="card-body">
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, cum delectus
+                                                dicta doloremque eveniet explicabo iusto, laborum modi non odio praesentium
+                                                quia?</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="card">
+                                            <img src="./img/1.jpg" alt="" class="card-img-top h-250">
+                                        </div>
+                                        <div class="card-body">
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, cum delectus
+                                                dicta doloremque eveniet explicabo iusto, laborum modi non odio praesentium
+                                                quia?</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane show fade " id="ssl">
+                                <h3 class="text-center">SSL Certificate</h3>
+                                <div class="row  mt-3">
+                                    <div class="col-md-3">
+                                        <div class="card">
+                                            <img src="./img/2.jpg" alt="" class="card-img-top h-200">
+                                        </div>
+                                        <div class="card-body">
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, cum delectus
+                                                dicta doloremque eveniet explicabo iusto, laborum modi non odio praesentium
+                                                quia?</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="card">
+                                            <img src="./img/3.jpg" alt="" class="card-img-top h-200">
+                                        </div>
+                                        <div class="card-body">
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, cum delectus
+                                                dicta doloremque eveniet explicabo iusto, laborum modi non odio praesentium
+                                                quia?</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="card">
+                                            <img src="./img/1.jpg" alt="" class="card-img-top h-200">
+                                        </div>
+                                        <div class="card-body">
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, cum delectus
+                                                dicta doloremque eveniet explicabo iusto, laborum modi non odio praesentium
+                                                quia?</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="card">
+                                            <img src="./img/4.jpg" alt="" class="card-img-top h-200">
+                                        </div>
+                                        <div class="card-body">
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, cum delectus
+                                                dicta doloremque eveniet explicabo iusto, laborum modi non odio praesentium
+                                                quia?</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="py-3">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="table-responsive">
+                        <table id="myTable" class="table table-border table-striped table-hover table-success" >
+                            <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Phone</th>
+                                <th>Address</th>
+                                <th>District</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Siam</td>
+                                <td>siyamul.cse@gmail.com</td>
+                                <td>01717338996</td>
+                                <td>Dhaka</td>
+                                <td>Bogura</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Ajay</td>
+                                <td>Ajay.cse@gmail.com</td>
+                                <td>01717348993</td>
+                                <td>Dhaka</td>
+                                <td>Japan</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Grecia</td>
+                                <td>Grecia.cse@gmail.com</td>
+                                <td>01713499323</td>
+                                <td>UK</td>
+                                <td>USA</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>Siam</td>
+                                <td>siyamul.cse@gmail.com</td>
+                                <td>01717338996</td>
+                                <td>Dhaka</td>
+                                <td>Bogura</td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>Ajay</td>
+                                <td>Ajay.cse@gmail.com</td>
+                                <td>01717348993</td>
+                                <td>Dhaka</td>
+                                <td>Japan</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>Siam</td>
+                                <td>siyamul.cse@gmail.com</td>
+                                <td>01717338996</td>
+                                <td>Dhaka</td>
+                                <td>Bogura</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Ajay</td>
+                                <td>Ajay.cse@gmail.com</td>
+                                <td>01717348993</td>
+                                <td>Dhaka</td>
+                                <td>Japan</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Grecia</td>
+                                <td>Grecia.cse@gmail.com</td>
+                                <td>01713499323</td>
+                                <td>UK</td>
+                                <td>USA</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>Siam</td>
+                                <td>siyamul.cse@gmail.com</td>
+                                <td>01717338996</td>
+                                <td>Dhaka</td>
+                                <td>Bogura</td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>Ajay</td>
+                                <td>Ajay.cse@gmail.com</td>
+                                <td>01717348993</td>
+                                <td>Dhaka</td>
+                                <td>Japan</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>Siam</td>
+                                <td>siyamul.cse@gmail.com</td>
+                                <td>01717338996</td>
+                                <td>Dhaka</td>
+                                <td>Bogura</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Ajay</td>
+                                <td>Ajay.cse@gmail.com</td>
+                                <td>01717348993</td>
+                                <td>Dhaka</td>
+                                <td>Japan</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Grecia</td>
+                                <td>Grecia.cse@gmail.com</td>
+                                <td>01713499323</td>
+                                <td>UK</td>
+                                <td>USA</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>Siam</td>
+                                <td>siyamul.cse@gmail.com</td>
+                                <td>01717338996</td>
+                                <td>Dhaka</td>
+                                <td>Bogura</td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>Ajay</td>
+                                <td>Ajay.cse@gmail.com</td>
+                                <td>01717348993</td>
+                                <td>Dhaka</td>
+                                <td>Japan</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>Siam</td>
+                                <td>siyamul.cse@gmail.com</td>
+                                <td>01717338996</td>
+                                <td>Dhaka</td>
+                                <td>Bogura</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Ajay</td>
+                                <td>Ajay.cse@gmail.com</td>
+                                <td>01717348993</td>
+                                <td>Dhaka</td>
+                                <td>Japan</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Grecia</td>
+                                <td>Grecia.cse@gmail.com</td>
+                                <td>01713499323</td>
+                                <td>UK</td>
+                                <td>USA</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>Siam</td>
+                                <td>siyamul.cse@gmail.com</td>
+                                <td>01717338996</td>
+                                <td>Dhaka</td>
+                                <td>Bogura</td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>Ajay</td>
+                                <td>Ajay.cse@gmail.com</td>
+                                <td>01717348993</td>
+                                <td>Dhaka</td>
+                                <td>Japan</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>Siam</td>
+                                <td>siyamul.cse@gmail.com</td>
+                                <td>01717338996</td>
+                                <td>Dhaka</td>
+                                <td>Bogura</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Ajay</td>
+                                <td>Ajay.cse@gmail.com</td>
+                                <td>01717348993</td>
+                                <td>Dhaka</td>
+                                <td>Japan</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Grecia</td>
+                                <td>Grecia.cse@gmail.com</td>
+                                <td>01713499323</td>
+                                <td>UK</td>
+                                <td>USA</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>Siam</td>
+                                <td>siyamul.cse@gmail.com</td>
+                                <td>01717338996</td>
+                                <td>Dhaka</td>
+                                <td>Bogura</td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>Ajay</td>
+                                <td>Ajay.cse@gmail.com</td>
+                                <td>01717348993</td>
+                                <td>Dhaka</td>
+                                <td>Japan</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--day12-->
     <section class="py-3">
         <div class="container-fluid">
             <div class="row">
@@ -214,9 +590,68 @@
             </div>
         </div>
     </section>
+    <section class="py-3">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card card-body">
+                        <div class="accordion" id="accordionEX">
+                            <div class="accordion-item ">
+                                <h2 class="accordion-header">
+                                    <button type="button" class="accordion-button" data-bs-toggle="collapse"
+                                        data-bs-target="#div1">
+                                        Lorem ipsuonsequuntur maiores mollitia nemo neque?
+                                    </button>
+                                </h2>
+                                <div class="collapse accordion-collapse show " id="div1" data-bs-parent="#accordionEX">
+                                    <div class="accordion-body bg-info">
+                                        <P class="text-white">I am adipisicing Lorem ipsum dolor sit amet, consectetur elit.</P>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item ">
+                                <h2 class="accordion-header">
+                                    <button type="button" class="accordion-button" data-bs-toggle="collapse"
+                                        data-bs-target="#div2">
+                                        Lorem ipsuonsequuntur maiore?
+                                    </button>
+                                </h2>
+                                <div class="collapse  accordion-collapse  " id="div2"  data-bs-parent="#accordionEX">
+                                    <div class="accordion-body bg-secondary">
+                                        <P class="text-white">I am adipisicing Lorem iptur elit.</P>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item ">
+                                <h2 class="accordion-header">
+                                    <button type="button" class="accordion-button" data-bs-toggle="collapse"
+                                        data-bs-target="#div3">
+                                        Lorem maiore?
+                                    </button>
+                                </h2>
+                                <div class="collapse accordion-collapse " id="div3"  data-bs-parent="#accordionEX">
+                                    <div class="accordion-body bg-success">
+                                        <P class="text-white">I am Lorem iptur elit.</P>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
 
     <script src="./js/jquery-3.6.1.min.js"></script>
     <script src="./js/bootstrap.bundle.js"></script>
+    <script src="./js/datatables.min.js"></script>
+
+    <script>
+        $(document).ready( function () {
+            $('#myTable').DataTable();
+        } );
+    </script>
 </body>
 
 </html>
