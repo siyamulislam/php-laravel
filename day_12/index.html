@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bootstrap </title>
+    <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+<nav class="navbar navbar-expand-md bg-dark navbar-dark">
+    <div class="container">
+        <a href="" class="navbar-brand">Movie Flix</a>
+        <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#mainMenu">
+            <span class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="mainMenu">
+            <ul class="navbar-nav me-auto">
+                <li><a href="" class="nav-link">Home</a></li>
+                <li class="nav-item dropdown">
+                    <a href="" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"
+                       aria-expanded="false">
+                        Genre</a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Animation</a></li>
+                        <li><a class="dropdown-item" href="#">Comedy</a></li>
+                        <li><a class="dropdown-item" href="#">Crime</a></li>
+                        <li><a class="dropdown-item" href="#">Music</a></li>
+                        <li><a class="dropdown-item" href="#">Short</a></li>
+
+                    </ul>
+                </li>
+                <li><a href="" class="nav-link">Country</a></li>
+                <li><a href="" class="nav-link">TV-Series</a></li>
+                <li><a href="" class="nav-link">Top IMDp</a></li>
+                <li><a href="" class="nav-link">A-Z List</a></li>
+
+
+            </ul>
+            <form class="d-flex" role="search">
+                <input class="form-control me-2" type="search" placeholder="Movie Search" aria-label="Search">
+                <button class="btn btn-success" type="submit">Search</button>
+            </form>
+        </div>
+    </div>
+</nav>
+
+
+<section class="py-3">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card card-body">
+                    <form action="" method="Post"></form>
+                    <div class="mt-2">
+                        <label for="name0">Name</label>
+                        <input id="name0" type="text" class="form-control">
+                    </div>
+                    <div class="mt-2">
+                        <label for="email0">Email</label>
+                        <input id="email0" type="email" class="form-control">
+                    </div>
+                    <div class="mt-2">
+                        <label for="number0">Phone</label>
+                        <input id="number0" type="number" class="form-control">
+                    </div>
+                    <div class="mt-2">
+                        <label for="dob0">Date of Birth</label>
+                        <input id="dob0" type="date" class="form-control">
+                    </div>
+                    <div class="mt-2">
+                        <label  >Religion</label>
+                        <label>
+                            <select name=""  >
+                                <option value="Islam">Islam</option>
+                                <option value="Hindu">Hindu</option>
+                                <option value="Kristhan">Kristhan</option>
+                                <option value="Boudho">Boudho</option>
+                            </select>
+                        </label>
+                    </div>
+
+
+                    <div class="mt-2">
+                        <label >Gender</label>
+                        <label ><input type="radio" name="gender"> Male</label>
+                        <label ><input type="radio" name="gender"> Female</label>
+                        <label ><input type="radio" name="gender"> Other</label>
+                    </div>
+                    <div class="mt-2">
+                        <label for="address0">Address</label>
+                        <textarea name="" id="address0" cols="30" rows="5 " class="form-control"></textarea>
+                    </div>
+
+                    <div class="mt-3">
+                        <input type="submit"  class="btn btn-info" value="Save ">
+                        <!--                        <button type="submit" class="btn btn-success">Submit</button>-->
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card card-body">
+                    <form action="" method="Post">
+
+                        <div class="row mt-2">
+                            <label for="name" class="col-md-3">Name</label>
+                            <div class="col-md-9">
+                                <input id="name" type="text" class=" form-control">
+                            </div>
+                        </div>
+                        <div class="row mt-2">
+                            <label for="email" class="col-md-3">Email</label>
+                            <div class="col-md-9">
+                                <input id="email" type="email" class=" form-control">
+                            </div>
+                        </div>
+                        <div class="row mt-2">
+                            <label for="phone" class="col-md-3">Phone</label>
+                            <div class="col-md-9">
+                                <input id="phone" type="number" class=" form-control">
+                            </div>
+                        </div>
+                        <div class="row mt-2">
+                            <label for="date" class="col-md-3">Date of Birth</label>
+                            <div class="col-md-9">
+                                <input id="date" type="date" class=" form-control">
+                            </div>
+                        </div>
+                        <div class="row mt-2">
+                            <label for="city" class="col-md-3">City</label>
+                            <div class="col-md-9">
+                                <select name="" id="city" class="form-control">
+                                    <Option value="dhaka">Dhaka</Option>
+                                    <Option value="dhaka1">Dhaka1</Option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row mt-2">
+                            <label  class="col-md-3">Gender</label>
+                            <div class="col-md-9">
+                                <label for="male"><input id="male" type="radio" name="gender">Male</label>
+                                <label for="female"><input id="female" type="radio" name="gender">Female</label>
+                                <label for="other"><input id="other" type="radio" name="gender">Other</label>
+                            </div>
+                        </div>
+                        <div class="row mt-2">
+                            <label for="address" class="col-md-3">Address</label>
+                            <div class="col-md-9">
+                                <textarea name="" id="address"  cols="30" rows="5" class="form-control"></textarea>
+                            </div>
+                        </div>
+                        <div class="row mt-2">
+                            <input type="submit" class="btn btn-outline-success  " value="Save">
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<script src="./js/jquery-3.6.1.min.js"></script>
+<script src="./js/bootstrap.bundle.js"></script>
+</body>
+
+</html>
