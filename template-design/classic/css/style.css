@@ -1,3 +1,10 @@
+@font-face {
+    font-family: squad;
+    src: url(./../fonts/squad-regular.otf);
+  } 
+body{
+  font-family: squad,sans-serif;
+}
 .h-550{height: 570px}
 .h-450{height: 450px}
 .h-400{height: 400px}
@@ -6,9 +13,16 @@
 .h-200{height: 200px}
 .h-150{height: 150px}
 
-.text-gr{color: #CA9629;}
-.bg-gr{background-color: #CA9629;}
 
+.text-gr{color: #CA9629;}
+.text-mt{color: #9E9E9F;}
+.bg-gr{background-color: #CA9629;}
+ 
+.custom-container{
+  padding-right: 4%;
+  padding-left: 4%;
+  width: 100%;
+}
 .active-nav{
     border-radius: 4px;
 }
@@ -24,3 +38,10 @@ padding:  0px 2px;
     padding:  5px 25px;
     font-weight: 400;
     }
+.custom-btn{
+    font-size: 12px;
+    border: none;
+    border-radius: 3px;
+    font-weight:  100;
+    padding: 5px 20px;
+}
