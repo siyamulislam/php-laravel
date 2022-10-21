@@ -10,8 +10,17 @@
 .bg-gr{background-color: #CA9629;}
 
 .active-nav{
-    border-radius: 10px;
+    border-radius: 4px;
 }
-.nav-menu{
-    
+
+.logo-text{
+font-weight: 500;
+font-size: 24px;
 }
+#mainMenu>ul>li{
+padding:  0px 2px;
+}
+#mainMenu>ul>li>a{
+    padding:  5px 25px;
+    font-weight: 400;
+    }
