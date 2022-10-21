@@ -12,10 +12,15 @@ body{
 .h-250{height: 250px}
 .h-200{height: 200px}
 .h-150{height: 150px}
+.h-2{height: 2px}
+.lh-5{display: block;
+    content: "";
+    margin: 5px 0;}
 
 
 .text-gr{color: #CA9629;}
 .text-mt{color: #9E9E9F;}
+.text-link{color: #16667E;}
 .bg-gr{background-color: #CA9629;}
  
 .custom-container{
@@ -37,6 +42,16 @@ padding:  0px 2px;
 #mainMenu>ul>li>a{
     padding:  5px 25px;
     font-weight: 400;
+    }
+.links>ul>li{
+padding:  10px 0px;
+list-style: none;
+text-align: start;
+}
+.links>ul>li>a{
+    font-size: 12px;
+    font-weight: 200;
+    color: #328FB7;
     }
 .custom-btn{
     font-size: 12px;
