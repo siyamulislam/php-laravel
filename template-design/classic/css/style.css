@@ -30,14 +30,17 @@ body{
 }
 .active-nav{
     border-radius: 4px;
-}
-
+}  
 .logo-text{
-font-weight: 500;
-font-size: 24px;
+font-weight: 600;
+font-size: 22px;
 }
 #mainMenu>ul>li{
 padding:  0px 2px;
+}
+p{
+    text-align: justify;
+  text-justify: inter-word;
 }
 #mainMenu>ul>li>a{
     padding:  5px 25px;
