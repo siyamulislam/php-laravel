@@ -1,9 +1,12 @@
 @font-face {
     font-family: squad;
     src: url(./../fonts/squad-regular.otf);
-  } 
+  } @font-face {
+    font-family: openSans;
+    src: url(./../fonts/OpenSans.ttf);
+  }
 body{
-  font-family: squad,sans-serif;
+  font-family: openSans,sans-serif;
 }
 .h-550{height: 570px}
 .h-450{height: 450px}
@@ -13,16 +16,25 @@ body{
 .h-200{height: 200px}
 .h-150{height: 150px}
 .h-2{height: 2px}
-.lh-5{display: block;
-    content: "";
-    margin: 5px 0;}
+
+[class*='lh-']{display: block;content: "";}
+.lh-5{margin: 5px 0;}
+.lh-10{margin: 10px 0;}
+.lh-15{margin: 15px 0;}
 
 
 .text-gr{color: #CA9629;}
+.text-gr-ft{color: #d99724;}
 .text-mt{color: #9E9E9F;}
+.text-cc{color: #9B9D9C;}
+.text-cw{color: #d7d8d8;}
+.text-mt{color: #575446;}
+.text-mt2{color: #343433;}
 .text-link{color: #16667E;}
 .bg-gr{background-color: #CA9629;}
- 
+.bg-mt{background-color: #666666;}
+.bg-dmt{background-color: #CCCCCC;}
+
 .custom-container{
   padding-right: 4%;
   padding-left: 4%;
@@ -39,7 +51,7 @@ font-size: 22px;
 padding:  0px 2px;
 }
 p{
-    text-align: justify;
+    /*text-align: justify;*/
   text-justify: inter-word;
 }
 #mainMenu>ul>li>a{
@@ -56,10 +68,30 @@ text-align: start;
     font-weight: 200;
     color: #328FB7;
     }
+.footerLinks>ul>li>a{
+    font-size: 14px;
+    font-weight: 400;
+    color: #cccc66;
+    }
 .custom-btn{
     font-size: 12px;
     border: none;
     border-radius: 3px;
     font-weight:  100;
     padding: 5px 20px;
+}
+.custom-footer-btn{
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    font-weight:  100;
+    padding: 10px 25px;
+}
+.footer-bg{
+    /*background-image: url("./../img/hex2.jpg");*/
+    background-color: rgb(33, 33, 33);
+}
+.danny{
+    font-size: 16px;
+    font-weight: 600;
 }
