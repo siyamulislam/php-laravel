@@ -1,1 +1,8 @@
 https://www.youtube.com/watch?v=rkpzYNB6xks
+ <div class="bg-df-color d-flex justify-content-center align-items-center py-4">
+                                        <i class="fa-solid fa-ship fa-2x me-2"></i>
+                                        <h6 class="text-white fw-bold ">Ocean Freight</h6>
+         <div class="bg-df-color d-flex justify-content-center align-items-center py-4">
+                                                <i class="fa-solid fa-ship fa-2x me-2"></i>
+                                                <h6 class="text-white fw-bold ">Ocean Freight</h6>
+                                            </div>                            </div>
