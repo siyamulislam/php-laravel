@@ -33,3 +33,8 @@ color: white;
       background-image: url("../img/header.jpg");
       height: 500px;
   }
+  .card-form-div{
+      padding-top:50px;
+      padding-left: 30px;
+      padding-right: 30px;
+  }
