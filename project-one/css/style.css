@@ -5,3 +5,31 @@
 .h-250{height: 250px}
 .h-200{height: 200px}
 .h-150{height: 150px}
+.custom-container{
+    padding-right: 4%;
+    padding-left: 4%;
+    width: 100%;
+}
+@font-face {
+    font-family: poppins;
+    src: url(./../fonts/Poppins-Regular.ttf);
+}
+body{
+    font-family: poppins,sans-serif;
+}
+.text-df-color{
+    color: #ff4800;
+}
+.bg-df-color{background-color: #ff4800;}
+.bg-df-color:hover{  background-color: #D93D00;}
+ .c-nav-link{
+font-weight: bold;
+color: #1B2024;
+ }.c-nav-link:hover{
+background-color: #ff4800;
+color: white;
+ }
+  .banner-section{
+      background-image: url("../img/header.jpg");
+      height: 500px;
+  }
