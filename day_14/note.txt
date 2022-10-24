@@ -1,4 +1,13 @@
 ##PHP ==>
+composer download and setup
+https://getcomposer.org/
+php -v
+
+composer dump-autoload
+
+
+
+
 -> 2 types of php 1. procedural and 2. oop
 -> oop -> songbidhan ba model , main theme is specification(information and activity) like AC er specification holo
     information(name,color,brand) and activity(thanda batash). for pen information(color,brand,height,width)
