@@ -1,0 +1,30 @@
+##PHP ==>
+composer download and setup
+https://getcomposer.org/
+php -v
+
+composer dump-autoload
+
+
+
+
+-> 2 types of php 1. procedural and 2. oop
+-> oop -> songbidhan ba model , main theme is specification(information and activity) like AC er specification holo
+    information(name,color,brand) and activity(thanda batash). for pen information(color,brand,height,width)
+    activity(lekha jay, mucha jay)
+    {
+    specification == class
+    information == property
+    activity == method
+    }
+-> php compailar is apache.
+-> php te $this is own class object. kno property ba method dorar jonno $this use kora hoy.
+-> __construct() is a magic method. auto call hoy.
+-> composer -> autoload [psr4 ekta poddoti].
+-> composer -> require hocche 3rd party kisu add krle project a adike ullekh kora thakbe.
+-> programming is a problem solution.
+
+## Dependency manager ==>
+-> ekta site banaite onk resources lage jemon img buttin pic etc lage agula function er modde hobe function thakbe
+class er vitore sob kisu e manage kore composer je kaj ta thik moto hocche naki aguli . it's like  manager.
+-> setup first a  download composer globally in your machine then it's setup to all project.
