@@ -2,8 +2,8 @@
   "name": "day_15/day_15",
   "type": "project",
   "description": "",
-  "keywords": [],
   "license": "",
+  "keywords": [],
   "require": {},
   "require-dev": {},
   "autoload": {

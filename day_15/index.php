@@ -2,6 +2,7 @@
 
 require_once 'vendor/autoload.php';
 
-use App\classes\HelloWorld;
-$helloWord= new HelloWorld();
-$helloWord->index();
+use App\classes\Person;
+$person= new Person();
+$person->greeting();
+$person->piramid();

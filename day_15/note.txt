@@ -1,4 +1,4 @@
-git add . && git commit -m "day-15 init" && git push
+git add . && git commit -m "upto print line" && git push
 ##PHP ==>
 composer download and setup
 https://getcomposer.org/
@@ -6,3 +6,5 @@ php -v
 
 composer dump-autoload
 
+
+git add . && git commit -m "upto print line" && git push
