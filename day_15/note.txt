@@ -1,0 +1,29 @@
+git add . && git commit -m "upto print line" && git push
+##PHP ==>
+composer download and setup
+https://getcomposer.org/
+php -v
+
+composer dump-autoload
+Image js
+https://www.youtube.com/watch?v=55iwMYv8tGI
+
+git add . && git commit -m "php basic op var con" && git push
+  variable
+
+        3 major rules
+               1>start with $
+                2>special Char not allowed
+                   allowed only a-z,A-Z,0-9,-,_
+               3>no number at first
+                    like 0data;
+         3 standard rules in variable
+            *start with small letter
+            *meaningful
+            *readable
+
+  Operator
+  Arithmetic OP (+,-,*,/,%,++,--)
+  Assignment OP (+,+=,-=,*=,/=,%=)
+  Conditional OP (<,>,==,<=,>=,===,!=,!==)
+  Logical Operator (&&,||,!)
