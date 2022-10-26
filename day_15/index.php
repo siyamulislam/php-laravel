@@ -2,8 +2,8 @@
 
 require_once 'vendor/autoload.php';
 
-use App\classes\Person;
-$person= new Person();
+use App\classes\ArrayList;
+$person= new ArrayList();
 
 $person->index();
 

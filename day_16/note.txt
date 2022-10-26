@@ -1,0 +1,12 @@
+##PHP ==>
+composer download and setup
+https://getcomposer.org/
+php -v
+
+composer dump-autoload
+Image js
+https://www.youtube.com/watch?v=55iwMYv8tGI
+
+git add . && git commit -m "day-16 init" && git push
+
+
