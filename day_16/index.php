@@ -2,11 +2,11 @@
 
 require_once 'vendor/autoload.php';
 
-use App\classes\ArrayList;
-$array= new ArrayList();
+use App\classes\ArrayLoop;
+$array= new ArrayLoop();
 
-//$array->index();
-$array->greeting();
+$array->index();
+//$array->greeting();
 
 
 

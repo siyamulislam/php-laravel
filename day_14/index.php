@@ -2,6 +2,6 @@
 
 require_once 'vendor/autoload.php';
 
-use App\classes\ArrayList;
-$helloWord= new ArrayList();
+use App\classes\ArrayLoop;
+$helloWord= new ArrayLoop();
 $helloWord->index();
