@@ -6,7 +6,7 @@ class ArrayLoop
 {
     public $message;
     private $x = 10, $y = 20, $z = 30;
-    public $names=[];
+    public $names = [];
 
     public function __construct()
     {
@@ -52,17 +52,60 @@ class ArrayLoop
 //        $this->names=['a',24,true,'dd','eee'];
 //        foreach ($this->names as $n)echo $n.'</br>';
 
-        $data=['name'=>'Siam',
-            'age'=>24,
-            'email'=>"siyamul.cse@gmail.com"
-            ];
-        echo $data['email'].'</br>';
+//        $data=[
+//            'name'=>'Siam',
+//            'age'=>24,
+//            'email'=>"siyamul.cse@gmail.com"
+//            ];
+//        echo $data['email'].'</br>';
+//
+//        foreach ($data as $n)echo $n.'</br>';
 
-        foreach ($data as $n)echo $n.'</br>';
+        $data0 = [
+            'r1' => [
+                'name' => 'Siam',
+                'age' => 24,
+                'email' => "siyamul.cse@gmail.com"
+            ],
+            'r10' => [
+                'name' => 'Jhu',
+                'age' => 22,
+                'email' => "jhu.cse@gmail.com"
+            ],
+            'r100' => [
+                'name' => 'Deo',
+                'age' => 45,
+                'email' => "deo.cse@gmail.com"
+            ],
+        ];
+        $data = [
+            [
+                'name' => 'Siam',
+                'age' => 24,
+                'email' => "siyamul.cse@gmail.com"
+            ],
+            [
+                'name' => 'Jhu',
+                'age' => 22,
+                'email' => "jhu.cse@gmail.com"
+            ],
+            [
+                'name' => 'Deo',
+                'age' => 45,
+                'email' => "deo.cse@gmail.com"
+            ],
+        ];
+        echo $data0['r100']['name'] . '</br>';
+        echo $data[1]['email'] . '</br>';
 
-
-
-
+        foreach ($data as $n) {
+            echo '</br>';
+            foreach ($n as $nn) echo $nn . '</br>';
+        }
+        echo '</br>';
+        foreach ($data as $n) {
+            echo $n['name'] . '</br>';
+        }
 
 
     }
