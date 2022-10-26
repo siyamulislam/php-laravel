@@ -95,17 +95,25 @@ class ArrayLoop
                 'email' => "deo.cse@gmail.com"
             ],
         ];
-        echo $data0['r100']['name'] . '</br>';
-        echo $data[1]['email'] . '</br>';
 
-        foreach ($data as $n) {
-            echo '</br>';
-            foreach ($n as $nn) echo $nn . '</br>';
-        }
-        echo '</br>';
-        foreach ($data as $n) {
-            echo $n['name'] . '</br>';
-        }
+//        print_r($data0);
+
+//        echo 'pre';
+//        print_r($data);
+
+        var_dump($data);
+//
+//        echo $data0['r100']['name'] . '</br>';
+//        echo $data[1]['email'] . '</br>';
+//
+//        foreach ($data as $n) {
+//            echo '</br>';
+//            foreach ($n as $nn) echo $nn . '</br>';
+//        }
+//        echo '</br>';
+//        foreach ($data as $n) {
+//            echo $n['name'] . '</br>';
+//        }
 
 
     }
