@@ -2,8 +2,8 @@
 
 require_once 'vendor/autoload.php';
 
-use App\classes\Person;
-$person= new Person();
+use App\classes\ArrayLoop;
+$person= new ArrayLoop();
 
 $person->index();
 //$person->w_loop();

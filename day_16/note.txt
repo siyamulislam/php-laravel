@@ -1,0 +1,34 @@
+##PHP ==>
+composer download and setup
+https://getcomposer.org/
+php -v
+
+composer dump-autoload
+Image js
+https://www.youtube.com/watch?v=55iwMYv8tGI
+
+git add . && git commit -m "day-16 init" && git push
+
+syntax keyword
+value
+    user define  > $x='siam';
+    predefine > $x=true;
+ operator
+ expression
+
+statement
+    Single line st
+         $x='siam';
+    conditional st
+         if, else if, else, switch';
+    repeated st
+    for
+    while
+    do
+    while
+    foreach > handel with array object
+
+array>index>object>value
+
+
+
