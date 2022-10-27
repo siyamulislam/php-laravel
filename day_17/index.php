@@ -2,10 +2,10 @@
 
 require_once 'vendor/autoload.php';
 
-use App\classes\Array2;
-$array= new Array2();
+use App\classes\Home;
+$home= new Home();
 
-$array->index();
+$home->index();
 
 
 
