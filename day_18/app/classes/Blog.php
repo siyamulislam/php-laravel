@@ -44,4 +44,12 @@ class blog
     {
         return $this->blogs;
     }
+
+    public function getBlogDetails($blogId){
+        foreach ($this->blogs as $blog){
+            if ($blog['id']==$blogId){
+                return $blog;
+            }
+        }
+    }
 }

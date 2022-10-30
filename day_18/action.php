@@ -14,5 +14,10 @@ else if ($_GET['page']=='blogs'){
     include "pages/blogs.php";
 }
 else if ($_GET['page']=='details'){
+
+    $blog= new Blog();
+    $details=$blog->getBlogDetails($_GET['id']);
+//    echo '<pre>';
+//print_r($details);
     include "pages/details.php";
 }
