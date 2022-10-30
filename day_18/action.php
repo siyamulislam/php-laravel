@@ -13,3 +13,6 @@ else if ($_GET['page']=='blogs'){
     $blogs=$blog->allBlogs();
     include "pages/blogs.php";
 }
+else if ($_GET['page']=='details'){
+    include "pages/details.php";
+}
