@@ -3,9 +3,9 @@
 require_once 'vendor/autoload.php';
 
 use App\classes\Home;
-$hello= new \App\classes\Hello();
+$home= new \App\classes\Home();
 
-$hello->greating();
+$home->index();
 
 
 
