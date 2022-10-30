@@ -14,7 +14,7 @@
                             <h3><?php echo $blog['title'] ?> </h3>
 <!--                             <p >--><?php //echo substr($blog['description'],0, 220)?><!--</p>-->
                              <p ><?php echo substr_replace($blog['description'],'...', 220)?></p>
-                             <a href="action.php?page=details&&id=3" class="btn btn-outline-success float-end">View</a>
+                             <a href="action.php?page=details&&id=<?php echo $blog['id'] ?>" class="btn btn-outline-success float-end">View</a>
                          </div>
                      </div>
                  </div>
