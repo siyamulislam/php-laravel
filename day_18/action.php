@@ -7,7 +7,9 @@ if ($_GET['page']=='home'){
 else if ($_GET['page']=='blogs'){
     $blog= new Blog();
 //    print_r($blog->allBlogs());
-    echo '<pre>';
-    print_r($blog->allBlogs());
+//    echo '<pre>';
+//    print_r($blog->allBlogs());
+
+    $blogs=$blog->allBlogs();
     include "pages/blogs.php";
 }
