@@ -3,9 +3,13 @@
     <section class="py-5">
         <div class="container">
             <div class="row">
-                <div class="col-md-6 mx-auto">
+                <div class="col-md-7 mx-auto">
                     <div class="card bg-dark text-white">
-                        <div class="card-header text-center display-6 text-info fw-bold">Get Full Name</div>
+                        <div class="row">
+                            <div class="col-md-3"></div>
+                            <div class="col-md-9"><div class="card-header display-6 text-info fw-bold">Get Full Name</div></div>
+                        </div>
+
                         <div class="card-body">
                             <form action="action.php" method="post">
                                 <div class="row mb-3">
