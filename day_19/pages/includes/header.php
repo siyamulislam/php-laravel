@@ -17,7 +17,9 @@
         <a href="" class="text-uppercase navbar-brand"> Logo</a>
         <ul class="navbar-nav">
             <li><a href="action.php?page=home" class="nav-link">Home</a></li>
-            <li><a href="action.php?page=fullName" class="nav-link">Full Name</a></li>
+            <li><a href="action.php?page=full-name" class="nav-link">Full Name</a></li>
+            <li><a href="action.php?page=calculator" class="nav-link">Calculator</a></li>
+            <li><a href="action.php?page=series" class="nav-link">Number Series</a></li>
         </ul>
     </div>
 </nav>
