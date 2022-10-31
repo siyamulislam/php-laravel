@@ -2,6 +2,7 @@
 
 use App\classes\Calculator;
 use App\classes\FullName;
+use App\classes\series;
 
 require_once './vendor/autoload.php';
 $result='';
@@ -18,10 +19,10 @@ if(isset($_GET['page'])){
     {
         include "pages/calculator.php";
     }
-//    elseif ($_GET['page'] == 'series')
-//    {
-//        include 'pages/series.php';
-//    }
+    elseif ($_GET['page'] == 'series')
+    {
+        include 'pages/series.php';
+    }
 }
 
 
@@ -38,9 +39,9 @@ elseif( isset($_POST['calculate_btn']))
     $result = $calculator->getResult();
     include "pages/calculator.php";
 }
-//elseif(isset($_POST['series_btn']))
-//{
-//    $series = new Series($_POST);
-//    $result = $series->getResult();
-//    include "pages/series.php";
-//}
+elseif(isset($_POST['series_btn']))
+{
+    $series = new Series($_POST);
+    $result = $series->getResult();
+    include "pages/series.php";
+}
