@@ -28,7 +28,7 @@
                             <div class="row mb-3">
                                 <div class="col-md-3">Result</div>
                                 <div class="col-md-9">
-                                    <textarea type="text" cols="10" rows="5" class="form-control" value="<?php echo $result ?>"></textarea>
+                                    <textarea type="text" cols="10" rows="5" class="form-control" value=""><?php echo $result ?></textarea>
                                 </div>
                             </div>
                             <div class="row mb-3">
