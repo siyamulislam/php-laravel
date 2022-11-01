@@ -3,6 +3,7 @@
 use App\classes\Calculator;
 use App\classes\EvenOdd;
 use App\classes\FullName;
+use App\classes\PasswordGenerate;
 use App\classes\series;
 use App\classes\Sumofseries;
 
