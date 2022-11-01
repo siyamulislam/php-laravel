@@ -1,6 +1,7 @@
 <?php
 
 use App\classes\Calculator;
+use App\classes\EvenOdd;
 use App\classes\FullName;
 use App\classes\series;
 use App\classes\Sumofseries;
@@ -27,7 +28,7 @@ if(isset($_GET['page'])){
 
     elseif ($_GET['page'] == 'sum-series')
     {
-        include 'pages/sumofseries.php';
+        include 'pages/sum-of-series.php';
     }
     elseif ($_GET['page'] == 'even-odd')
     {
@@ -61,9 +62,9 @@ elseif(isset($_POST['series_btn']))
 }
 elseif(isset($_POST['sum_series_btn']))
 {
-    $sumofseries = new Sumofseries($_POST);
-    $result = $sumofseries->getResult();
-    include "pages/sumofseries.php";
+    $sumOfSeries = new Sumofseries($_POST);
+    $result = $sumOfSeries->getResult();
+    include "pages/sum-of-series.php";
 }
 elseif(isset($_POST['even_odd_btn']))
 {

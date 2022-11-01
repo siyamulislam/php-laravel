@@ -1,12 +1,15 @@
-<?php include "header.php" ?>
+<?php include "includes/header.php" ?>
 
 
 <section class="py-5">
     <div class="container">
         <div class="row">
-            <div class="col-md-8 mx-auto">
+            <div class="col-md-7 mx-auto">
                 <div class="card bg-dark text-white fw-bold">
-                    <div class="card-header text-center fw-bold display-6 text-info">Even & Odd Generator</div>
+                    <div class="row">
+                        <div class="col-md-3"></div>
+                        <div class="col-md-9"><div class="card-header fw-bold display-6 text-info">Even & Odd Generator</div></div>
+                    </div>
                     <div class="card-body">
                         <form action="action.php" method="post">
                             <div class="row mb-3">
@@ -49,4 +52,4 @@
 </section>
 
 
-<?php include "footer.php" ?>
+<?php include "includes/footer.php" ?>
