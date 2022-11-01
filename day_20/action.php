@@ -5,7 +5,7 @@ use App\classes\EvenOdd;
 use App\classes\FullName;
 use App\classes\PasswordGenerate;
 use App\classes\series;
-use App\classes\Sumofseries;
+use App\classes\SumOfSeries;
 
 require_once './vendor/autoload.php';
 $result='';
@@ -63,7 +63,7 @@ elseif(isset($_POST['series_btn']))
 }
 elseif(isset($_POST['sum_series_btn']))
 {
-    $sumOfSeries = new Sumofseries($_POST);
+    $sumOfSeries = new SumOfSeries($_POST);
     $result = $sumOfSeries->getResult();
     include "pages/sum-of-series.php";
 }

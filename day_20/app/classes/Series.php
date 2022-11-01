@@ -25,14 +25,16 @@ class series
             for ($this->start_number; $this->start_number <= $this->end_number; $this->start_number++) {
                 $this->x .= $this->start_number . ", ";
             }
-            return $this->x;
+//            return $this->x;
+            return rtrim($this->x,', ');
         }
         else
         {
             for ($this->start_number; $this->start_number >= $this->end_number; $this->start_number--) {
                 $this->x .= $this->start_number . ", ";
             }
-            return $this->x;
+//            return $this->x;
+            return rtrim($this->x,', ');
         }
     }
 }

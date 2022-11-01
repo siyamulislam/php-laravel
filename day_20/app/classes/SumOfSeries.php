@@ -4,7 +4,7 @@
 namespace App\classes;
 
 
-class Sumofseries
+class SumOfSeries
 {
     public $startingNumber, $endingNumber, $result, $series;
 
