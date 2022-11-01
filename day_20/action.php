@@ -3,6 +3,7 @@
 use App\classes\Calculator;
 use App\classes\FullName;
 use App\classes\series;
+use App\classes\Sumofseries;
 
 require_once './vendor/autoload.php';
 $result='';
@@ -22,6 +23,19 @@ if(isset($_GET['page'])){
     elseif ($_GET['page'] == 'series')
     {
         include 'pages/series.php';
+    }
+
+    elseif ($_GET['page'] == 'sum-series')
+    {
+        include 'pages/sumofseries.php';
+    }
+    elseif ($_GET['page'] == 'even-odd')
+    {
+        include 'pages/even-odd.php';
+    }
+    elseif ($_GET['page'] == 'password-generator')
+    {
+        include 'pages/password-generator.php';
     }
 }
 
@@ -44,4 +58,22 @@ elseif(isset($_POST['series_btn']))
     $series = new Series($_POST);
     $result = $series->getResult();
     include "pages/series.php";
+}
+elseif(isset($_POST['sum_series_btn']))
+{
+    $sumofseries = new Sumofseries($_POST);
+    $result = $sumofseries->getResult();
+    include "pages/sumofseries.php";
+}
+elseif(isset($_POST['even_odd_btn']))
+{
+    $evenOdd = new EvenOdd($_POST);
+    $result = $evenOdd->getResult();
+    include "pages/even-odd.php";
+}
+elseif(isset($_POST['password_btn']))
+{
+    $passwordGenerate = new PasswordGenerate($_POST);
+    $result = $passwordGenerate->newPassword();
+    include "pages/password-generator.php";
 }

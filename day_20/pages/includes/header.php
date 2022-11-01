@@ -19,7 +19,10 @@
             <li><a href="action.php?page=home" class="nav-link">Home</a></li>
             <li><a href="action.php?page=full-name" class="nav-link">Full Name</a></li>
             <li><a href="action.php?page=calculator" class="nav-link">Calculator</a></li>
-            <li><a href="action.php?page=series" class="nav-link">Number Series</a></li>
+            <li><a href="action.php?page=series" class="nav-link">Series</a></li>
+            <li><a href="action.php?page=sum-series" class="nav-link">Sum of Series</a></li>
+            <li><a href="action.php?page=even-odd" class="nav-link">Even & Odd</a></li>
+            <li><a href="action.php?page=password-generator" class="nav-link">Password Generator</a></li>
         </ul>
     </div>
 </nav>

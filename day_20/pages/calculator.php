@@ -28,11 +28,17 @@
                             <div class="row mb-3">
                                 <div class="col-md-3">Action</div>
                                 <div class="col-md-9 fs-4 text-center">
-                                    <label><input type="radio" checked name="action" value="+"/> + </label>
-                                    <label><input type="radio" name="action" value="-"/> - </label>
-                                    <label><input type="radio" name="action" value="*"/> * </label>
-                                    <label><input type="radio" name="action" value="/"/> / </label>
+                                    <label><input type="radio" checked name="action" value="+"/> + </label> &nbsp;
+                                    <label><input type="radio" name="action" value="-"/> - </label> &nbsp;
+                                    <label><input type="radio" name="action" value="*"/> * </label> &nbsp;
+                                    <label><input type="radio" name="action" value="/"/> / </label> &nbsp;
                                     <label><input type="radio" name="action" value="%"/> % </label>
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <div class="col-md-3">Result</div>
+                                <div class="col-md-9">
+                                    <input type="text" value="<?php echo $result ?>" class="form-control" readonly/>
                                 </div>
                             </div>
                             <div class="row mb-3">
@@ -42,12 +48,7 @@
                                            name="calculate_btn">
                                 </div>
                             </div>
-                            <div class="row mb-3">
-                                <div class="col-md-3">Result</div>
-                                <div class="col-md-9">
-                                    <input type="text" value="<?php echo $result ?>" class="form-control" readonly/>
-                                </div>
-                            </div>
+
                         </form>
                     </div>
                 </div>
