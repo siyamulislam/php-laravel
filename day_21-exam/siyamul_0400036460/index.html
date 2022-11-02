@@ -9,6 +9,9 @@
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/fontawesome/css/all.css">
     <link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous"/>
 </head>
 <body>
 
@@ -126,7 +129,7 @@
         </div>
     </section>
 
-    <section class="latest-work py-5">
+    <section class="latest-work bg-oc py-5">
         <div class="container">
             <div class="row">
                 <div class="col-md-12 text-center">
@@ -154,6 +157,23 @@
                     </div>
                 </div>
             </div>
+
+<!--            owl carosaul-->
+            <div class="row">
+                <div class="owl-carousel owl-theme">
+                    <div class="item"><h4><img src="img/slider-1.jpg" alt="image" /></h4></div>
+                    <div class="item"><h4><img src="img/slider-2.jpg" alt="image" /></h4></div>
+                    <div class="item"><h4><img src="img/slider-3.jpg" alt="image" /></h4></div>
+                    <div class="item"><h4><img src="img/slider-4.jpg" alt="image" /></h4></div>
+                    <div class="item"><h4><img src="img/slider-5.jpg" alt="image" /></h4></div>
+                    <div class="item"><h4><img src="img/slider-6.jpg" alt="image" /></h4></div>
+                    <div class="item"><h4><img src="img/slider-7.jpg" alt="image" /></h4></div>
+                    <div class="item"><h4><img src="img/slider-8.jpg" alt="image" /></h4></div>
+                    <div class="item"><h4><img src="img/slider-9.jpg" alt="image" /></h4></div>
+                    <div class="item"><h4><img src="img/slider-10.jpg" alt="image" /></h4></div>
+                    <div class="item"><h4><img src="img/slider-4.jpg" alt="image" /></h4></div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -170,19 +190,7 @@
             </div>
         </div>
     </section>
-<section>
-    <div class="owl-carousel owl-theme">
 
-        <div class="item">
-            <h4><img src="./img/slider02.jpg" alt="image" /></h4>
-        </div>
-        <div class="item">
-            <h4><img src="./img/slider03.jpg" alt="image" /></h4>
-        </div>
-
-<!--        https://aguidehub.com/blog/how-to-use-owl-carousel-in-bootstrap-5/-->
-    </div>
-</section>
 
     <footer>
         <section class="footer-top py-5">
@@ -267,5 +275,28 @@
 
     <script src="js/bootstrap.bundle.js"></script>
     <script src="js/jquery-3.6.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $(".owl-carousel").owlCarousel();
+        });
+
+        $('.owl-carousel').owlCarousel({
+            loop: true,
+            margin: 10,
+            nav: true,
+            responsive: {
+                0: {
+                    items: 1
+                },
+                600: {
+                    items: 3
+                },
+                1000: {
+                    items: 4
+                },
+            }
+        })
+    </script>
 </body>
 </html>
