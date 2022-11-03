@@ -1,0 +1,12 @@
+##PHP ==>
+
+composer dump-autoload
+php -S 127.0.0.1:800
+
+git add . && git commit -m "day-22 init" && git push
+
+https://bdixtv.serverbd247.com/live/gazi-tv/
+http://live.hoihulloor.com/#/?playlistId=0&videoId=0
+
+
+
