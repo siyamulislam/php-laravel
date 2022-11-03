@@ -6,18 +6,27 @@ namespace App\classes;
 
 class WordCount
 {
-    public $words;
+    public $inputStrings;
+    private $resultData;
 
     public function __construct($post)
     {
-        $this->words = $post['wordsData'];
+        $this->inputStrings = $post['wordsData'];
     }
 
-    public function getWords()
+    public function getCountedStrings()
     {
-        $words=str_word_count($this->words);
-        $length=strlen($this->words);
+        $words=str_word_count($this->inputStrings);
+        $chars=strlen($this->inputStrings);
 
-         return "Words :".$words." | ".'Character : '.$length;
+//        $this->resultData=[
+//            'totalWord'=>$words,
+//            'totalChar'=>$chars,
+//            'inputString'=>$this->inputStrings
+//        ];
+//        return $this->resultData;
+
+        if($chars<0) return '';
+         else return "Words :".$words." | ".'Characters : '.$chars;
     }
 }

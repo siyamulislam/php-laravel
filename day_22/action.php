@@ -88,6 +88,6 @@ elseif(isset($_POST['password_btn']))
 elseif (isset($_POST['word_btn']))
 {
     $wordCount = new WordCount($_POST);
-    $result = $wordCount->getWords();
+    $result = $wordCount->getCountedStrings();
     include "pages/word-count.php";
 }

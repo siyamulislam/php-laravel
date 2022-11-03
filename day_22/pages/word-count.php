@@ -15,7 +15,7 @@
                             <div class="row mb-3">
                                 <label for="words" class="col-md-3 fw-bold">Enter Word</label>
                                 <div class="col-md-9">
-                                    <textarea type="text" name="wordsData" class="form-control" id="wordsData" rows="3"  ></textarea>
+                                    <textarea type="text" name="wordsData" class="form-control" id="wordsData" rows="2"  ></textarea>
                                 </div>
                             </div>
 
