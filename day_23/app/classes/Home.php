@@ -4,7 +4,7 @@
 namespace App\classes;
 
 
-class Home
+class Home extends Student
 
 
 
@@ -13,8 +13,10 @@ class Home
     protected $email='damu@mail.com';
     private $password;
     public function  name(){
-        echo 'Siam';
-        echo $this->email();
+//        echo 'Siam';
+//        echo $this->email();
+//        $this->one();
+        $this->two();
     }
     protected function  email(){
         echo 'siyamul@gmail.com';
