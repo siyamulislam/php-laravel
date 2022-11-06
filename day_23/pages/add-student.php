@@ -44,7 +44,7 @@
                             <div class="row mb-3">
                                 <div class="col-md-3">Address</div>
                                 <div class="col-md-9">
-                                    <textarea type="text" class="form-control" rows="2" placeholder="Your Address"></textarea>
+                                    <textarea type="text" class="form-control" name="address" rows="2" placeholder="Your Address"></textarea>
                                 </div>
                             </div>
                             <div class="row mb-3">
@@ -57,7 +57,7 @@
                             <div class="row mb-3">
                                 <div class="col-md-3"></div>
                                 <div class="col-md-9">
-                                    <input type="submit" value="add_student" class="btn btn-outline-info w-100" name="add_student">
+                                    <input type="submit" value="Add Student" class="btn btn-outline-info w-100" name="add_student">
                                 </div>
                             </div>
 

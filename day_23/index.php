@@ -5,7 +5,7 @@ use App\classes\Home;
 use App\classes\Student;
 
 $home = new Home();
-$st = new Student();
+//$st = new Student();
 
 $home->index();
 

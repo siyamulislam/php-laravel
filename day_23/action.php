@@ -23,16 +23,26 @@ if (isset($_GET['page'])) {
 
         include 'pages/add-student.php';
     }
-} elseif (isset($_POST['btn'])) {
-    if ($_POST['btn'] == 'add_student') {
-
-
-        $student = new Student($_POST, $_FILES);
-        $saveStudentInfo = $student->saveStudentInfo();
-        include "pages/add-student.php";
-    }
-
 }
+
+//elseif (isset($_POST['btn'])) {
+//    if ($_POST['btn'] == 'add_student') {
+//
+//        echo "feeeeeeeeeeeeeeeeeeeeeeeeeeffffere";
+////        $student = new Student($_POST, $_FILES);
+////        $saveStudentInfo = $student->saveStudentInfo();
+////        include "pages/add-student.php";
+//    }
+//
+//}
+
+elseif (isset($_POST['add_student']))
+{
+    $student = new Student($_POST, $_FILES);
+    $saveStudentInfo = $student->saveStudentInfo();
+    include "pages/add-student.php";
+}
+
 
 
 
