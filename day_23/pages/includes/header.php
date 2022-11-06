@@ -17,12 +17,12 @@
 
 <nav class="navbar navbar-expand-md navbar-dark bg-dark py-3 shadow-lg">
     <div class="container">
-        <a href="" class="navbar-brand">LOGO</a>
+        <a href="" class="navbar-brand fw-bold">LOGO</a>
         <ul class="navbar-nav">
-            <li><a href="action.php?page=home" class="nav-link text-uppercase fw-bold text-light shadow-lg">Home</a></li>
-            <li><a href="action.php?page=add-student" class="nav-link text-uppercase fw-bold text-light shadow-lg">Add Student</a></li>
+            <li><a href="action.php?page=home" class="nav-link  ">Home</a></li>
+            <li><a href="action.php?page=add-student" class="nav-link  ">Add Student</a></li>
 			<li class="dropdown">
-				<a href="" class="dropdown-toggle nav-link text-uppercase fw-bold text-light shadow-lg" data-bs-toggle="dropdown">Gender</a>
+				<a href="" class="dropdown-toggle nav-link   " data-bs-toggle="dropdown">Gender</a>
 				<ul class="dropdown-menu">
 
 					<?php foreach ($categories as $category) { ?>
