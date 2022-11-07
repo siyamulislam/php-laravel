@@ -27,7 +27,7 @@ class Student
 
         $this->imageName = time() . $this->image['name'];
 
-        $this->imageDirectory = 'assets/img/uploads/' . $this->imageName;
+        $this->imageDirectory = 'assets/img/upload/' . $this->imageName;
         move_uploaded_file($this->image['tmp_name'], $this->imageDirectory);
 
         echo "success";
