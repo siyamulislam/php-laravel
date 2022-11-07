@@ -15,8 +15,8 @@
                             <div class="row mb-3">
                                 <div class="col-md-3">Category Name</div>
                                 <div class="col-md-9">
-                                    <select name="category_id" id="" class="form-control text-muted">
-                                        <option value=""  >Select a category</option>
+                                    <select name="category_id" id="" class="form-control ">
+                                        <option value="" class="text-muted"  >Select a category</option>
                                         <?php foreach ($categories as $category){?>
                                             <option value=" <?php echo $category['id']?>" class="text-dark" > <?php echo $category['name']?>  </option>
                                         <?php } ?>
