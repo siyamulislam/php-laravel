@@ -3,6 +3,7 @@
 require_once 'vendor/autoload.php';
 
 use App\classes\Category;
+use App\classes\Product;
 
 $category = new Category();
 $categories = $category->getCategories();
@@ -17,7 +18,16 @@ if (isset($_GET['page'])) {
 
         include 'pages/add-product.php';
     }
+}
+elseif (isset($_POST['btn'])){
+    if ($_POST['btn']== 'Add Product'){
+        $product= new Product($_POST,$_FILES);
+//        echo "<pre>";
+//        print_r($_FILES);
+        $product->saveProductInfo();
+        include "pages/add-product.php";
 
+    }
 }
 
 

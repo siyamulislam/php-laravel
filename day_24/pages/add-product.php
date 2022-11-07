@@ -24,32 +24,28 @@
                                 </div>
                             </div>
                             <div class="row mb-3">
-                                <div class="col-md-3">Name</div>
+                                <div class="col-md-3">Product Name</div>
                                 <div class="col-md-9">
-                                    <input type="text" class="form-control" name="name" placeholder="Your Name" >
+                                    <input type="text" class="form-control" name="name" placeholder="Enter product name" >
                                 </div>
                             </div>
                             <div class="row mb-3">
-                                <div class="col-md-3">Email</div>
+                                <div class="col-md-3">Product Price</div>
                                 <div class="col-md-9">
-                                    <input type="email" class="form-control" name="email" placeholder="Your Email"  >
+                                    <input type="number" class="form-control" name="price" placeholder="Enter product price"  >
                                 </div>
                             </div>
+
                             <div class="row mb-3">
-                                <div class="col-md-3">Phone</div>
+                                <div class="col-md-3">Product Description</div>
                                 <div class="col-md-9">
-                                    <input type="text" class="form-control" name="phone" placeholder="Your Phone"  >
-                                </div>
-                            </div>
-                            <div class="row mb-3">
-                                <div class="col-md-3">Address</div>
-                                <div class="col-md-9">
-                                    <textarea type="text" class="form-control" name="address" rows="2" placeholder="Your Address"></textarea>
+                                    <textarea type="text" class="form-control" name="description" rows="2" placeholder="Write product description"></textarea>
                                 </div>
                             </div>
                             <div class="row mb-3">
                                 <div class="col-md-3">Image</div>
                                 <div class="col-md-9">
+<!--                                    <input type="file" class="form-control" name="image[]" multiple accept="image/*"  required>-->
                                     <input type="file" class="form-control" name="image"  accept="image/*"  required>
                                 </div>
                             </div>
@@ -57,7 +53,7 @@
                             <div class="row mb-3">
                                 <div class="col-md-3"></div>
                                 <div class="col-md-9">
-                                    <input type="submit" value="Add Product" class="btn btn-outline-info w-100" name="add_product">
+                                    <input type="submit" name="btn" value="Add Product" class="btn btn-outline-info w-100" >
                                 </div>
                             </div>
 
