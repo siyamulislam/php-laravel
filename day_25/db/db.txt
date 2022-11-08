@@ -1,0 +1,1 @@
+ 1,Shirt,342,100 % cotton,assets/img/upload/1667898272-5648_arg.jpg$ 2,Shoe,5454, best comfort,assets/img/upload/1667898295-5671_images.jpg$ 3,pampus,1200,Suitable for Hot Weather,assets/img/upload/1667898587-4277_images.jpg$ 2,Lehenga,2000,nice look and perfect comfort,assets/img/upload/1667906181-4244_thumb-1920-1039949.jpg$
