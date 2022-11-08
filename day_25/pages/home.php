@@ -22,6 +22,7 @@
                            </tr>
                             </thead>
                             <tbody>
+
                             <tr>
                                 <td>1</td>
                                 <td>Man Fashion</td>
@@ -30,6 +31,20 @@
                                 <td>Pure cotton 100%. Buy and feel comfort all night</td>
                                 <td><img src="assets/img/logo.jpg" alt="" style="height:50px"></td>
                             </tr>
+                            <?php $i=1;?>
+                            <?php foreach ($products as $product) {?>
+<!--                               --><?php //echo "<pre>"; print_r($categories[$product['category_id']]['name']) ?>
+<!--                               --><?php //echo  ($product['category_id']) ?>
+<!--                               --><?php //$id=$product['category_id']; echo  ($categories[3]['name']) ?>
+                                <tr>
+                                    <td><?php echo $i++ ?></td>
+                                    <td><?php echo $product['name'] ?></td>
+                                    <td><?php echo $product['name'] ?></td>
+                                    <td><?php echo $product['price'] ?></td>
+                                    <td><?php echo $product['description'] ?></td>
+                                    <td><img src="<?php echo $product['image'] ?>" alt="" style="height:50px"></td>
+                                </tr>
+                            <?php }?>
                             </tbody>
                         </table>
                     </div>
