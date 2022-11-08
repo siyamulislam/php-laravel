@@ -1,7 +1,6 @@
 <?php include "pages/includes/header.php"; ?>
 
-<h1 class=" text-center   mt-5"> Home Page</h1>
-<div class="py-5">
+<section class="py-5">
     <div class="container">
         <div class="row">
             <div class="col-md-10 mx-auto">
@@ -10,7 +9,7 @@
                         <h3 class="text-center">All Product</h3>
                     </div>
                     <div class="card-body">
-                        <table class="table table-hover table-striped">
+                        <table class="table  table-bordered table-hover table-striped">
                             <thead>
                            <tr>
                                <th>#</th>
@@ -22,7 +21,6 @@
                            </tr>
                             </thead>
                             <tbody>
-
 
                             <?php $i=1;?>
                             <?php foreach ($products as $product) {?>
@@ -42,6 +40,6 @@
             </div>
         </div>
     </div>
-</div>
+</section>
 
 <?php include "pages/includes/footer.php"; ?>

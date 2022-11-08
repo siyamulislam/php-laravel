@@ -9,11 +9,11 @@
                     <div class="row">
                         <div class="col-md-3"></div>
                         <div class="col-md-9"><div class="card-header fw-bold display-6 text-info">Add Product</div></div>
-                        <h3 class="text-success" >  <? echo isset($message)?  $message : ''; ?>   </h3>
                     </div>
                     <div class="card-body">
 
                         <form action="action.php" method="post" enctype="multipart/form-data">
+                            <h3 class="text-success text-center" > <?php echo isset($message)?  $message : '' ?> </h3>
                             <div class="row mb-3">
                                 <div class="col-md-3">Category Name</div>
                                 <div class="col-md-9">
@@ -25,6 +25,7 @@
                                     </select>
                                 </div>
                             </div>
+
                             <div class="row mb-3">
                                 <div class="col-md-3">Product Name</div>
                                 <div class="col-md-9">
@@ -45,7 +46,7 @@
                                 </div>
                             </div>
                             <div class="row mb-3">
-                                <div class="col-md-3">Image</div>
+                                <div class="col-md-3">Product Image</div>
                                 <div class="col-md-9">
 <!--                                    <input type="file" class="form-control" name="image[]" multiple accept="image/*"  required>-->
                                     <input type="file" class="form-control" name="image"  accept="image/*"  required>
