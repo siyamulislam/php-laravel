@@ -9,8 +9,10 @@
                     <div class="row">
                         <div class="col-md-3"></div>
                         <div class="col-md-9"><div class="card-header fw-bold display-6 text-info">Add Product</div></div>
+                        <h3 class="text-success" >  <? echo isset($message)?  $message : ''; ?>   </h3>
                     </div>
                     <div class="card-body">
+
                         <form action="action.php" method="post" enctype="multipart/form-data">
                             <div class="row mb-3">
                                 <div class="col-md-3">Category Name</div>

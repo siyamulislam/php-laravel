@@ -12,8 +12,10 @@ $categories = $category->getCategories();
 if (isset($_GET['page'])) {
 
     if ($_GET['page'] == 'home') {
+        $product= new Product(  );
+        $products= $product->getAllProducts();
 
-        include 'pages/home.php';
+//        include 'pages/home.php';
     } elseif ($_GET['page'] == 'add-product') {
 
         include 'pages/add-product.php';
@@ -24,7 +26,7 @@ elseif (isset($_POST['btn'])){
         $product= new Product($_POST,$_FILES);
 //        echo "<pre>";
 //        print_r($_FILES);
-        $product->saveProductInfo();
+        $message=$product->saveProductInfo();
         include "pages/add-product.php";
 
     }

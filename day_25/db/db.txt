@@ -1,1 +1,1 @@
- 1,Shirt,2500,Colorful OS ,assets/img/upload/1667819600-1360_images.jpg 3,Shoe,4530,comfort size,assets/img/upload/1667819631-3361_download.png
+ 1,Shirt,342,100 % cotton,assets/img/upload/1667898272-5648_arg.jpg$ 2,Shoe,5454, best comfort,assets/img/upload/1667898295-5671_images.jpg$ 3,pampus,1200,Suitable for Hot Weather,assets/img/upload/1667898587-4277_images.jpg$

@@ -21,24 +21,26 @@ class Product
     public $filePath;
     public $fileContent;
 
-    public function __construct($post, $file)
+    public function __construct($post=null, $file=null)
     {
-        $this->category_id  = $post['category_id'];
-        $this->name         = $post['name'];
-        $this->price        = $post['price'];
-        $this->description  = $post['description'];
-        $this->image        = $file['image'];
+        if ($post){
+            $this->category_id  = $post['category_id'];
+            $this->name         = $post['name'];
+            $this->price        = $post['price'];
+            $this->description  = $post['description'];
+        }
+        if ($file){
+            $this->image        = $file['image'];
+        }
     }
 
     public function saveProductInfo()
     {
-
-
         $this->imageDirectory = $this->uploadImage();
 
         $this->filePath = 'db/db.txt';
         $this->file = fopen($this->filePath, 'a');
-        $this->fileContent = "$this->category_id,$this->name,$this->price,$this->description,$this->imageDirectory";
+        $this->fileContent = "$this->category_id,$this->name,$this->price,$this->description,$this->imageDirectory$";
         fwrite($this->file, $this->fileContent);
         fclose($this->file);
         return "data Saved Successfully";
@@ -54,4 +56,14 @@ class Product
         return $this->imageDirectory;
     }
 
+
+    public  function getAllProducts(){
+        $this->filePath = 'db/db.txt';
+        $this->fileContent=file_get_contents($this->filePath);
+        echo "<pre>";
+       print_r(explode('$',rtrim($this->fileContent,'$')));
+
+//        return $this->product;
+    }
 }
+
