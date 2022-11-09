@@ -24,6 +24,11 @@ if (isset($_GET['page'])) {
     } elseif ($_GET['page'] == 'category') {
         $products = $product->getProductsByCategory($_GET['id']);
         include 'pages/category-product.php';
+    } elseif ($_GET['page'] == 'product-detail') {
+        $single_product = $product->getProductById($_GET['id']);
+        include 'pages/product-detail.php';
+    } elseif ($_GET['page'] == 'login') {
+        include 'pages/login.php';
     }
 } elseif (isset($_POST['btn'])) {
     if ($_POST['btn'] == 'Add Product') {

@@ -92,9 +92,6 @@ return $this->arrayDetails;
     {
         $this->arrayDetails=$this->getAllProducts();
         foreach ($this->arrayDetails as $product)
-//            echo '<pre>';
-//            print_r($product);
-//         exit();
         {
             if($product['category_id'] == $categoryId)
             {
@@ -102,6 +99,18 @@ return $this->arrayDetails;
             }
         }
       return $this->categoryProducts;
+    }
+
+    public function getProductById($productId)
+    {
+        $this->arrayDetails=$this->getAllProducts();
+        foreach ($this->arrayDetails as $product)
+        {
+            if($product['price'] == $productId)
+            {
+                return $product;
+            }
+        }
     }
 }
 

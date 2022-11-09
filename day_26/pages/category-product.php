@@ -11,8 +11,10 @@
                             <div class="card-body">
                                 <h3><?php echo $product['name'] ?></h3>
                                 <h5>Tk. <?php echo $product['price'] ?></h5>
-                                <small><?php echo substr($product['description'],0,38)." ..." ?></small>
-                <a href="action.php?page=product-detail&id=<?php echo $product['id'] ?>" class="btn btn-outline-info d-block">More details</a>
+<!--                                <small>--><?php //echo substr($product['description'],0,38)." ..." ?><!--</small>-->
+                                 <a href=" " class="btn btn-outline-info d-block mb-2">Add to Cart</a>
+
+                                <a href="action.php?page=product-detail&id=<?php echo $product['price']?>" class="btn btn-outline-info d-block">More details</a>
                             </div>
                         </div>
                     </div>

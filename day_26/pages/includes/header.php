@@ -34,6 +34,7 @@
 
 				</ul>
 			</li>
+            <li><a href="action.php?page=login" class="nav-link">Login</a></li>
         </ul>
     </div>
 </nav>
