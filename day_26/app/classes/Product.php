@@ -24,6 +24,8 @@ class Product
     public $arrayContent;
     public $arrayDetails=[];
 
+    public $categoryProducts = [];
+
     public function __construct($post=null, $file=null)
     {
         if ($post){
@@ -82,6 +84,24 @@ class Product
 //        echo "<pre>";
 //        print_r($this->arrayDetails);
 return $this->arrayDetails;
+    }
+
+
+
+    public function getProductsByCategory($categoryId)
+    {
+        $this->arrayDetails=$this->getAllProducts();
+        foreach ($this->arrayDetails as $product)
+//            echo '<pre>';
+//            print_r($product);
+//         exit();
+        {
+            if($product['category_id'] == $categoryId)
+            {
+                array_push($this->categoryProducts, $product);
+            }
+        }
+      return $this->categoryProducts;
     }
 }
 

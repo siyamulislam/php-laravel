@@ -28,7 +28,7 @@
 
 					<?php foreach ($categories as $category) { ?>
 
-					<li><a href="" class="dropdown-item"><?php echo $category['name']; ?></a></li>
+					<li><a href="action.php?page=category&id=<?php echo $category['id'] ?>" class="dropdown-item"><?php echo $category['name']; ?></a></li>
 
                     <?php } ?>
 

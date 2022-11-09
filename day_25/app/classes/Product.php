@@ -83,5 +83,7 @@ class Product
 //        print_r($this->arrayDetails);
 return $this->arrayDetails;
     }
+
+
 }
 
