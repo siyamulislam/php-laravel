@@ -1,5 +1,11 @@
 <?php include "pages/includes/header.php"; ?>
+<?php
+session_start();
+$_SESSION['name'] = "Siam";
+echo $_SESSION['name'];
 
+
+?>
 <section class="py-5">
     <div class="container">
         <div class="row">
@@ -11,28 +17,28 @@
                     <div class="card-body">
                         <table class="table  table-bordered table-success table-hover table-striped">
                             <thead>
-                           <tr>
-                               <th>#</th>
-                               <th>Category Name</th>
-                               <th>Product Name</th>
-                               <th>Product Price</th>
-                               <th>Product Description</th>
-                               <th>Product Image</th>
-                           </tr>
+                            <tr>
+                                <th>#</th>
+                                <th>Category Name</th>
+                                <th>Product Name</th>
+                                <th>Product Price</th>
+                                <th>Product Description</th>
+                                <th>Product Image</th>
+                            </tr>
                             </thead>
                             <tbody>
 
-                            <?php $i=1;?>
-                            <?php foreach ($products as $product) {?>
+                            <?php $i = 1; ?>
+                            <?php foreach ($products as $product) { ?>
                                 <tr>
                                     <td><?php echo $i++ ?></td>
-                                    <td><?php echo ($categories[--$product['category_id']]['name']) ?></td>
+                                    <td><?php echo($categories[--$product['category_id']]['name']) ?></td>
                                     <td><?php echo $product['name'] ?></td>
                                     <td><?php echo $product['price'] ?></td>
                                     <td><?php echo $product['description'] ?></td>
                                     <td><img src="<?php echo $product['image'] ?>" alt="" style="height:50px"></td>
                                 </tr>
-                            <?php }?>
+                            <?php } ?>
                             </tbody>
                         </table>
                     </div>

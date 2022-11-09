@@ -18,10 +18,12 @@ if (isset($_GET['page'])) {
         $products= $product->getAllProducts();
 //print_r($products);
        include 'pages/home.php';
-    } elseif ($_GET['page'] == 'add-product') {
+    }
+    elseif ($_GET['page'] == 'add-product') {
 
         include 'pages/add-product.php';
     }
+
 }
 elseif (isset($_POST['btn'])){
     if ($_POST['btn']== 'Add Product'){
