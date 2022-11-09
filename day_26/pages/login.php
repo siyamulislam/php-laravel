@@ -13,6 +13,7 @@
                         </div>
                         <div class="card-body">
                             <form action="action.php" method="post">
+                                <p class="text-danger text-center"> <?php echo isset($result)? $result:""?></p>
                                 <div class="row mb-3">
                                     <div class="col-md-3">Email</div>
                                     <div class="col-md-9">
@@ -29,8 +30,12 @@
                                 <div class="row mb-3">
                                     <div class="col-md-3"></div>
                                     <div class="col-md-9">
-                                        <input type="submit" value="Login" class="btn btn-outline-info w-100"
-                                               name="login">
+                                        <input type="submit" value="Login" class="btn btn-outline-info w-100" name="btn">
+                                        <div class="mt-2 text-center ">
+                                            <a href="" class="text-muted">
+                                                <small>New user? Register now</small>
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
 

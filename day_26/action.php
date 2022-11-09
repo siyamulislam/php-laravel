@@ -4,6 +4,7 @@ require_once 'vendor/autoload.php';
 
 use App\classes\Category;
 use App\classes\Product;
+use App\classes\Auth;
 
 $category = new Category();
 $categories = $category->getCategories();
@@ -35,6 +36,19 @@ if (isset($_GET['page'])) {
         $product = new Product($_POST, $_FILES);
         $message = $product->saveProductInfo();
         include "pages/add-product.php";
+
+    }
+    elseif ($_POST['btn'] == 'Login') {
+        $auth = new Auth($_POST);
+        $result= $auth->login();
+        if ($result=='success'){
+            include "pages/add-product.php";
+        }
+        else {
+//            echo '<script>alert("Email/Password is invalid!")</script>';
+            include "pages/login.php";
+        }
+
 
     }
 
