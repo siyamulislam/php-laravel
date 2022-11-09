@@ -1,0 +1,10 @@
+##PHP ==>
+
+composer dump-autoload
+php -S 127.0.0.1:800
+
+git add . && git commit -m "login auth" && git push
+
+
+
+

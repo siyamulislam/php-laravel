@@ -9,13 +9,14 @@
     <link rel="stylesheet" href="assets/css/bootstrap.css">
     <link rel="stylesheet" href="assets/css/all.css">
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon">
 </head>
 <body>
 
 <header>
-    <nav class="navbar navbar-expand-md navbar-dark bg-dark py-3 text-uppercase">
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark py-0 text-uppercase">
         <div class="container">
-            <a href="action.php?page=home" class="navbar-brand">E-commerce Website</a>
+            <a href="" class="navbar-brand fw-bold"><img src="assets/img/logo.jpg" alt="" width="50" class="img-fluid "></a>
             <ul class="navbar-nav">
                 <li><a href="action.php?page=home" class="nav-link">Home</a></li>
                 <li><a href="action.php?page=category" class="nav-link">Category</a></li>
