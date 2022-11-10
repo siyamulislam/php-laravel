@@ -1,3 +1,4 @@
+<?php session_start();?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -11,7 +12,7 @@
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-
+<?php if (isset($_SESSION['id'])){?>
 <nav class="navbar navbar-expand-md bg-dark navbar-dark">
     <div class="container">
         <a href="" class="text-uppercase navbar-brand"> Logo</a>
@@ -22,7 +23,9 @@
             <li><a href="action.php?page=series" class="nav-link">Series</a></li>
             <li><a href="action.php?page=file-upload" class="nav-link">File Upload</a></li>
             <li><a href="action.php?page=file-rw" class="nav-link">File R/W</a></li>
-            <li><a href="action.php?page=login" class="nav-link">Login</a></li>
+<!--            <li><a href="action.php?page=login" class="nav-link">Login</a></li>-->
+            <li><a href="action.php?page=logout" class="nav-link">Logout</a></li>
         </ul>
     </div>
 </nav>
+<?php } ?>

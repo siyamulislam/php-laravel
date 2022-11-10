@@ -1,5 +1,5 @@
 <?php include "includes/header.php" ?>
-
+<?php if (isset($_SESSION['id'])){  header("Location: action.php? page=home");} ?>
     <section class="py-5">
         <div class="container">
             <div class="row">
@@ -12,8 +12,8 @@
                             </div>
                         </div>
                         <div class="card-body">
+                            <p class="text-danger text-center"> <?php echo isset($authResult)? $authResult:""?></p>
                             <form action="action.php" method="post">
-                                <p class="text-danger text-center"> <?php echo isset($authResult)? $authResult:""?></p>
                                 <div class="row mb-3">
                                     <div class="col-md-3">Email</div>
                                     <div class="col-md-9">

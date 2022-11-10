@@ -22,8 +22,22 @@ if (isset($_GET['page'])) {
         include "pages/file-rw.php";
     } elseif ($_GET['page'] == 'login') {
         include "pages/login.php";
+    } elseif ($_GET['page'] == 'logout') {
+        $auth = new Auth($_POST);
+        $auth->logout();
+        include "pages/login.php";
     }
-} elseif (isset($_POST['calculate_btn'])) {
+}
+
+
+
+
+
+
+
+
+
+elseif (isset($_POST['calculate_btn'])) {
     $calculator = new Calculator($_POST);
     $result = $calculator->getResult();
     include "pages/calculator.php";
@@ -41,13 +55,13 @@ elseif (isset($_POST['btn'])) {
    if ($_POST['btn'] == 'Login') {
         $auth = new Auth($_POST);
        $authResult= $auth->login();
-        if ($authResult=='success'){
-            include "pages/series.php";
-        }
-        else {
-//            echo '<script>alert("Email/Password is invalid!")</script>';
+//        if ($authResult=='success'){
+//            include "pages/series.php";
+//        }
+//        else {
+////            echo '<script>alert("Email/Password is invalid!")</script>';
             include "pages/login.php";
-        }
+//        }
 
 
     }
