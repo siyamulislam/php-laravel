@@ -14,13 +14,14 @@
 <body>
 
 <header>
-    <nav class="navbar navbar-expand-md navbar-dark bg-dark py-0 text-uppercase">
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark py-0  ">
         <div class="container">
             <a href="" class="navbar-brand fw-bold"><img src="assets/img/logo.jpg" alt="" width="50" class="img-fluid "></a>
             <ul class="navbar-nav">
                 <li><a href="action.php?page=home" class="nav-link">Home</a></li>
                 <li><a href="action.php?page=category" class="nav-link">Category</a></li>
                 <li><a href="action.php?page=brand" class="nav-link">Brand</a></li>
+                <li><a href="action.php?page=add-brand" class="nav-link">Add Brand</a></li>
             </ul>
         </div>
     </nav>

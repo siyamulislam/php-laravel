@@ -6,9 +6,9 @@
                 <?php foreach ($brands as $brand) { ?>
                     <div class="col-md-4">
                         <div class="card bg-dark text-white mb-3">
-                            <img src="assets/img/<?php echo $brand['brand_image']?>" alt="" height="250" class="card-img">
+                            <img src="<?php echo $brand['image']?>" alt="" height="250" class="card-img">
                             <div class="card-body">
-                                <h3><?php echo $brand['brand_name']?></h3>
+                                <h3><?php echo $brand['name']?></h3>
                                 <a href="action.php?page=brand-product&&brand_id=<?php echo $brand['brand_id']?>" class="btn btn-outline-info">View</a>
                             </div>
                         </div>
