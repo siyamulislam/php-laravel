@@ -9,7 +9,7 @@
                             <img src="<?php echo $category['image']?>" alt="" height="250" class="card-img">
                             <div class="card-body">
                                 <h3><?php echo $category['name']?></h3>
-                                <a href="action.php?page=category-product&&category_id=<?php echo $category['id']?>" class="btn btn-outline-info">View
+                                <a href="action.php?page=category-product&&category_id=<?php echo $category['category_id']?>" class="btn btn-outline-info">View
                                 </a>
                             </div>
                         </div>
