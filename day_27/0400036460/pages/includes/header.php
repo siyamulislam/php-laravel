@@ -22,6 +22,7 @@
                 <li><a href="action.php?page=category" class="nav-link">Category</a></li>
                 <li><a href="action.php?page=brand" class="nav-link">Brand</a></li>
                 <li><a href="action.php?page=add-brand" class="nav-link">Add Brand</a></li>
+                <li><a href="action.php?page=add-category" class="nav-link">Add Category</a></li>
             </ul>
         </div>
     </nav>

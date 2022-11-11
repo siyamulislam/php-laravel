@@ -8,20 +8,23 @@ use App\classes\Category;
 
 
 $product = new Product();
-$category = new Category();
+//$category = new Category();
 //$brand = new Brand();
 
 $brand = new Brand($_POST, $_FILES);
-
 $brands = $brand->getAllBrand();
-$lastBrandID= $brand->getLastBrandID();
+$lastBrandID = $brand->getLastBrandID();
+
+$category = new Category($_POST, $_FILES);
+$categories = $category->getAllCategory();
+$lastCategoryID = $category->getLastCategoryID();
 
 if (isset($_GET['page'])) {
     if ($_GET['page'] == 'home') {
         $products = $product->getAllProduct();
         include 'pages/home.php';
     } elseif ($_GET['page'] == 'category') {
-        $categories = $category->getAllCategory();
+//        $categories = $category->getAllCategory();
         include 'pages/category.php';
     } elseif ($_GET['page'] == 'category-product') {
         $productsByCategory = $product->getProductsByCategory($_GET['category_id']);
@@ -36,22 +39,27 @@ if (isset($_GET['page'])) {
     } elseif ($_GET['page'] == 'product-details') {
         $singleProduct = $product->getProductByid($_GET['id']);
         include 'pages/product-details.php';
-    }elseif ($_GET['page'] == 'add-brand') {
+    } elseif ($_GET['page'] == 'add-brand') {
         include 'pages/add-brand.php';
+    } elseif ($_GET['page'] == 'add-category') {
+        include 'pages/add-category.php';
     }
-}
-
-elseif (isset($_POST['btn'])) {
+} elseif (isset($_POST['btn'])) {
     if ($_POST['btn'] == 'Add Brand') {
         $brand = new Brand($_POST, $_FILES);
-        $lastBrandID= $brand->getLastBrandID();
+        $lastBrandID = $brand->getLastBrandID();
         $message = $brand->saveBrandInfo();
 //        echo '<script>alert("Email/Password is invalid!")</script>';
         header("Location: action.php?page=add-brand");
 //       include "pages/add-brand.php";
 //       sleep(2);
     }
-
+    if ($_POST['btn'] == 'Add Category') {
+        $category = new Category($_POST, $_FILES);
+        $lastCategoryID = $category->getLastCategoryID();
+        $message = $category->saveCategoryInfo();
+        header("Location: action.php?page=add-category");
+    }
 
 
 }
