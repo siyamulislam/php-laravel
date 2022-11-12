@@ -70,7 +70,7 @@ class Product
             6=>[
                 "id"=>7,
                 "category_id"=>3,
-                "name"=>'three pis',
+                "name"=>'Three pieces',
                 "brand_id"=>3,
                 "description"=>'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters',
                 'price'=>'1800',
@@ -81,7 +81,7 @@ class Product
                 "category_id"=>4,
                 "name"=>'Kids t-shirt',
                 "brand_id"=>2,
-                "description"=>'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters',
+                "description"=>'PRODUCT DETAILS Size : 5-10 Years,10-16 Years TRADE INFO Quantity : 100 Pieces Destination Place : Colombo, Sri Lanka PRICE INFO FOB Price : Price on request ADDITIONAL INFORMATION Payment Terms : L/C Import Country : Central Asia,Eastern Asia,South Asia,Southeast Asia Coats Digital Messe Frankfurt Middle East GmbH Other Buying Offer From This Buyer',
                 'price'=>450,
                 'image'=>'product8.jpg'
             ],
@@ -90,7 +90,7 @@ class Product
                 "category_id"=>4,
                 "brand_id"=>2,
                 "name"=>'Kids Pant',
-                "description"=>'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters',
+                "description"=>'Product details of Yellow Color full Pant For Kids Brand New and High Quality Yellow Color Made of Cotton Original Export Quality No harm forbabies\' skin Comfortable and warm for babies Stylish and fashion design make your baby more attractive Great for casual, daily, party or photoshoot, also a great idea for a baby show gifts About Kids Pant Kids Pants are an item of clothing worn from the waist to the ankles, covering both legs separately. The word pants generally means underwear and not Leggings . Shorts are similar to Leggings , but with legs that come down only to around the area of the knee, higher or lower depending on the style of the garment. To distinguish them from shorts, trousers may be called long trousers in certain contexts. The seller offers a wide selection of products from renowned brands in Bangladesh with a promise of fast, safe and easy online shopping experience through Daraz. The seller comes closer to the huge customers on this leading online shopping platform of all over Bangladesh and serving to the greater extent of achieving higher customer satisfaction. The brands working with Daraz are not only serving top class products but also are dedicated to acquiring brand loyalty. Specifications of Yellow Color full Pant For Kids BrandFashion ParkSKU117262078_BD-1036450605Main MaterialCotton What’s in the box	Yellow Color full Pant For Kids',
                 'price'=>780,
                 'image'=>'product9.jpg'
             ],
@@ -99,7 +99,7 @@ class Product
                 "category_id"=>4,
                 "brand_id"=>3,
                 "name"=>'Kids Shirt',
-                "description"=>'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters',
+                "description"=>'Please enter PIN code to check delivery time & Pay on Delivery Availability 100% Original Products Pay on delivery might be available Easy 30 days returns and exchanges Try & Buy might be available BEST OFFERS Best Price: Rs. 479 Applicable on: Orders above Rs. 599 (only on first purchase) Coupon code: MYNTRA200 Coupon Discount: Rs. 200 off (check cart for final savings) View Eligible Products EMI option available EMI starting from Rs.32/month View Plan PRODUCT DETAILS Shirt in an airy cotton weave with a turn-down collar, buttons down the front and a yoke at the back. Long sleeves with buttoned cuffs, and a rounded hem. Material & Care 100% Cotton Machine Wash Specifications Sleeve Length Long Sleeves Collar Spread Collar Fit Regular Fit Print or Pattern Type Polka Dots Occasion Casual Length Regular Hemline Curved Placket Button Placket',
                 'price'=>500,
                 'image'=>'product10.jpg'
             ],
@@ -118,7 +118,7 @@ class Product
                 "category_id"=>3,
                 "name"=>'Red White Saree',
                 "brand_id"=>3,
-                "description"=>' Silk sarees have their origins in Dhaka, Bangladesh and were popularized during the Mughal rule in India. Very delicate to touch and exotic to',
+                "description"=>'Silk sarees have their origins in Dhaka, Bangladesh and were popularized during the Mughal rule in India. Very delicate to touch and exotic to',
                 'price'=>'3200',
                 'image'=>'product12.jpg'
             ],

@@ -10,7 +10,7 @@
                     <div class="card-body">
                         <h3><?php echo $product['name']?></h3>
                         <h5>Tk. <?php echo $product['price']?></h5>
-                        <a href="action.php?page=product-details&&id=<?php echo $product['id'] ?>" class="btn btn-outline-info">More details</a>
+                        <a href="action.php?page=product-details&&id=<?php echo $product['product_id'] ?>" class="btn btn-outline-info">More details</a>
                     </div>
                 </div>
             </div>

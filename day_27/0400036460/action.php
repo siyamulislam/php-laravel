@@ -30,7 +30,7 @@ if (isset($_GET['page'])) {
     } elseif ($_GET['page'] == 'category') {
         include 'pages/category.php';
     } elseif ($_GET['page'] == 'category-product') {
-        $productsByCategory = $product->getProductsByCategory($_GET['category_id']);
+        $productsByCategory = $productt->getProductsByCategory($_GET['category_id']);
         include 'pages/category-product.php';
     } elseif ($_GET['page'] == 'brand') {
 //        echo '<pre>';
@@ -40,7 +40,7 @@ if (isset($_GET['page'])) {
         $productByBrand = $product->getProductsByBrand($_GET['brand_id']);
         include 'pages/brand-product.php';
     } elseif ($_GET['page'] == 'product-details') {
-        $singleProduct = $product->getProductByid($_GET['id']);
+        $singleProduct = $productt->getProductByID($_GET['id']);
         include 'pages/product-details.php';
     } elseif ($_GET['page'] == 'add-brand') {
         include 'pages/add-brand.php';

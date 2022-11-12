@@ -49,7 +49,7 @@ class Products
 
         $this->filePath = 'assets/db/product.txt';
         $this->file = fopen($this->filePath, 'a');
-        $this->fileContent = "$this->product_id,$this->category_id,$this->brand_id,$this->name,$this->price,$this->description,$this->imageDirectory$";
+        $this->fileContent = "$this->product_id,-^-,$this->category_id,-^-,$this->brand_id,-^-,$this->name,-^-,$this->price,-^-,$this->description,-^-,$this->imageDirectory$-^-$"."\n";
         fwrite($this->file, $this->fileContent);
         fclose($this->file);
         return "product Saved Successfully";
@@ -67,11 +67,11 @@ class Products
     public  function getAllProducts(){
         $this->filePath = 'assets/db/product.txt';
         $this->fileContent=file_get_contents($this->filePath);
-        $this->productList= explode('$',rtrim($this->fileContent,'$'));
+        $this->productList= explode('$-^-$'."\n",rtrim($this->fileContent,'$-^-$'."\n"));
         foreach ($this->productList as $key=> $value){
-            $this->productContent=explode(",",$value);
+            $this->productContent=explode(",-^-,",$value);
             if($this->productContent[0]){
-                $this->productDetails[$key]['category_id']=$this->productContent[0];
+                $this->productDetails[$key]['product_id']=$this->productContent[0];
                 $this->productDetails[$key]['category_id']=$this->productContent[1];
                 $this->productDetails[$key]['brand_id']=$this->productContent[2];
                 $this->productDetails[$key]['name']=$this->productContent[3];
@@ -98,12 +98,15 @@ return $this->productDetails;
       return $this->categoryProducts;
     }
 
-    public function getProductById($productId)
+    public function getProductByID($productId)
     {
         $this->productDetails=$this->getAllProducts();
+        echo $productId;
+//        echo "<pre>";
+//        print_r($this->productDetails);
         foreach ($this->productDetails as $product)
         {
-            if($product['price'] == $productId)
+            if($product['product_id'] == $productId)
             {
                 return $product;
             }
@@ -113,9 +116,9 @@ return $this->productDetails;
     public  function getLastProductID(){
         $this->filePath = 'assets/db/product.txt';
         $this->fileContent=file_get_contents($this->filePath);
-        $this->productList= explode('$',rtrim($this->fileContent,'$'));
+        $this->productList= explode('$-^-$'."\n",rtrim($this->fileContent,'$-^-$'."\n"));
         foreach ($this->productList as $key=> $value){
-            $this->productContent=explode(",",$value);
+            $this->productContent=explode(",-^-,",$value);
             if($this->productContent[0]){
                 $this->lastProductID= $this->productContent[0];
             }
