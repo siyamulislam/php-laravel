@@ -8,8 +8,8 @@
                         <div class="card bg-dark text-white mb-3">
                             <img src="<?php echo $product['image']?>" alt="" height="250" class="card-img">
                             <div class="card-body">
-                                <h3><?php echo $product['name']?></h3>
-                                <h5>Tk. <?php echo $product['price']?></h5>
+                                <h5><?php echo $product['name']?></h5>
+                                <h6>Tk. <?php echo $product['price']?></h6>
                                 <a href="action.php?page=product-details&&id=<?php echo $product['product_id'] ?>" class="btn btn-outline-info">More details</a>
                             </div>
                         </div>
