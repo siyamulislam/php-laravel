@@ -2,11 +2,11 @@
 
 //echo $_GET['page'];
 require_once 'vendor/autoload.php';
-use App\classes\Products;
+use App\classes\Product;
 
 
 if($_GET['page']=='home') {
-    $products= new Products();
+    $products= new Product();
     $allProducts= $products->allProducts();
     include 'pages/home.php';
 }

@@ -5,7 +5,7 @@
             <div class="row py-5 bg-dark">
                 <div class="col-md-6">
                     <div class="card">
-                        <img src="assets/img/<?php echo $singleProduct['image']?>" alt="" class="" height="500">
+                        <img src="<?php echo $singleProduct['image']?>" alt="" class="" height="500">
                     </div>
                 </div>
                 <div class="col-md-6 text-white">
