@@ -15,7 +15,16 @@ Route> web.php
 
 php artisan make:controller HomeController
 
+composer install
+copy .env.example .env
+php artisan key:generate
+
+
+
 URL>R<>c(<>V)<>M<>D
+
+
+composer install
 
 
 git add . && git commit -m "day-28 init" && git push
