@@ -13,6 +13,15 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+//Route::get('/', function () {
+//    return view('welcome');
+//});
+//Route::get('/home', function () {
+//    return view("home");
+//});
+
+
+Route::get('/', [\App\Http\Controllers\HomeController::class,'welcome']);
+Route::get('/home', [\App\Http\Controllers\HomeController::class,'home']);
+Route::get('/bitm', [\App\Http\Controllers\HomeController::class,'bitm']);
+Route::get('/basis', [\App\Http\Controllers\HomeController::class,'basis']);
