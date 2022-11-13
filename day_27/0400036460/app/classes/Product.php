@@ -50,7 +50,7 @@ class Product
 
         $this->filePath = 'assets/db/product.txt';
         $this->file = fopen($this->filePath, 'a');
-        $this->fileContent = "$this->product_id,-^-,$this->category_id,-^-,$this->brand_id,-^-,$this->name,-^-,$this->price,-^-,$this->description,-^-,$this->imageDirectory$-^-$"."\n";
+        $this->fileContent = "$this->product_id,-^-,$this->category_id,-^-,$this->brand_id,-^-,$this->name,-^-,$this->price,-^-,$this->description,-^-,$this->imageDirectory$-^-$";
         fwrite($this->file, $this->fileContent);
         fclose($this->file);
         return "product Saved Successfully";
@@ -68,7 +68,7 @@ class Product
     public  function getAllProducts(){
         $this->filePath = 'assets/db/product.txt';
         $this->fileContent=file_get_contents($this->filePath);
-        $this->productList= explode('$-^-$'."\n",rtrim($this->fileContent,'$-^-$'."\n"));
+        $this->productList= explode('$-^-$',rtrim($this->fileContent,'$-^-$'));
         foreach ($this->productList as $key=> $value){
             $this->productContent=explode(",-^-,",$value);
             if($this->productContent[0]){
@@ -126,7 +126,7 @@ return $this->productDetails;
     public  function getLastProductID(){
         $this->filePath = 'assets/db/product.txt';
         $this->fileContent=file_get_contents($this->filePath);
-        $this->productList= explode('$-^-$'."\n",rtrim($this->fileContent,'$-^-$'."\n"));
+        $this->productList= explode('$-^-$',rtrim($this->fileContent,'$-^-$'));
         foreach ($this->productList as $key=> $value){
             $this->productContent=explode(",-^-,",$value);
             if($this->productContent[0]){
