@@ -1,0 +1,15 @@
+##PHP ==>
+
+composer dump-autoload
+php -S 127.0.0.1:800
+
+##LARAVEL ==>
+composer create-project laravel/laravel laravel-app
+cd laravel-app
+
+php artisan serve
+
+git add . && git commit -m "day-18 init" && git push
+
+
+
