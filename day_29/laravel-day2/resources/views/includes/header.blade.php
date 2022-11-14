@@ -21,9 +21,11 @@
     <div class="container">
         <a href="" class="navbar-brand">LOGO</a>
         <ul  class="navbar-nav">
-            <li><a class="nav-link" href="{{ route('home') }}">      Home</a></li>
-            <li><a class="nav-link" href="{{ route('about') }}">     About</a> </li>
-            <li><a class="nav-link" href="{{ route('contact') }}">   Contact</a></li>
+            <li><a class="nav-link" href="{{ route('home') }}">         Home</a></li>
+            <li><a class="nav-link" href="{{ route('about') }}">        About</a> </li>
+            <li><a class="nav-link" href="{{ route('contact') }}">      Contact</a></li>
+            <li><a class="nav-link" href="{{ route('calculator') }}">   Calculator</a></li>
+            <li><a class="nav-link" href="{{ route('series') }}">       Series</a></li>
         </ul>
     </div>
 
