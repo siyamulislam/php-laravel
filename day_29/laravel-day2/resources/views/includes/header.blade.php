@@ -28,8 +28,3 @@
     </div>
 
 </nav>
-<h1>This is About Page</h1>
-
-<script src="{{asset('/')}}assets/js/bootstrap.bundle.css"></script>
-</body>
-</html>
