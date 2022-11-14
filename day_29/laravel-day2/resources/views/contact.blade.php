@@ -9,15 +9,16 @@
 </head>
 <body>
 {{--<ul>--}}
-{{--    <li><a href="{{ route('home') }}">Home</a></li>--}}
-{{--    <li><a href="{{ route('about') }}">About</a></li>--}}
-{{--    <li><a href="{{ route('contact') }}">Contact</a></li>--}}
+{{--    <li><a href="{{ url('/') }}">Home</a></li>--}}
+{{--    <li><a href="{{ url('/about') }}">About</a></li>--}}
+{{--    <li><a href="{{ url('/contact') }}">Contact</a></li>--}}
 {{--</ul>--}}
 <ul>
-    <li><a href="{{ url('/') }}">Home</a></li>
-    <li><a href="{{ url('/about') }}">About</a></li>
-    <li><a href="{{ url('/contact') }}">Contact</a></li>
+    <li><a href="{{ route('home') }}">Home</a></li>
+    <li><a href="{{ route('about') }}">About</a></li>
+    <li><a href="{{ route('contact') }}">Contact</a></li>
 </ul>
+
 <h1>This is Contact Page</h1>
 </body>
 </html>
