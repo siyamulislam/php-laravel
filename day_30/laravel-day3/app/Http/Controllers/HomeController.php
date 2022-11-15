@@ -2,13 +2,21 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Product;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
+public $products,$product;
     public function home()
     {
-        return view("home");
+//        $product= new Product();//object with static
+//        $product->products();
+//        Product::products();//scope with static
+//        echo '<pre>';
+//        print_r(Product::products());
+       $this->products =Product::products();
+        return view("home", ['products' => $this->products]);
     }
 
     public function about()
@@ -29,5 +37,11 @@ class HomeController extends Controller
     public function series()
     {
         return view("series");
+    }
+    public function detail($id)
+    {
+        $this->product = Product::getProductById($id);
+//        echo "$this->products";
+        return view('detail',['product'=> $this->product]);
     }
 }
