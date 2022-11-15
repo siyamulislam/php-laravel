@@ -1,0 +1,33 @@
+##PHP ==>
+
+composer dump-autoload
+php -S 127.0.0.1:800
+
+##LARAVEL ==>
+composer create-project laravel/laravel laravel-app
+cd laravel-app
+php artisan serve
+stackoverflow
+https://laracasts.com/
+
+public> index.php
+Route> web.php
+
+php artisan make:controller HomeController
+
+composer install
+copy .env.example .env
+php artisan key:generate
+php artisan serve
+
+
+URL>R<>c(<>V)<>M<>D
+
+
+composer install
+
+
+git add . && git commit -m "day-28 init" && git push
+
+
+
