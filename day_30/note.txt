@@ -1,5 +1,4 @@
 ##PHP ==>
-
 composer dump-autoload
 php -S 127.0.0.1:800
 
@@ -7,21 +6,18 @@ php -S 127.0.0.1:800
 composer create-project laravel/laravel laravel-app
 cd laravel-app
 php artisan serve
-stackoverflow
-https://laracasts.com/
 
 public> index.php
 Route> web.php
 
 php artisan make:controller HomeController
+//singular form
+php artisan make:model Product
 
 composer install
 copy .env.example .env
 php artisan key:generate
 php artisan serve
-
-
-URL>R<>c(<>V)<>M<>D
 
 
 composer install
