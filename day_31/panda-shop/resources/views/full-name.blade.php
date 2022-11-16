@@ -37,7 +37,7 @@
                                 <div class="row mb-3">
                                     <label for="" class="col-md-3 fw-bold">Full Name</label>
                                     <div class="col-md-9">
-                                        <input type="text" value=" " class="form-control" placeholder="Full Name">
+                                        <input type="text" value="{{Session::has('result')?Session::get('result'):'' }}" class="form-control" placeholder="Full Name">
 {{--                                        <input type="text" value="" class="form-control" placeholder="Full Name">--}}
                                     </div>
                                 </div>
