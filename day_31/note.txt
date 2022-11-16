@@ -23,7 +23,7 @@ php artisan serve
 composer install
 
 
-git add . && git commit -m "day-28 init" && git push
+git add . && git commit -m "laravel mastering" && git push
 
 
 
