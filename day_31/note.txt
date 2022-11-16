@@ -11,6 +11,7 @@ public> index.php
 Route> web.php
 
 php artisan make:controller HomeController
+php artisan make:controller FullNameController
 //singular form
 php artisan make:model Product
 

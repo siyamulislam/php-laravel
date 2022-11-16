@@ -15,8 +15,8 @@
                         <img src="{{asset('/assets/img/brand/'.$brand['image'])}}" alt="" height="250" class="card-img">
                         <div class="card-body">
                             <h3>{{ $brand['name'] }}</h3>
-{{--                            <a href="action.php?page=brand-product&&brand_id=<?php echo $brand['brand_id']?>" class="btn btn-outline-info">View</a>--}}
-                            <a href="" class="btn btn-outline-info">View</a>
+                             <a href="{{ route('brand-product',['id' => $brand['id']]) }}" class="btn btn-outline-info">View</a>
+
                         </div>
                     </div>
                 </div>

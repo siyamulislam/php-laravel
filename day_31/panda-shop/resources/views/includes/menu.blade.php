@@ -5,6 +5,7 @@
             <li><a class="nav-link" href="{{ route('home') }}">         Home</a></li>
             <li><a class="nav-link" href="{{ route('brand') }}">        Brand</a></li>
             <li><a class="nav-link" href="{{ route('category') }}">     Category</a></li>
+            <li><a class="nav-link" href="{{ route('full-name') }}">     Full Name</a></li>
         </ul>
     </div>
 </nav>

@@ -21,18 +21,25 @@ public $brands,$categories;
        $this->brands =Brand::getAllBrands();
         return view("brand.brand", ['brands' => $this->brands]);
     }
+    public function brandProduct($brand_id)
+    {
+       $this->products =Product::getProductsByBrand($brand_id);
+        return view("brand.brand-product", ['products' => $this->products]);
+    }
+
     public function category()
     {
        $this->categories =Category::getAllCategories();
         return view('category.category', ['categories' => $this->categories]);
     }
+    public function fullName()
+    {
+        return view('full-name');
+    }
 
-
-
-    public function detail($id)
+    public function productDetail($id)
     {
         $this->product = Product::getProductById($id);
-//        echo "$this->products";
-        return view('detail',['product'=> $this->product]);
+        return view('product-detail',['product'=> $this->product]);
     }
 }
