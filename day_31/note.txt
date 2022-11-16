@@ -11,6 +11,7 @@ public> index.php
 Route> web.php
 
 php artisan make:controller HomeController
+php artisan make:controller FullNameController
 //singular form
 php artisan make:model Product
 
@@ -19,10 +20,11 @@ copy .env.example .env
 php artisan key:generate
 php artisan serve
 
+
 composer install
 
 
-git add . && git commit -m "day-28 init" && git push
+git add . && git commit -m "laravel mastering" && git push
 
 
 
