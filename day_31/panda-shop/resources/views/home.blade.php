@@ -22,8 +22,7 @@
                                         <hr>
                                         <a href=" " class="btn btn-outline-info">Buy Now</a>
                                         <a href=" " class="btn btn-outline-info">Add to Cart</a>
-                                        {{--                                       <a href=" " class="btn btn-outline-info">View</a>--}}
-                                        <a href="{{ route('product-detail',['id' => $product['id']]) }}" class="btn btn-outline-info">View</a>
+                                         <a href="{{ route('product-detail',['id' => $product['product_id']]) }}" class="btn btn-outline-info">View</a>
 
                                     </div>
                                 </div>
