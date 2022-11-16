@@ -16,6 +16,8 @@ public $brands,$categories;
        $this->products =Product::products();
         return view("home", ['products' => $this->products]);
     }
+
+
     public function brand()
     {
        $this->brands =Brand::getAllBrands();
@@ -27,15 +29,24 @@ public $brands,$categories;
         return view("brand.brand-product", ['products' => $this->products]);
     }
 
+
     public function category()
     {
        $this->categories =Category::getAllCategories();
         return view('category.category', ['categories' => $this->categories]);
     }
+    public function categoryProduct($category_id)
+    {
+        $this->products =Product::getProductsByCategory($category_id);
+        return view("category.category-product", ['products' => $this->products]);
+    }
+
+
     public function fullName()
     {
         return view('full-name');
     }
+
 
     public function productDetail($id)
     {

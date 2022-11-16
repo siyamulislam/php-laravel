@@ -11,7 +11,7 @@
         <div class="row mt-3 ">
             <div class="col-md-5 ">
                 <div class="card card-body  text-white">
-                    <img src="{{asset('/assets/img/product/'.$product['image'])}}" height="400px" alt="">
+                    <img src="{{asset('/assets/img/product/'.$product['image'])}}" height="450px" alt="">
                 </div>
             </div>
             <div class="col-md-7">

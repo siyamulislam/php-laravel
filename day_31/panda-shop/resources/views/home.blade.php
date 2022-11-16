@@ -10,12 +10,12 @@
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <h1 class="text-center">ALl Product</h1>
+                    <h1 class="text-center">All Product</h1>
                     <div class="row">
                         @foreach($products as $product)
-                            <div class="col-md-4 mt-3">
+                            <div class="col-md-3 mt-4">
                                 <div class="card bg-dark text-white">
-                                    <img src="{{asset('/assets/img/product/'.$product['image'])}}" height="280" alt="">
+                                    <img src="{{asset('/assets/img/product/'.$product['image'])}}" height="250" alt="">
                                     <div class="card-body">
                                         <h4 class="card-title">{{ $product['name'] }}</h4>
                                         <p>Price: {{ $product['price'] }} tk</p>

@@ -16,8 +16,8 @@
                             <img src="{{asset('/assets/img/category/'.$category['image'])}}" alt="" height="250" class="card-img">
                             <div class="card-body">
                                 <h3>{{ $category['name'] }}</h3>
-{{--                                <a href="action.php?page=category-product&&category_id=<?php echo $category['category_id']?>" class="btn btn-outline-info">View--}}
-                                <a href="" class="btn btn-outline-info">View  </a>
+                                <a href="{{ route('category-product',['id' => $category['id']]) }}" class="btn btn-outline-info">View</a>
+
                             </div>
                         </div>
                     </div>
