@@ -10,10 +10,16 @@ php artisan serve
 public> index.php
 Route> web.php
 
+//singular form
 php artisan make:controller HomeController
 php artisan make:controller FullNameController
-//singular form
+php artisan make:migration create_students_table
 
+php artisan make:model Product
+php artisan make:model Product -m
+
+php artisan migrate
+php artisan migrate:fresh
 composer install
 copy .env.example .env
 php artisan key:generate
