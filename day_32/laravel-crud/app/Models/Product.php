@@ -12,18 +12,22 @@ class Product extends Model
     protected $fillable=['name','price','description','image'];
 
     public static function createProduct($req){
+
 //        self::$product =new Product();
 //        self::$product->name=$req->name;
 //        self::$product->price=$req->price;
 //        self::$product->description=$req->description;
 //        self::$product->image=$req->image;
 //        self::$product->save();
-        Product::create([
-            'name'=>$req->name,
-            'price'=>$req->price,
-            'description'=>$req->description,
-            'image'=>$req->image,
-        ]);
+
+//        Product::create([
+//            'name'=>$req->name,
+//            'price'=>$req->price,
+//            'description'=>$req->description,
+//            'image'=>$req->image,
+//        ]);
+
+        Product::create($req->all());
     }
 
 }
