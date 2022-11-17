@@ -24,7 +24,7 @@ php artisan serve
 composer install
 
 
-git add . && git commit -m "category implementation" && git push
+git add . && git commit -m "day32 init" && git push
 
 
 
