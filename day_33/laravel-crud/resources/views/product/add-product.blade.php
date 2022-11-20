@@ -19,7 +19,7 @@
                         </div>
                         <div class="card-body">
                             <p class="text-center text-success">{{Session::get('message')}}</p>
-                            <form action="{{'save-product'}}" method="post" enctype="multipart/form-data">
+                            <form action="{{route('save-product')}}}" method="post" enctype="multipart/form-data">
                                 @csrf
                                 <h3 class="text-success text-center"></h3>
 {{--                                <div class="row mb-3">--}}

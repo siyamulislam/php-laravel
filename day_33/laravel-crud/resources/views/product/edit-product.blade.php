@@ -19,8 +19,8 @@
                         </div>
                         <div class="card-body">
                             <p class="text-center text-success">{{Session::get('message')}}</p>
-{{--                            <form action="{{'update-product',['id'=>$product->id]}}" method="post" enctype="multipart/form-data">--}}
-                            <form action="" method="post" enctype="multipart/form-data">
+                            <form action="{{ route('update-product', ['id'=>$product->id]) }}" method="post" enctype="multipart/form-data">
+{{--                            <form action="" method="post" enctype="multipart/form-data">--}}
                                 @csrf
                                 <h3 class="text-success text-center"></h3>
 

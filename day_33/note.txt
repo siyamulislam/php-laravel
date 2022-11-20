@@ -29,7 +29,7 @@ php artisan serve
 composer install
 
 
-git add . && git commit -m "day32 init" && git push
+git add . && git commit -m "update fix" && git push
 
 
 

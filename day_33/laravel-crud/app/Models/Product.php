@@ -52,7 +52,7 @@ class Product extends Model
         self::$product->name=$req->name;
         self::$product->price=$req->price;
         self::$product->description=$req->description;
-        self::$product->image=self::getImageUrl($req);
+        self::$product->image=self::$imageUrl;
         self::$product->save();
     }
     public static function deleteProduct( $id){
