@@ -18,7 +18,7 @@
                             </div>
                         </div>
                         <div class="card-body">
-{{--                            <p class="text-center text-success">{{Session::get('message')}}</p>--}}
+                            <p class="text-center text-success">{{Session::get('message')}}</p>
                             <table class="table table-bordered table-hover table-dark  table-striped">
                                 <thead>
                                 <tr>
@@ -39,10 +39,10 @@
                                    <td>{{ $product->description }}</td>
                                    <td><img src="{{ asset($product->image) }}" alt="" height="50" width="70"></td>
                                    <td>
-                                       <a href="" class="btn btn-primary btn-sm">Edit</a>
-{{--                                       <a href="{{ route('product.edit', ['id'=>$product->id]) }}" class="btn btn-primary btn-sm">Edit</a>--}}
-                                       <a href="" onclick="return confirm('Are you sure to delete this ?')" class="btn btn-danger btn-sm">Delete</a>
-{{--                                       <a href="{{ route('product.delete', ['id'=>$product->id]) }}" onclick="return confirm('Are you sure to delete this ?')" class="btn btn-danger btn-sm">Delete</a>--}}
+
+                                       <a href="{{ route('edit-product', ['id'=>$product->id]) }}" class="btn btn-primary btn-sm">Edit</a>
+                                        <a href="{{ route('delete-product', ['id'=>$product->id]) }}" onclick="return confirm('Are you sure to delete this ?')" class="btn btn-danger btn-sm">Delete</a>
+
                                    </td>
                                </tr>
                                 @endforeach

@@ -11,7 +11,7 @@ class Product extends Model
     public static $product,$image,$imageUrl,$directory,$imageName;
     protected $fillable=['name','price','description','image'];
 
-    public static function getImage($req){
+    public static function getImageUrl($req){
         self::$image=$req->file('image');
         self::$imageName=self::$image->getClientOriginalName();
         self::$directory="product-image/";
@@ -25,7 +25,7 @@ class Product extends Model
         self::$product->name=$req->name;
         self::$product->price=$req->price;
         self::$product->description=$req->description;
-        self::$product->image=self::getImage($req);
+        self::$product->image=self::getImageUrl($req);
         self::$product->save();
 
 //        Product::create([
@@ -36,6 +36,32 @@ class Product extends Model
 //        ]);
 
 //        Product::create($req->all());
+    }
+
+    public static function updateProduct($req, $id){
+        self::$product=Product::find($id);
+        if ($req->file('image')){
+            if (file_exists(self::$product->image)){
+                unlink(self::$product->image);
+            }
+            self::$imageUrl=self::getImageUrl($req);
+        }
+        else{
+            self::$imageUrl=self::$product->image;
+        }
+        self::$product->name=$req->name;
+        self::$product->price=$req->price;
+        self::$product->description=$req->description;
+        self::$product->image=self::getImageUrl($req);
+        self::$product->save();
+    }
+    public static function deleteProduct( $id){
+        self::$product=Product::find($id);
+            if (file_exists(self::$product->image)){
+                unlink(self::$product->image);
+            }
+
+        self::$product->delete();
     }
 
 }
