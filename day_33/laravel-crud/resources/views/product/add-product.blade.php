@@ -19,16 +19,16 @@
                         </div>
                         <div class="card-body">
                             <p class="text-center text-success">{{Session::get('message')}}</p>
-                            <form action="{{route('save-product')}}}" method="post" enctype="multipart/form-data">
+                            <form action="{{route('save-product')}}" method="post" enctype="multipart/form-data">
                                 @csrf
                                 <h3 class="text-success text-center"></h3>
-{{--                                <div class="row mb-3">--}}
-{{--                                    <div class="col-md-3">Product ID</div>--}}
-{{--                                    <div class="col-md-9">--}}
-{{--                                        <input type="number" class="form-control" name="product_id" placeholder="id"--}}
-{{--                                               readonly value="">--}}
-{{--                                    </div>--}}
-{{--                                </div>--}}
+                                {{--                                <div class="row mb-3">--}}
+                                {{--                                    <div class="col-md-3">Product ID</div>--}}
+                                {{--                                    <div class="col-md-9">--}}
+                                {{--                                        <input type="number" class="form-control" name="product_id" placeholder="id"--}}
+                                {{--                                               readonly value="">--}}
+                                {{--                                    </div>--}}
+                                {{--                                </div>--}}
 
                                 <div class="row mb-3">
                                     <div class="col-md-3">Product Name</div>
@@ -76,7 +76,5 @@
     </section>
 
 @endsection
-
-
 
 
