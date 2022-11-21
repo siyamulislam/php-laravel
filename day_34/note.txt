@@ -20,6 +20,10 @@ php artisan make:model Product -m
 
 php artisan migrate
 php artisan migrate:fresh
+
+php artisan migrate:rollback
+php artisan migrate
+
 composer install
 copy .env.example .env
 php artisan key:generate
