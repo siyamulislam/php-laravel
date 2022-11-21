@@ -25,7 +25,7 @@
                                 <div class="row mb-3">
                                     <label class="col-md-3"> Category Name</label>
                                     <div class="col-md-9">
-                                        <select class="form-control" name="">
+                                        <select class="form-control" name="category_id">
                                             <option>--Select Category--</option>
                                             @foreach($categories as $category)
                                                 <option value="{{ $category->id }}">{{ $category->name }}</option>
@@ -44,7 +44,7 @@
                                         <label for="">Short Description</label>
                                     </div>
                                     <div class="col-md-9">
-                                        <input type="text" class="form-control" name="sort-description">
+                                        <input type="text" class="form-control" name="short_description">
                                     </div>
                                 </div>
                                 <div class="row mb-3">
@@ -52,7 +52,7 @@
                                         <label for="">Long Description</label>
                                     </div>
                                     <div class="col-md-9">
-                                        <input type="text" class="form-control" name="long-description">
+                                        <input type="text" class="form-control" name="long_description">
                                     </div>
                                 </div>
                                 <div class="row mb-3">

@@ -15,9 +15,9 @@ return new class extends Migration
     {
         Schema::create('blogs', function (Blueprint $table) {
             $table->id();
-            $table->integer('Category_id');
+            $table->integer('category_id');
             $table->string('title');
-            $table->text('sort_description');
+            $table->text('short_description');
             $table->text('long_description');
             $table->text('image');
             $table->integer('hit_count')->default(0);

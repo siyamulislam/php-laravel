@@ -1,6 +1,6 @@
 @extends('master')
 @section('title')
-    Edit Category
+    Add Category
 @endsection
 
 @section('body')
@@ -9,32 +9,51 @@
             <div class="row">
                 <div class="col-md-8 mx-auto">
                     <div class="card bg-dark text-white">
-                        <div class="card-header ">
+                        <div class="card-header  ">
                             <div class="row">
                                 <div class="col-md-3"></div>
                                 <div class="col-md-9">
-                                    <div class="card-header fw-bold display-6 text-info">Add Category</div>
+                                    <div class="card-header fw-bold display-6 text-info">Add Blog</div>
                                 </div>
                             </div>
 
                         </div>
                         <div class="card-body">
                             <p class="text-center text-success">{{ Session::get('message') }}</p>
-                            <form action="{{ route('category.update', ['id'=>$category->id]) }}" method="post" enctype="multipart/form-data">
+                            <form action="{{route('blog.update', ['id'=>$blog->id])}}" method="post" enctype="multipart/form-data">
                                 @csrf
                                 <div class="row mb-3">
                                     <label class="col-md-3"> Category Name</label>
                                     <div class="col-md-9">
-                                        <input type="text" name="name" value="{{ $category->name }}" class="form-control">
-
+                                        <select class="form-control" name="category_id">
+{{--                                            {{$cat_id=--$blog->category_id}}--}}
+                                            <option value="{{$blog->category_id}}">{{$categories[--$blog->category_id]->name}}</option>
+                                            @foreach($categories as $category)
+                                                <option value="{{ $category->id }}">{{ $category->name }}</option>
+                                            @endforeach
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="row mb-3">
+                                    <label class="col-md-3"> Blog Title</label>
+                                    <div class="col-md-9">
+                                        <input type="text" class="form-control" value="{{$blog->title}}" name="title">
                                     </div>
                                 </div>
                                 <div class="row mb-3">
                                     <div class="col-md-3">
-                                        <label for="">Description</label>
+                                        <label for="">Short Description</label>
                                     </div>
                                     <div class="col-md-9">
-                                       <input name="description" value="{{ $category->description }}" class="form-control">
+                                        <input type="text" class="form-control"value="{{$blog->short_description}}" name="short_description">
+                                    </div>
+                                </div>
+                                <div class="row mb-3">
+                                    <div class="col-md-3">
+                                        <label for="">Long Description</label>
+                                    </div>
+                                    <div class="col-md-9">
+                                        <input type="text" class="form-control" value="{{$blog->long_description}}" name="long_description">
                                     </div>
                                 </div>
                                 <div class="row mb-3">
@@ -42,8 +61,8 @@
                                         <label for="">Image</label>
                                     </div>
                                     <div class="col-md-9">
-                                        <input type="file" class="form-control mb-3" name="image">
-                                        <img src="{{ asset($category->image) }}" alt="" height="50" width="70">
+                                        <input type="file" class="form-control" name="image">
+                                        <img src="{{ asset($blog->image) }}" alt="" height="50" width="70">
                                     </div>
                                 </div>
                                 <div class="row mb-3">
@@ -51,7 +70,7 @@
                                         <label for=""></label>
                                     </div>
                                     <div class="col-md-9">
-                                        <input type="submit" name="update_category" class="btn btn-success" value="Update Category">
+                                        <input type="submit" class="btn btn-outline-info" value="Update Blog">
                                     </div>
                                 </div>
 

@@ -9,7 +9,7 @@ class Blog extends Model
 {
     use HasFactory;
     public static $blog,$image,$imageUrl,$directory,$imageName;
-    protected $fillable=['name','description','image'];
+    protected $fillable=['category_id','title','sort-description','long-description','image'];
     public static function getImageUrl($req){
         self::$image=$req->file('image');
         self::$imageName=self::$image->getClientOriginalName();
@@ -20,8 +20,10 @@ class Blog extends Model
 
     public static function addBlog($req){
         self::$blog=new Blog();
-        self::$blog->name=$req->name;
-        self::$blog->description=$req->description;
+        self::$blog->category_id=$req->category_id;
+        self::$blog->title=$req->title;
+        self::$blog->short_description=$req->short_description;
+        self::$blog->long_description=$req->long_description;
         self::$blog->image=self::getImageUrl($req);
         self::$blog->save();
     }
@@ -39,8 +41,10 @@ class Blog extends Model
         else{
             self::$imageUrl=self::$blog->image;
         }
-        self::$blog->name=$req->name;
-        self::$blog->description=$req->description;
+        self::$blog->category_id=$req->category_id;
+        self::$blog->title=$req->title;
+        self::$blog->short_description=$req->short_description;
+        self::$blog->long_description=$req->long_description;
         self::$blog->image=self::$imageUrl;
         self::$blog->save();
     }

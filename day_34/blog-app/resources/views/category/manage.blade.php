@@ -20,7 +20,7 @@
                                 <thead>
                                 <tr>
                                     <th>Sl</th>
-                                    <th>Category Name</th>
+                                    <th>Blog Title</th>
                                     <th>Description</th>
                                     <th>Image</th>
                                     <th>Action</th>

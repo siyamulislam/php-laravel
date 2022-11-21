@@ -14,40 +14,32 @@
                             </div>
                         </div>
                         <div class="card-body">
+                            <p class="text-success text-center">{{ Session::get('message') }}</p>
+                            <p class="text-danger text-center">{{ Session::get('message_delete') }}</p>
                             <table class="table table-bordered table-hover table-dark  table-striped">
                                 <thead>
                                 <tr>
                                     <th>Sl</th>
-                                    <th>Category Name</th>
-                                    <th>Description</th>
+                                    <th>Blog Category</th>
+                                    <th>Blog Title</th>
+                                    <th>Short Description</th>
+                                    <th>Long Description</th>
                                     <th>Image</th>
                                     <th>Action</th>
                                 </tr>
                                 </thead>
                                 <tbody>
-                                {{--                                <tr>--}}
-                                {{--                                    <td>12</td>--}}
-                                {{--                                    <td>Tilte</td>--}}
-                                {{--                                    <td>gdfffffffdfdfdgdfd</td>--}}
-                                {{--                                    <td><img src="" alt="" height="50" width="70"></td>--}}
-                                {{--                                    <td>--}}
-
-                                {{--                                        <a href=" " class="btn btn-primary btn-sm">Edit</a>--}}
-                                {{--                                        <a href=" " onclick="return confirm('Are you sure to delete this ?')"--}}
-                                {{--                                           class="btn btn-danger btn-sm">Delete</a>--}}
-
-                                {{--                                    </td>--}}
-                                {{--                                </tr>--}}
-                                <tbody>
-                                @foreach($categories as $category)
+                                @foreach($blogs as $blog)
                                     <tr>
                                         <td>{{ $loop->iteration }}</td>
-                                        <td>{{ $category->name }}</td>
-                                        <td>{{ $category->description }}</td>
-                                        <td><img src="{{ asset($category->image) }}" alt="" height="50" width="70"></td>
+                                        <td>{{ $categories[--$blog->category_id]->name }}</td>
+                                        <td>{{ $blog->title }}</td>
+                                        <td>{{ $blog->short_description }}</td>
+                                        <td>{{ $blog->long_description }}</td>
+                                        <td><img src="{{ asset($blog->image) }}" alt="" height="50" width="70"></td>
                                         <td>
-                                            <a href="{{ route('category.edit', ['id'=>$category->id]) }}" class="btn btn-primary btn-sm">Edit</a>
-{{--                                            <a href="{{ route('category.delete', ['id'=>$category->id]) }}" onclick="return confirm('Are you sure to delete this ?')" class="btn btn-danger btn-sm">Delete</a>--}}
+                                            <a href="{{ route('blog.edit', ['id'=>$blog->id]) }}" class="btn btn-primary btn-sm">Edit</a>
+                                            <a href="{{ route('blog.delete', ['id'=>$blog->id]) }}" onclick="return confirm('Are you sure to delete this ?')" class="btn btn-danger btn-sm">Delete</a>
                                         </td>
                                     </tr>
                                 @endforeach
