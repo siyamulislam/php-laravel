@@ -24,4 +24,9 @@ class CategoryController extends Controller
         $this->category = Category::find($id);
         return view('category.edit', ['category' => $this->category]);
     }
+    public function update(Request $request, $id)
+    {
+        Category::updateCategory($request, $id);
+        return redirect('/category/manage')->with('message', 'Category update successfully');
+    }
 }

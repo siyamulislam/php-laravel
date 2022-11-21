@@ -14,7 +14,7 @@ class BlogController extends Controller
     }
     public function store(Request $request)
     {
-        Category::addCategory($request);
+//        Category::addCategory($request);
         return redirect('/category/add')->with('message', 'Category Added Successfully');
     }
 

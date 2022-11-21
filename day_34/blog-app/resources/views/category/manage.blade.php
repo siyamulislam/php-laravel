@@ -25,19 +25,6 @@
                                 </tr>
                                 </thead>
                                 <tbody>
-                                {{--                                <tr>--}}
-                                {{--                                    <td>12</td>--}}
-                                {{--                                    <td>Tilte</td>--}}
-                                {{--                                    <td>gdfffffffdfdfdgdfd</td>--}}
-                                {{--                                    <td><img src="" alt="" height="50" width="70"></td>--}}
-                                {{--                                    <td>--}}
-
-                                {{--                                        <a href=" " class="btn btn-primary btn-sm">Edit</a>--}}
-                                {{--                                        <a href=" " onclick="return confirm('Are you sure to delete this ?')"--}}
-                                {{--                                           class="btn btn-danger btn-sm">Delete</a>--}}
-
-                                {{--                                    </td>--}}
-                                {{--                                </tr>--}}
                                 <tbody>
                                 @foreach($categories as $category)
                                     <tr>

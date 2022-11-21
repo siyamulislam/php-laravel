@@ -17,7 +17,7 @@
                 <a href=" " class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Blog</a>
                 <ul class="dropdown-menu">
                     <li><a href="{{route('blog.add')}}" class="dropdown-item">Add Blog</a></li>
-{{--                    <li><a href="{{route('blog.manage)}}" class="dropdown-item">Manage Blog</a></li>--}}
+                    <li><a href="{{route('blog.manage')}}" class="dropdown-item">Manage Blog</a></li>
                 </ul>
             </li>
         </ul>

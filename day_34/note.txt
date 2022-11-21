@@ -33,7 +33,7 @@ php artisan serve
 composer install
 
 
-git add . && git commit -m "day_34 blogs" && git push
+git add . && git commit -m "category update" && git push
 
 
 
