@@ -32,7 +32,8 @@
                                 @foreach($blogs as $blog)
                                     <tr>
                                         <td>{{ $loop->iteration }}</td>
-                                        <td>{{ $categories[--$blog->category_id]->name }}</td>
+{{--                                        <td>{{ $categories[--$blog->category_id]->name }}</td>--}}
+                                        <td>{{ $blog->category['name'] }}</td>
                                         <td>{{substr( $blog->title , 0, 15).'..' }}</td>
                                         <td >{{substr( $blog->short_description,  0,35).'..'   }}</td>
                                         <td><img src="{{ asset($blog->image) }}" alt="" height="50" width="70"></td>
