@@ -20,26 +20,23 @@
                                 <thead>
                                 <tr>
                                     <th>Sl</th>
-                                    <th>Blog Category</th>
                                     <th>Blog Title</th>
-                                    <th>Short Description</th>
-                                    <th>Long Description</th>
+                                    <th>Description</th>
                                     <th>Image</th>
                                     <th>Action</th>
                                 </tr>
                                 </thead>
                                 <tbody>
-                                @foreach($blogs as $blog)
+                                <tbody>
+                                @foreach($categories as $category)
                                     <tr>
                                         <td>{{ $loop->iteration }}</td>
-                                        <td>{{ $categories[--$blog->category_id]->name }}</td>
-                                        <td>{{ $blog->title }}</td>
-                                        <td >{{substr( $blog->short_description , 0, 35).'...' }}</td>
-                                        <td>{{ substr( $blog->long_description , 0, 35).'..'  }}</td>
-                                        <td><img src="{{ asset($blog->image) }}" alt="" height="50" width="70"></td>
-                                        <td style="width:15%">
-                                            <a href="{{ route('blog.edit', ['id'=>$blog->id]) }}" class="btn btn-primary btn-sm">Edit</a>
-                                            <a href="{{ route('blog.delete', ['id'=>$blog->id]) }}" onclick="return confirm('Are you sure to delete this ?')" class="btn btn-danger btn-sm">Delete</a>
+                                        <td>{{ $category->name }}</td>
+                                        <td>{{ $category->description }}</td>
+                                        <td><img src="{{ asset($category->image) }}" alt="" height="50" width="70"></td>
+                                        <td>
+                                            <a href="{{ route('category.edit', ['id'=>$category->id]) }}" class="btn btn-primary btn-sm">Edit</a>
+                                            <a href="{{ route('category.delete', ['id'=>$category->id]) }}" onclick="return confirm('Are you sure to delete this ?')" class="btn btn-danger btn-sm">Delete</a>
                                         </td>
                                     </tr>
                                 @endforeach
