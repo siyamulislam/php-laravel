@@ -1,4 +1,4 @@
-.h-550{height: 570px}
+.h-550{height: 550px}
 .h-450{height: 450px}
 .h-400{height: 400px}
 .h-300{height: 300px}
@@ -14,12 +14,27 @@ h1, h2, h3, h4, h5, h6 {
     padding-left: 4%;
     width: 100%;
 }
-/*@font-face {*/
-/*    font-family: poppins;*/
-/*    src: url(./../fonts/Poppins-Regular.ttf);*/
-/*}*/
+@font-face {
+    font-family: 'Poppins'; /*a name to be used later*/
+    src: url('./public/assets/fonts/Poppins-Regular.ttf');
+}
+@font-face {
+    font-family: 'SiyamRupali'; /*a name to be used later*/
+    src: url('./public/assets/fonts/Siyamrupali.ttf');
+}
+@font-face {
+    font-family: 'SolaimanLipi'; /*a name to be used later*/
+    src: url('./public/assets/fonts/SolaimanLipi.ttf'); /*URL to font*/
+}
+@font-face {
+    font-family: 'Shurjo'; /*a name to be used later*/
+    src: url('./public/assets/fonts/Shurjo-UNICODE-Regular.ttf'); /*URL to font*/
+}@font-face {
+    font-family: 'ft'; /*a name to be used later*/
+    src: url('./public/assets/fonts/ft.ttf'); /*URL to font*/
+}
 body{
-    font-family: Poppins,sans-serif;
+    font-family: ft,sans-serif;
 }
 .text-df-color{
     color: #ff4800;
@@ -38,7 +53,7 @@ color: white;
       height: 500px;
   }
   .card-form-div{
-      padding-top:80px; 
+      padding-top:80px;
       padding-left: 30px;
       padding-right: 30px;
   }

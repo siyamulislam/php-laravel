@@ -10,12 +10,12 @@
             <div class="row">
                 <div class="col-md-12 mx-auto">
                     <div class="card" style=" ">
-                        <img src="{{ asset($blog->image) }}" class="card-img-top" alt="...">
+                        <img src="{{ asset($blog->image) }}" class="card-img-top h-450" alt="...">
                         <div class="card-body">
                             <h2 class="card-title"> {{ $blog->title }}</h2>
                             <small class="card-title fw-normal text-muted">Category: {{ $categories[--$blog->category_id]->name }}
                              | View: {{ $blog->hit_count }}
-                                | Status: {{ $blog->status }}
+                                | Status: {{ $blog->status=1?"Published":"Unpublished"  }}
                                 | posted on: {{ $blog->	created_at }}
                                 | Last update at: {{ $blog->	updated_at }}
                             </small>
