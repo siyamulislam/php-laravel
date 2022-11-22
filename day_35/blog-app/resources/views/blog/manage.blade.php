@@ -1,12 +1,12 @@
 @extends('master')
 @section('title')
-    Manage Category
+    Manage Blogs
 @endsection
 @section('body')
     <section class="py-5">
         <div class="container">
             <div class="row">
-                <div class="col-md-10 mx-auto">
+                <div class="col-md-12 mx-auto">
                     <div class="card bg-dark text-white">
                         <div class="card-header">
                             <div class="row">
@@ -24,8 +24,8 @@
                                     <th>Blog Title</th>
                                     <th>Short Description</th>
                                     <th>Long Description</th>
-                                    <th>Image</th>
-                                    <th>Action</th>
+                                    <th style="width:8%">Image</th>
+                                    <th style="width:20%">Action</th>
                                 </tr>
                                 </thead>
                                 <tbody>
@@ -34,10 +34,11 @@
                                         <td>{{ $loop->iteration }}</td>
                                         <td>{{ $categories[--$blog->category_id]->name }}</td>
                                         <td>{{ $blog->title }}</td>
-                                        <td >{{substr( $blog->short_description , 0, 35).'...' }}</td>
-                                        <td>{{ substr( $blog->long_description , 0, 35).'..'  }}</td>
+                                        <td >{{substr( $blog->short_description , 0, 18).'...' }}</td>
+                                        <td>{{ substr( $blog->long_description , 0, 18).'..'  }}</td>
                                         <td><img src="{{ asset($blog->image) }}" alt="" height="50" width="70"></td>
-                                        <td style="width:15%">
+                                        <td >
+                                            <a href="{{ route('blog.detail', ['id'=>$blog->id]) }}" class="btn btn-success btn-sm">Details</a>
                                             <a href="{{ route('blog.edit', ['id'=>$blog->id]) }}" class="btn btn-primary btn-sm">Edit</a>
                                             <a href="{{ route('blog.delete', ['id'=>$blog->id]) }}" onclick="return confirm('Are you sure to delete this ?')" class="btn btn-danger btn-sm">Delete</a>
                                         </td>

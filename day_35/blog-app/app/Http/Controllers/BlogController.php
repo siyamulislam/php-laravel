@@ -43,5 +43,12 @@ class BlogController extends Controller
         Blog::deleteBlog($id);
         return redirect('/blog/manage')->with('message_delete', 'Blogs delete successfully');
     }
+    public function detail($id)
+    {
+
+        $this->categories=Category::all();
+        $this->blog = Blog::find($id);
+        return view('blog.detail',['blog'=>$this->blog,'categories'=>$this->categories]);
+    }
 
 }

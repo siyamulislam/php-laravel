@@ -6,7 +6,7 @@
     <section class="py-5">
         <div class="container">
             <div class="row">
-                <div class="col-md-10 mx-auto">
+                <div class="col-md-11 mx-auto">
                     <div class="card bg-dark text-white">
                         <div class="card-header">
                             <div class="row">
@@ -22,8 +22,8 @@
                                     <th>Sl</th>
                                     <th>Blog Title</th>
                                     <th>Description</th>
-                                    <th>Image</th>
-                                    <th>Action</th>
+                                    <th style="width:10%">Image</th>
+                                    <th style="width:20%">Action</th>
                                 </tr>
                                 </thead>
                                 <tbody>
@@ -35,6 +35,7 @@
                                         <td>{{ $category->description }}</td>
                                         <td><img src="{{ asset($category->image) }}" alt="" height="50" width="70"></td>
                                         <td>
+                                            <a href="{}" class="btn btn-success btn-sm">Details</a>
                                             <a href="{{ route('category.edit', ['id'=>$category->id]) }}" class="btn btn-primary btn-sm">Edit</a>
                                             <a href="{{ route('category.delete', ['id'=>$category->id]) }}" onclick="return confirm('Are you sure to delete this ?')" class="btn btn-danger btn-sm">Delete</a>
                                         </td>
