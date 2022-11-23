@@ -14,10 +14,10 @@
             </li>
 
             <li class="dropdown">
-                <a href=" " class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Blog</a>
+                <a href=" " class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Brand</a>
                 <ul class="dropdown-menu">
-{{--                    <li><a href="{{route('blog.add')}}" class="dropdown-item">Add Blog</a></li>--}}
-{{--                    <li><a href="{{route('blog.manage')}}" class="dropdown-item">Manage Blog</a></li>--}}
+                    <li><a href="{{route('brand.add')}}" class="dropdown-item">Add Brand</a></li>
+                    <li><a href="{{route('brand.manage')}}" class="dropdown-item">Manage Brand</a></li>
                 </ul>
             </li>
         </ul>
