@@ -6,3 +6,7 @@
 <p>day-14 to day 27 ---> PHP</p>
 <p>day-28 to day ## ---> LARAVEL</p>
 
+<p>day-21           ---> 1st Assessment</p>
+<p>day-27           ---> 2nd Assessment</p>
+<p>day-36           ---> 3rd Assessment</p>
+
