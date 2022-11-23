@@ -16,7 +16,7 @@ php artisan make:controller FullNameController
 php artisan make:migration create_students_table
 
 php artisan make:model Product
-php artisan make:model Product -m
+php artisan make:model Category -m
 
 php artisan migrate
 php artisan migrate:fresh
