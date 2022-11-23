@@ -1,0 +1,39 @@
+##PHP ==>
+composer dump-autoload
+php -S 127.0.0.1:800
+
+##LARAVEL ==>
+composer create-project laravel/laravel panda-shop
+cd laravel-app
+php artisan serve
+
+public> index.php
+Route> web.php
+
+//singular form
+php artisan make:controller HomeController
+php artisan make:controller FullNameController
+php artisan make:migration create_students_table
+
+php artisan make:model Product
+php artisan make:model Category -m
+
+php artisan migrate
+php artisan migrate:fresh
+
+php artisan migrate:rollback
+php artisan migrate
+
+composer install
+copy .env.example .env
+php artisan key:generate
+php artisan serve
+
+
+composer install
+
+
+git add . && git commit -m "day-36 exam init" && git push
+
+
+
