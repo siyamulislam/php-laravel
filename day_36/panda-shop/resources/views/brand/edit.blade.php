@@ -20,12 +20,12 @@
                         </div>
                         <div class="card-body">
                             <p class="text-center text-success">{{ Session::get('message') }}</p>
-                            <form action="{{ route('category.update', ['id'=>$category->id]) }}" method="post" enctype="multipart/form-data">
+                            <form action="{{ route('brand.update', ['id'=>$brand->id]) }}" method="post" enctype="multipart/form-data">
                                 @csrf
                                 <div class="row mb-3">
                                     <label class="col-md-3"> Brand Name</label>
                                     <div class="col-md-9">
-                                        <input type="text" name="name" value="{{ $category->name }}" class="form-control">
+                                        <input type="text" name="name" value="{{ $brand->name }}" class="form-control">
 
                                     </div>
                                 </div>
@@ -34,7 +34,7 @@
                                         <label for="">Description</label>
                                     </div>
                                     <div class="col-md-9">
-                                       <input name="description" value="{{ $category->description }}" class="form-control">
+                                       <input name="description" value="{{ $brand->description }}" class="form-control">
                                     </div>
                                 </div>
                                 <div class="row mb-3">
@@ -43,7 +43,7 @@
                                     </div>
                                     <div class="col-md-9">
                                         <input type="file" class="form-control mb-3" name="image">
-                                        <img src="{{ asset($category->image) }}" alt="" height="50" width="70">
+                                        <img src="{{ asset($brand->image) }}" alt="" height="50" width="70">
                                     </div>
                                 </div>
                                 <div class="row mb-3">
