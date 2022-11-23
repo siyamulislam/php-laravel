@@ -33,7 +33,7 @@ php artisan serve
 composer install
 
 
-git add . && git commit -m "day-36 exam init" && git push
+git add . && git commit -m "day-36 exam db-bak" && git push
 
 
 
