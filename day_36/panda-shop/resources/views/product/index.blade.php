@@ -23,7 +23,7 @@
                             <form action="{{route('product.store')}}" method="post" enctype="multipart/form-data">
                                 @csrf
                                 <div class="row mb-3">
-                                    <label class="col-md-3"> Product Name</label>
+                                    <label class="col-md-3">Product Category</label>
                                     <div class="col-md-9">
                                         <select class="form-control" name="category_id">
                                             <option>--Select Category--</option>
@@ -34,7 +34,7 @@
                                     </div>
                                 </div>
                                 <div class="row mb-3">
-                                    <label class="col-md-3"> Brand Name</label>
+                                    <label class="col-md-3">Product Brand</label>
                                     <div class="col-md-9">
                                         <select class="form-control" name="brand_id">
                                             <option>--Select Brand--</option>
