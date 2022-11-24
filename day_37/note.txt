@@ -32,6 +32,13 @@ php artisan serve
 
 composer install
 
+#auth
+composer require laravel/jetstream
+
+php artisan jetstream:install livewire
+
+cogninator
+
 https://www.000webhost.com/free-cpanel-hosting
 https://www.hostingadvice.com/how-to/free-cpanel-hosting/
 git add . && git commit -m "day_37 init" && git push

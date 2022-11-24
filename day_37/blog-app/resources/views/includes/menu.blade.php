@@ -2,7 +2,7 @@
     <div class="container">
         <a href="" class="navbar-brand "><img src="assets/img/logo.jpg" alt="" width="50" class="img-fluid ">My Blog</a>
         <ul class="navbar-nav">
-            <li><a class="nav-link" href=" "> Home</a></li>
+            <li><a class="nav-link" href="{{route('home.index')}}"> Home</a></li>
 
 
             <li class="dropdown">

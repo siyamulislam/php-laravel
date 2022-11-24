@@ -15,7 +15,8 @@ use App\Http\Controllers\BlogController;
 |
 */
 
-Route::get('/',[HomeController::class,'index'])->name('home');
+Route::get('/',[HomeController::class,'index'])->name('home.index');
+Route::get('/home',[HomeController::class,'index'])->name('home.index');
 Route::get('/category/add',[CategoryController::class,'index'])->name('category.add');
 Route::post('/category/store', [CategoryController:: class,"store"])   ->name('category.store');
 
@@ -32,3 +33,14 @@ Route::get('/blog/edit/{id}', [BlogController::class, 'edit'])->name('blog.edit'
 Route::post('/blog/update/{id}', [BlogController::class, 'update'])->name('blog.update');
 Route::get('/blog/delete/{id}', [BlogController::class, 'delete'])->name('blog.delete');
 Route::get('/blog/detail/{id}', [BlogController::class, 'detail'])->name('blog.detail');
+
+
+Route::middleware([
+    'auth:sanctum',
+    config('jetstream.auth_session'),
+    'verified'
+])->group(function () {
+    Route::get('/dashboard', function () {
+        return view('dashboard');
+    })->name('dashboard');
+});
