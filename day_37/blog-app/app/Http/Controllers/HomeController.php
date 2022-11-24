@@ -12,7 +12,7 @@ class HomeController extends Controller
    public function index(){
        $this->categories=Category::all();
        $this->blogs = Blog::all();
-//       return view('home.index', ['blogs' => $this->blogs,'categories'=>$this->categories]);
-       return view('welcome');
+       return view('home.index', ['blogs' => $this->blogs,'categories'=>$this->categories]);
+//       return view('welcome');
    }
 }

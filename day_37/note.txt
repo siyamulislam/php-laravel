@@ -37,6 +37,8 @@ composer require laravel/jetstream
 
 php artisan jetstream:install livewire
 
+vendor>laravel>fortify>src>rule
+
 cogninator
 
 https://www.000webhost.com/free-cpanel-hosting
