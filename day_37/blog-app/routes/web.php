@@ -31,3 +31,4 @@ Route::get('/blog/manage',[BlogController::class,'manage'])->name('blog.manage')
 Route::get('/blog/edit/{id}', [BlogController::class, 'edit'])->name('blog.edit');
 Route::post('/blog/update/{id}', [BlogController::class, 'update'])->name('blog.update');
 Route::get('/blog/delete/{id}', [BlogController::class, 'delete'])->name('blog.delete');
+Route::get('/blog/detail/{id}', [BlogController::class, 'detail'])->name('blog.detail');
