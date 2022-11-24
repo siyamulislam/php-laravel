@@ -15,32 +15,32 @@
                                 <div class="row mt-2">
                                     <label for="" class="col-md-3">Name</label>
                                     <div class="col-md-9">
-                                        <input type="name" name="name" class="form-control">
+                                        <input  id="name" type="text" name="name" class="form-control">
                                     </div>
                                 </div>
                                 <div class="row mt-2">
                                     <label for="" class="col-md-3">Email</label>
                                     <div class="col-md-9">
-                                        <input type="email" name="email" class="form-control">
+                                        <input id="email" type="email" name="email" class="form-control">
                                     </div>
                                 </div>
                                 <div class="row mt-2">
                                     <label for="" class="col-md-3">Password</label>
                                     <div class="col-md-9">
-                                        <input type="password" name="password_confirmation" class="form-control">
+                                        <input  id="password" type="password" name="password" class="form-control">
                                     </div>
                                 </div>
                                 <div class="row mt-2">
                                     <label for="" class="col-md-3">Confirm Password</label>
                                     <div class="col-md-9">
-                                        <input type="password" name="password_confirmation" class="form-control">
+                                        <input  id="password_confirmation" type="password" name="password_confirmation" class="form-control">
                                     </div>
                                 </div>
                                 <div class="row mt-2">
                                     <label for="" class="col-md-3"></label>
                                     <div class="col-md-9">
 
-                                        <input type="submit" class="btn btn-outline-success text-white" value="Registration">
+                                        <input type="submit" class="btn btn-outline-success text-white" value="Register">
 
                                         <a href="{{route('login')}}" class="text-muted ms-3">already have an account?</a>
                                     </div>
