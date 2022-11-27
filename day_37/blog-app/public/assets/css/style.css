@@ -34,15 +34,17 @@ h1, h2, h3, h4, h5, h6 {
     src: url('./public/assets/fonts/ft.ttf'); /*URL to font*/
 }
 body{
-    font-family: ft,sans-serif;
+    /*font-family: Poppins,sans-serif;*/
+    /*background-color: #0d6efd;*/
 }
 
 .blog-card{
-    /*transition: box-shadow .3s ease-in-out,top .3s ease-in-out,top .3s ease-in-out;*/
-    opacity: 0.6;
+    /*opacity: 0.6;*/
     transition: 0.3s;
-   text-color:red!important;
 }
 .blog-card:hover{
-    opacity: 1;
+    /*opacity: 1;*/
+    box-shadow: 0 2px 15px #979696 !important; ;
+    transform: scale(1.015);
+    transition: .3s ease-in-out,top .3s ease-in-out,top .3s ease-in-out !important;
 }
