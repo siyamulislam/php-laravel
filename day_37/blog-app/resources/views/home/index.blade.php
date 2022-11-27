@@ -1,26 +1,28 @@
 @extends('master')
 @section('title')
-   Home
+    Home
 @endsection
-
 
 @section('body')
 
     <section class="py-5">
         <div class="container">
             <div class="row">
-                <?php foreach ($blogs as $blog) { ?>
+                    @foreach($blogs as $blog)
                 <div class="col-md-3">
-                    <div class="card bg-dark text-white mb-3">
-                        <img src="<?php echo $blog['image']?>" alt="" height="250" class="card-img">
-                        <div class="card-body">
-                            <h6><?php echo $blog['title']?></h6>
-                            <h6>Category: <?php echo $blog['category_id']?></h6>
-{{--                            <a href="action.php?page=product-details&&id=<?php echo $blog['product_id'] ?>" class="btn btn-outline-info">More details</a>--}}
+                    <div class="card blog-card h-400 my-4    ">
+                        <img src="{{$blog['image']}}" alt="" height="162" class="card-img hover-zoom">
+                        <div class="card-body my-1">
+                            <h6 class="text-secondary fw-normal ">#{{$blog->category['name']}}</h6>
+                            <h5 class="fw-semibold my-3  ">
+                                <a href="{{ route('blog.detail', ['id'=>$blog->id]) }}"
+                                   class="text-decoration-none text-dark  ">{{ $blog['title']}}</a>
+                            </h5>
+                            <small>{{$blog->created_at}} | <span>3min ago</span></small>
                         </div>
                     </div>
                 </div>
-                <?php } ?>
+                @endforeach
             </div>
         </div>
     </section>

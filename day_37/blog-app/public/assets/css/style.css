@@ -36,8 +36,13 @@ h1, h2, h3, h4, h5, h6 {
 body{
     font-family: ft,sans-serif;
 }
-.text-df-color{
-    color: #ff4800;
+
+.blog-card{
+    /*transition: box-shadow .3s ease-in-out,top .3s ease-in-out,top .3s ease-in-out;*/
+    opacity: 0.6;
+    transition: 0.3s;
+   text-color:red!important;
 }
-.bg-df-color{background-color: #ff4800;}
-.bg-df-color:hover{  background-color: #D93D00;}
+.blog-card:hover{
+    opacity: 1;
+}
