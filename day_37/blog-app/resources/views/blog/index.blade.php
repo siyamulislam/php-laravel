@@ -1,6 +1,6 @@
 @extends('master')
 @section('title')
-    Add Category
+    Add Blogs
 @endsection
 
 @section('body')
@@ -8,12 +8,12 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-8 mx-auto">
-                    <div class="card bg-dark text-white">
+                    <div class="card  ">
                         <div class="card-header  ">
                             <div class="row">
                             <div class="col-md-3"></div>
                             <div class="col-md-9">
-                                <div class="card-header fw-bold display-6 text-info">Add Blog</div>
+                                <div class="fw-normal display-6 text-secondary">Add Blog</div>
                             </div>
                             </div>
 
@@ -68,7 +68,7 @@
                                         <label for=""></label>
                                     </div>
                                     <div class="col-md-9">
-                                        <input type="submit" class="btn btn-outline-info" value="Create New Blog">
+                                        <input type="submit" class="btn btn-outline-success" value="Create New Blog">
                                     </div>
                                 </div>
 

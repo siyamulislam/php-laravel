@@ -1,6 +1,8 @@
-<nav class="navbar navbar-expand-md bg-dark navbar-dark py-0">
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light shadow py-0">
     <div class="container">
-        <a href="" class="navbar-brand "><img src="assets/img/logo.jpg" alt="" width="50" class="img-fluid ">My Blog</a>
+        <a href="{{route('home.index')}}" class="navbar-brand "><img src="{{asset('/')}}assets/img/logo.jpg" alt="" width="50" class="img-fluid ">
+            <span class="mx-2 fw-semibold text-secondary" >Panda Blog</span></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>

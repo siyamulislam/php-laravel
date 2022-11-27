@@ -5,9 +5,9 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6 mx-auto">
-                    <div class="card bg-dark text-white">
+                    <div class="card  ">
                         <div class="card-header">
-                            <h2 class="text-center fw-bold text-info">Registration</h2>
+                            <h2 class="text-center fw-normal text-secondary">Registration</h2>
                         </div>
                         <div class="card-body">
                             <form action="{{route('register')}}" method="post">
@@ -40,7 +40,7 @@
                                     <label for="" class="col-md-3"></label>
                                     <div class="col-md-9">
 
-                                        <input type="submit" class="btn btn-outline-success text-white" value="Register">
+                                        <input type="submit" class="btn btn-outline-success " value="Register">
 
                                         <a href="{{route('login')}}" class="text-muted ms-3">already have an account?</a>
                                     </div>

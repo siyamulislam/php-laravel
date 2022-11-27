@@ -4,13 +4,12 @@
 @endsection
 
 @section('body')
-
     <section class="py-5">
         <div class="container">
             <div class="text-center"> <h1>Blogs</h1> </div>
             <div class="row">
                     @foreach($blogs as $blog)
-                <div class="col-md-3">
+                <div class="col-xl-3 col-lg-4 col-sm-6">
                     <div class="card blog-card shadow h-400 my-4 border-0">
                         <img src="{{$blog['image']}}" alt="" height="162" class="card-img ">
                         <div class="card-body my-1">

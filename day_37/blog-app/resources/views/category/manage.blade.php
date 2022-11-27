@@ -7,16 +7,17 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-11 mx-auto">
-                    <div class="card bg-dark text-white">
+                    <div class="card ">
                         <div class="card-header">
                             <div class="row">
-                                <div class="card-header fw-bold display-6 text-info text-center">Manage Category</div>
+                                <div class=" fw-normal display-6 text-secondary text-center">Manage Category</div>
+{{--                                <div class="card-header fw-bold display-6 text-secondary text-center">Manage Category</div>--}}
                             </div>
                         </div>
                         <div class="card-body">
                             <p class="text-success text-center">{{ Session::get('message') }}</p>
                             <p class="text-danger text-center">{{ Session::get('message_delete') }}</p>
-                            <table class="table table-bordered table-hover table-dark  table-striped">
+                            <table class="table table-bordered table-hover  table-striped">
                                 <thead>
                                 <tr>
                                     <th>Sl</th>
