@@ -16,6 +16,9 @@ use App\Http\Controllers\BlogController;
 */
 
 
+Route::get('/',[HomeController::class,'index'])->name('home.index');
+Route::get('/home',[HomeController::class,'index'])->name('home.index');
+Route::get('/home/detail/{id}', [HomeController::class, 'detail'])->name('home.detail');
 
 
 Route::middleware([
@@ -23,11 +26,10 @@ Route::middleware([
     config('jetstream.auth_session'),
     'verified'
 ])->group(function () {
-    Route::get('/',[HomeController::class,'index'])->name('home.index');
-    Route::get('/home',[HomeController::class,'index'])->name('home.index');
+//    Route::get('/',[HomeController::class,'index'])->name('home.index');
+//    Route::get('/home',[HomeController::class,'index'])->name('home.index');
     Route::get('/category/add',[CategoryController::class,'index'])->name('category.add');
     Route::post('/category/store', [CategoryController:: class,"store"])   ->name('category.store');
-    Route::get('/home/detail/{id}', [HomeController::class, 'detail'])->name('home.detail');
 
     Route::get('/category/manage',[CategoryController::class,'manage'])->name('category.manage');
     Route::get('/category/edit/{id}', [CategoryController::class, 'edit'])->name('category.edit');

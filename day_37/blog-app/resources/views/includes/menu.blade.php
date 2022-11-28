@@ -8,8 +8,8 @@
         </button>
         <div class="collapse navbar-collapse text-center" id="navbarNavDropdown">
         <ul class="navbar-nav ms-auto">
-            @if(auth()->check())
             <li><a class="nav-link" href="{{route('home.index')}}"> Home</a></li>
+            @if(auth()->check())
 
             <li class="dropdown">
                 <a href=" " class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Category</a>
