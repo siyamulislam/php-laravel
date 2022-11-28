@@ -15,7 +15,7 @@
                         <div class="card-body my-1">
                             <h6 class="text-secondary fw-normal ">#{{$blog->category['name']}}</h6>
                             <h4 class="fw-semibold my-3  ">
-                                <a href="{{ route('blog.detail', ['id'=>$blog->id]) }}"
+                                <a href="{{ route('home.detail', ['id'=>$blog->id]) }}"
                                    class="text-decoration-none text-dark  ">{{ $blog['title']}}</a>
                             </h4>
                             <small>{{$blog->created_at}} | <span>3min ago</span></small>

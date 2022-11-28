@@ -1,5 +1,7 @@
 @extends('master')
-
+@section('title')
+   registration
+@endsection
 @section('body')
     <section class="py-5">
         <div class="container">

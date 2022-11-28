@@ -1,5 +1,7 @@
 @extends('master')
-
+@section('title')
+    login
+@endsection
 @section('body')
     <section class="py-5">
         <div class="container">

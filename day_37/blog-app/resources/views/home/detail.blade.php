@@ -29,11 +29,7 @@
 
                 </div>
                 <div class="col-md-4 mx-auto">
-                    <a href="{{ route('blog.edit', ['id'=>$blog->id]) }}"
-                       class="btn btn-primary btn w-100 mb-2">Edit</a>
-                    <a href="{{ route('blog.delete', ['id'=>$blog->id]) }}"
-                       onclick="return confirm('Are you sure to delete this ?')"
-                       class="btn btn-danger btn w-100">Delete</a>
+                   <p>ad section</p>
                 </div>
             </div>
         </div>
