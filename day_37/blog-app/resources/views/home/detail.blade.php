@@ -16,7 +16,7 @@
                         | {{ $blog->lastUpdate.' ago'}}
                     </small>
                     <hr class="text-muted">
-                    <p class="lh-base"style="text-align: justify;">{{ $blog->short_description  }}</p>
+                    <p class="lh-base"style="text-align: justify;">{{ $blog->short_description }}</p>
                 </div>
                 <div class="col-md-6"><img src="{{ asset($blog->image) }}" class="rounded " width="100%" alt="...">
                 </div>
