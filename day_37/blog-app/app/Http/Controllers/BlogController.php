@@ -48,20 +48,29 @@ class BlogController extends Controller
     {
         $this->categories=Category::all();
         $this->blog = Blog::find($id);
-        $dateDiff=date_diff(new DateTime(),$this->blog->updated_at);
-        $dateFormat='';
-        if($dateDiff->format('%y')!=0) $dateFormat=$dateFormat.'%y year';
-        if($dateDiff->format('%m')!=0) $dateFormat=$dateFormat.' %m month';
-        if($dateDiff->format('%d')!=0) $dateFormat=$dateFormat.' %d day';
-        if($dateDiff->format('%H')!=0) $dateFormat=$dateFormat.' %Hh';
-        if($dateDiff->format('%I')!=0) $dateFormat=$dateFormat.' %Im';
-        if($dateDiff->format('%S')!=0) $dateFormat=$dateFormat.' %Ss';
 
-        $lastUpdate=$dateDiff->format($dateFormat);
+        $lastUpdate = $this->getLastUpdateDate($this->blog);
         $this->blog['lastUpdate']=$lastUpdate;
+
 //        echo '<pre>';
 //        print_r($dateFormat);
         return view('blog.detail',['blog'=>$this->blog,'categories'=>$this->categories]);
+    }
+
+    public static function getLastUpdateDate($blog)
+    {
+        $dateDiff = date_diff(new DateTime(), $blog->updated_at);
+
+        $dateFormat = '';
+        if ($dateDiff->format('%y') != 0) $dateFormat = $dateFormat . '%y year';
+        if ($dateDiff->format('%m') != 0) $dateFormat = $dateFormat . ' %m month';
+        if ($dateDiff->format('%d') != 0) $dateFormat = $dateFormat . ' %d day';
+        if ($dateDiff->format('%H') != 0) $dateFormat = $dateFormat . ' %Hh';
+        if ($dateDiff->format('%I') != 0) $dateFormat = $dateFormat . ' %Im';
+        if ($dateDiff->format('%S') != 0) $dateFormat = $dateFormat . ' %Ss';
+
+        $lastUpdate = $dateDiff->format($dateFormat);
+        return $lastUpdate;
     }
 
 

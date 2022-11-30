@@ -45,6 +45,6 @@ body{
 .blog-card:hover{
     /*opacity: 1;*/
     box-shadow: 0 2px 15px #979696 !important; ;
-    transform: scale(1.015);
+    transform: scale(1.015) translateY(-5px) ;
     transition: .3s ease-in-out,top .3s ease-in-out,top .3s ease-in-out !important;
 }
