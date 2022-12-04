@@ -42,10 +42,12 @@
 
                             @foreach($categories as $category)
                                 <div class="tab-pane show fade" id={{$category->name}}>
-                                    <h3>{{$category->name}}</h3>
                                     <div class="container">
                                         <div class="row">
-                                            @foreach($blogs as $blog)
+{{--                                            @php--}}
+{{--                                                $blogs=\App\Http\Controllers\CategoryController::blogByCategory($category->id)}}
+{{--                                            @endphp --}}
+                                            @foreach(\App\Http\Controllers\CategoryController::blogByCategory($category->id) as $blog)
                                                 <div class="col-xl-3 col-lg-4 col-sm-6">
                                                     <div class="card blog-card shadow h-400 my-4 border-0">
                                                         <a href="{{ route('home.detail', ['id'=>$blog->id]) }}">
