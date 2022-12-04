@@ -35,7 +35,7 @@
                                         <td>{{ $loop->iteration }}</td>
 {{--                                        <td>{{ $categories[--$blog->category_id]->name }}</td>--}}
                                         <td>{{ $blog->category['name'] }}</td>
-                                        <td>{{substr( $blog->title , 0, 15).'..' }}</td>
+                                        <td>{{Illuminate\Support\Str::limit($blog->title,20, '...') }}</td>
                                         <td >{{substr( $blog->short_description,  0,35).'..'   }}</td>
                                         <td><img src="{{ asset($blog->image) }}" alt="" height="50" width="70"></td>
                                         <td  >{{ $blog->status=1?"Published":"Unpublished"  }}</td>

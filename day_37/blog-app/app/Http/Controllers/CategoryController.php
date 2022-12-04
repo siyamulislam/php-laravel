@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Blog;
 use App\Models\Category;
 use Illuminate\Http\Request;
 
@@ -40,5 +41,13 @@ class CategoryController extends Controller
     {
         Category::deleteCategory($id);
         return redirect('/category/manage')->with('message_delete', 'Category delete successfully');
+    }
+
+    public static function blogByCategory($id)
+    {
+        $blogs = Blog::where('category_id', $id)->get();
+//        echo '<pre>';
+//        print_r($blogs);
+        return ( $blogs);
     }
 }
