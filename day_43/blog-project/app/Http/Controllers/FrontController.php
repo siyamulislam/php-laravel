@@ -8,7 +8,8 @@ class FrontController extends Controller
 {
    public function home(){
        return view ('front.home.home');
-   }public function productDetails(){
+   }
+   public function productDetails(){
        return view ('front.product.details');
    }
 }

@@ -5,7 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>@yield('title')</title>
-
+    <link rel="shortcut icon" href="{{asset('/')}}front/img/favicon.ico" >
+{{--    <link rel="shortcut icon" href="{{asset('/')}}admin/assets/images/favicon.ico">--}}
     <!-- Google Fonts -->
     <link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,200,300,700,600' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:400,700,300' rel='stylesheet' type='text/css'>
@@ -41,7 +42,9 @@
                         <li><a href="#"><i class="fa fa-heart"></i> Wishlist</a></li>
                         <li><a href="cart.html"><i class="fa fa-user"></i> My Cart</a></li>
                         <li><a href="checkout.html"><i class="fa fa-user"></i> Checkout</a></li>
-                        <li><a href="#"><i class="fa fa-user"></i> Login</a></li>
+                        <li><a href="{{route('register')}}"><i class="fa fa-user"></i> Register</a></li>
+                        <li><a href="{{route('login')}}"><i class="fa fa-user"></i> Login</a></li>
+
                     </ul>
                 </div>
             </div>
