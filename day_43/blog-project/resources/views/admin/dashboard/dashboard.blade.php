@@ -4,25 +4,26 @@
 
 <!-- Mirrored from coderthemes.com/hyper/saas/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 29 May 2022 14:56:44 GMT -->
 <head>
-    <meta charset="utf-8" />
+    <meta charset="utf-8"/>
     <title>Dashboard | Hyper - Responsive Bootstrap 5 Admin Dashboard</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta content="A fully featured admin theme which can be used to build CRM, CMS, etc." name="description" />
-    <meta content="Coderthemes" name="author" />
+    <meta content="A fully featured admin theme which can be used to build CRM, CMS, etc." name="description"/>
+    <meta content="Coderthemes" name="author"/>
     <!-- App favicon -->
     <link rel="shortcut icon" href="{{asset('/')}}admin/assets/images/favicon.ico">
 
     <!-- third party css -->
-    <link href="{{asset('/')}}admin/assets/css/vendor/jquery-jvectormap-1.2.2.css" rel="stylesheet" type="text/css" />
+    <link href="{{asset('/')}}admin/assets/css/vendor/jquery-jvectormap-1.2.2.css" rel="stylesheet" type="text/css"/>
     <!-- third party css end -->
 
     <!-- App css -->
-    <link href="{{asset('/')}}admin/assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+    <link href="{{asset('/')}}admin/assets/css/icons.min.css" rel="stylesheet" type="text/css"/>
     <link href="{{asset('/')}}admin/assets/css/app.min.css" rel="stylesheet" type="text/css" id="app-style"/>
 
 </head>
 
-<body class="loading" data-layout-color="light" data-leftbar-theme="dark" data-layout-mode="fluid" data-rightbar-onstart="true">
+<body class="loading" data-layout-color="light" data-leftbar-theme="dark" data-layout-mode="fluid"
+      data-rightbar-onstart="true">
 <!-- Begin page -->
 <div class="wrapper">
     <!-- ========== Left Sidebar Start ========== -->
@@ -56,7 +57,8 @@
                 <li class="side-nav-title side-nav-item">Navigation</li>
 
                 <li class="side-nav-item">
-                    <a data-bs-toggle="collapse" href="#sidebarDashboards" aria-expanded="false" aria-controls="sidebarDashboards" class="side-nav-link">
+                    <a data-bs-toggle="collapse" href="#sidebarDashboards" aria-expanded="false"
+                       aria-controls="sidebarDashboards" class="side-nav-link">
                         <i class="uil-home-alt"></i>
                         <span class="badge bg-success float-end">4</span>
                         <span> Dashboards </span>
@@ -73,7 +75,8 @@
                                 <a href="dashboard-projects.html">Projects</a>
                             </li>
                             <li>
-                                <a href="dashboard-wallet.html">E-Wallet <span class="badge rounded bg-danger font-10 float-end">New</span></a>
+                                <a href="dashboard-wallet.html">E-Wallet <span
+                                        class="badge rounded bg-danger font-10 float-end">New</span></a>
                             </li>
                         </ul>
                     </div>
@@ -96,7 +99,8 @@
                 </li>
 
                 <li class="side-nav-item">
-                    <a data-bs-toggle="collapse" href="#sidebarCrm" aria-expanded="false" aria-controls="sidebarCrm" class="side-nav-link">
+                    <a data-bs-toggle="collapse" href="#sidebarCrm" aria-expanded="false" aria-controls="sidebarCrm"
+                       class="side-nav-link">
                         <i class="uil uil-tachometer-fast"></i>
                         <span class="badge bg-danger text-white float-end">New</span>
                         <span> CRM </span>
@@ -123,7 +127,8 @@
                 </li>
 
                 <li class="side-nav-item">
-                    <a data-bs-toggle="collapse" href="#sidebarEcommerce" aria-expanded="false" aria-controls="sidebarEcommerce" class="side-nav-link">
+                    <a data-bs-toggle="collapse" href="#sidebarEcommerce" aria-expanded="false"
+                       aria-controls="sidebarEcommerce" class="side-nav-link">
                         <i class="uil-store"></i>
                         <span> Ecommerce </span>
                         <span class="menu-arrow"></span>
@@ -159,7 +164,8 @@
                 </li>
 
                 <li class="side-nav-item">
-                    <a data-bs-toggle="collapse" href="#sidebarEmail" aria-expanded="false" aria-controls="sidebarEmail" class="side-nav-link">
+                    <a data-bs-toggle="collapse" href="#sidebarEmail" aria-expanded="false" aria-controls="sidebarEmail"
+                       class="side-nav-link">
                         <i class="uil-envelope"></i>
                         <span> Email </span>
                         <span class="menu-arrow"></span>
@@ -177,7 +183,8 @@
                 </li>
 
                 <li class="side-nav-item">
-                    <a data-bs-toggle="collapse" href="#sidebarProjects" aria-expanded="false" aria-controls="sidebarProjects" class="side-nav-link">
+                    <a data-bs-toggle="collapse" href="#sidebarProjects" aria-expanded="false"
+                       aria-controls="sidebarProjects" class="side-nav-link">
                         <i class="uil-briefcase"></i>
                         <span> Projects </span>
                         <span class="menu-arrow"></span>
@@ -191,7 +198,8 @@
                                 <a href="apps-projects-details.html">Details</a>
                             </li>
                             <li>
-                                <a href="apps-projects-gantt.html">Gantt <span class="badge rounded-pill bg-light text-dark font-10 float-end">New</span></a>
+                                <a href="apps-projects-gantt.html">Gantt <span
+                                        class="badge rounded-pill bg-light text-dark font-10 float-end">New</span></a>
                             </li>
                             <li>
                                 <a href="apps-projects-add.html">Create Project</a>
@@ -208,7 +216,8 @@
                 </li>
 
                 <li class="side-nav-item">
-                    <a data-bs-toggle="collapse" href="#sidebarTasks" aria-expanded="false" aria-controls="sidebarTasks" class="side-nav-link">
+                    <a data-bs-toggle="collapse" href="#sidebarTasks" aria-expanded="false" aria-controls="sidebarTasks"
+                       class="side-nav-link">
                         <i class="uil-clipboard-alt"></i>
                         <span> Tasks </span>
                         <span class="menu-arrow"></span>
@@ -238,7 +247,8 @@
                 <li class="side-nav-title side-nav-item">Custom</li>
 
                 <li class="side-nav-item">
-                    <a data-bs-toggle="collapse" href="#sidebarPages" aria-expanded="false" aria-controls="sidebarPages" class="side-nav-link">
+                    <a data-bs-toggle="collapse" href="#sidebarPages" aria-expanded="false" aria-controls="sidebarPages"
+                       class="side-nav-link">
                         <i class="uil-copy-alt"></i>
                         <span> Pages </span>
                         <span class="menu-arrow"></span>
@@ -264,7 +274,8 @@
                                 <a href="pages-maintenance.html">Maintenance</a>
                             </li>
                             <li class="side-nav-item">
-                                <a data-bs-toggle="collapse" href="#sidebarPagesAuth" aria-expanded="false" aria-controls="sidebarPagesAuth">
+                                <a data-bs-toggle="collapse" href="#sidebarPagesAuth" aria-expanded="false"
+                                   aria-controls="sidebarPagesAuth">
                                     <span> Authentication </span>
                                     <span class="menu-arrow"></span>
                                 </a>
@@ -310,7 +321,8 @@
                                 </div>
                             </li>
                             <li class="side-nav-item">
-                                <a data-bs-toggle="collapse" href="#sidebarPagesError" aria-expanded="false" aria-controls="sidebarPagesError">
+                                <a data-bs-toggle="collapse" href="#sidebarPagesError" aria-expanded="false"
+                                   aria-controls="sidebarPagesError">
                                     <span> Error </span>
                                     <span class="menu-arrow"></span>
                                 </a>
@@ -350,7 +362,8 @@
                 </li>
 
                 <li class="side-nav-item">
-                    <a data-bs-toggle="collapse" href="#sidebarLayouts" aria-expanded="false" aria-controls="sidebarLayouts" class="side-nav-link">
+                    <a data-bs-toggle="collapse" href="#sidebarLayouts" aria-expanded="false"
+                       aria-controls="sidebarLayouts" class="side-nav-link">
                         <i class="uil-window"></i>
                         <span> Layouts </span>
                         <span class="menu-arrow"></span>
@@ -373,7 +386,8 @@
                 <li class="side-nav-title side-nav-item mt-1">Components</li>
 
                 <li class="side-nav-item">
-                    <a data-bs-toggle="collapse" href="#sidebarBaseUI" aria-expanded="false" aria-controls="sidebarBaseUI" class="side-nav-link">
+                    <a data-bs-toggle="collapse" href="#sidebarBaseUI" aria-expanded="false"
+                       aria-controls="sidebarBaseUI" class="side-nav-link">
                         <i class="uil-box"></i>
                         <span> Base UI </span>
                         <span class="menu-arrow"></span>
@@ -457,7 +471,8 @@
                 </li>
 
                 <li class="side-nav-item">
-                    <a data-bs-toggle="collapse" href="#sidebarExtendedUI" aria-expanded="false" aria-controls="sidebarExtendedUI" class="side-nav-link">
+                    <a data-bs-toggle="collapse" href="#sidebarExtendedUI" aria-expanded="false"
+                       aria-controls="sidebarExtendedUI" class="side-nav-link">
                         <i class="uil-package"></i>
                         <span> Extended UI </span>
                         <span class="menu-arrow"></span>
@@ -494,7 +509,8 @@
                 </li>
 
                 <li class="side-nav-item">
-                    <a data-bs-toggle="collapse" href="#sidebarIcons" aria-expanded="false" aria-controls="sidebarIcons" class="side-nav-link">
+                    <a data-bs-toggle="collapse" href="#sidebarIcons" aria-expanded="false" aria-controls="sidebarIcons"
+                       class="side-nav-link">
                         <i class="uil-streering"></i>
                         <span> Icons </span>
                         <span class="menu-arrow"></span>
@@ -515,7 +531,8 @@
                 </li>
 
                 <li class="side-nav-item">
-                    <a data-bs-toggle="collapse" href="#sidebarForms" aria-expanded="false" aria-controls="sidebarForms" class="side-nav-link">
+                    <a data-bs-toggle="collapse" href="#sidebarForms" aria-expanded="false" aria-controls="sidebarForms"
+                       class="side-nav-link">
                         <i class="uil-document-layout-center"></i>
                         <span> Forms </span>
                         <span class="menu-arrow"></span>
@@ -545,7 +562,8 @@
                 </li>
 
                 <li class="side-nav-item">
-                    <a data-bs-toggle="collapse" href="#sidebarCharts" aria-expanded="false" aria-controls="sidebarCharts" class="side-nav-link">
+                    <a data-bs-toggle="collapse" href="#sidebarCharts" aria-expanded="false"
+                       aria-controls="sidebarCharts" class="side-nav-link">
                         <i class="uil-chart"></i>
                         <span> Charts </span>
                         <span class="menu-arrow"></span>
@@ -553,7 +571,8 @@
                     <div class="collapse" id="sidebarCharts">
                         <ul class="side-nav-second-level">
                             <li class="side-nav-item">
-                                <a data-bs-toggle="collapse" href="#sidebarApexCharts" aria-expanded="false" aria-controls="sidebarApexCharts">
+                                <a data-bs-toggle="collapse" href="#sidebarApexCharts" aria-expanded="false"
+                                   aria-controls="sidebarApexCharts">
                                     <span> Apex Charts </span>
                                     <span class="menu-arrow"></span>
                                 </a>
@@ -615,7 +634,8 @@
                 </li>
 
                 <li class="side-nav-item">
-                    <a data-bs-toggle="collapse" href="#sidebarTables" aria-expanded="false" aria-controls="sidebarTables" class="side-nav-link">
+                    <a data-bs-toggle="collapse" href="#sidebarTables" aria-expanded="false"
+                       aria-controls="sidebarTables" class="side-nav-link">
                         <i class="uil-table"></i>
                         <span> Tables </span>
                         <span class="menu-arrow"></span>
@@ -633,7 +653,8 @@
                 </li>
 
                 <li class="side-nav-item">
-                    <a data-bs-toggle="collapse" href="#sidebarMaps" aria-expanded="false" aria-controls="sidebarMaps" class="side-nav-link">
+                    <a data-bs-toggle="collapse" href="#sidebarMaps" aria-expanded="false" aria-controls="sidebarMaps"
+                       class="side-nav-link">
                         <i class="uil-location-point"></i>
                         <span> Maps </span>
                         <span class="menu-arrow"></span>
@@ -651,7 +672,8 @@
                 </li>
 
                 <li class="side-nav-item">
-                    <a data-bs-toggle="collapse" href="#sidebarMultiLevel" aria-expanded="false" aria-controls="sidebarMultiLevel" class="side-nav-link">
+                    <a data-bs-toggle="collapse" href="#sidebarMultiLevel" aria-expanded="false"
+                       aria-controls="sidebarMultiLevel" class="side-nav-link">
                         <i class="uil-folder-plus"></i>
                         <span> Multi Level </span>
                         <span class="menu-arrow"></span>
@@ -659,7 +681,8 @@
                     <div class="collapse" id="sidebarMultiLevel">
                         <ul class="side-nav-second-level">
                             <li class="side-nav-item">
-                                <a data-bs-toggle="collapse" href="#sidebarSecondLevel" aria-expanded="false" aria-controls="sidebarSecondLevel">
+                                <a data-bs-toggle="collapse" href="#sidebarSecondLevel" aria-expanded="false"
+                                   aria-controls="sidebarSecondLevel">
                                     <span> Second Level </span>
                                     <span class="menu-arrow"></span>
                                 </a>
@@ -675,7 +698,8 @@
                                 </div>
                             </li>
                             <li class="side-nav-item">
-                                <a data-bs-toggle="collapse" href="#sidebarThirdLevel" aria-expanded="false" aria-controls="sidebarThirdLevel">
+                                <a data-bs-toggle="collapse" href="#sidebarThirdLevel" aria-expanded="false"
+                                   aria-controls="sidebarThirdLevel">
                                     <span> Third Level </span>
                                     <span class="menu-arrow"></span>
                                 </a>
@@ -685,7 +709,8 @@
                                             <a href="javascript: void(0);">Item 1</a>
                                         </li>
                                         <li class="side-nav-item">
-                                            <a data-bs-toggle="collapse" href="#sidebarFourthLevel" aria-expanded="false" aria-controls="sidebarFourthLevel">
+                                            <a data-bs-toggle="collapse" href="#sidebarFourthLevel"
+                                               aria-expanded="false" aria-controls="sidebarFourthLevel">
                                                 <span> Item 2 </span>
                                                 <span class="menu-arrow"></span>
                                             </a>
@@ -713,7 +738,7 @@
                 <a href="javascript: void(0);" class="float-end close-btn text-white">
                     <i class="mdi mdi-close"></i>
                 </a>
-                <img src="{{asset('/')}}admin/assets/images/help-icon.svg" height="90" alt="Helper Icon Image" />
+                <img src="{{asset('/')}}admin/assets/images/help-icon.svg" height="90" alt="Helper Icon Image"/>
                 <h5 class="mt-3">Unlimited Access</h5>
                 <p class="mb-3">Upgrade to plan to get access to unlimited reports</p>
                 <a href="javascript: void(0);" class="btn btn-secondary btn-sm">Upgrade</a>
@@ -739,47 +764,57 @@
             <div class="navbar-custom">
                 <ul class="list-unstyled topbar-menu float-end mb-0">
                     <li class="dropdown notification-list d-lg-none">
-                        <a class="nav-link dropdown-toggle arrow-none" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle arrow-none" data-bs-toggle="dropdown" href="#" role="button"
+                           aria-haspopup="false" aria-expanded="false">
                             <i class="dripicons-search noti-icon"></i>
                         </a>
                         <div class="dropdown-menu dropdown-menu-animated dropdown-lg p-0">
                             <form class="p-3">
-                                <input type="text" class="form-control" placeholder="Search ..." aria-label="Recipient's username">
+                                <input type="text" class="form-control" placeholder="Search ..."
+                                       aria-label="Recipient's username">
                             </form>
                         </div>
                     </li>
                     <li class="dropdown notification-list topbar-dropdown">
-                        <a class="nav-link dropdown-toggle arrow-none" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
-                            <img src="{{asset('/')}}admin/assets/images/flags/us.jpg" alt="user-image" class="me-0 me-sm-1" height="12">
-                            <span class="align-middle d-none d-sm-inline-block">English</span> <i class="mdi mdi-chevron-down d-none d-sm-inline-block align-middle"></i>
+                        <a class="nav-link dropdown-toggle arrow-none" data-bs-toggle="dropdown" href="#" role="button"
+                           aria-haspopup="false" aria-expanded="false">
+                            <img src="{{asset('/')}}admin/assets/images/flags/us.jpg" alt="user-image"
+                                 class="me-0 me-sm-1" height="12">
+                            <span class="align-middle d-none d-sm-inline-block">English</span> <i
+                                class="mdi mdi-chevron-down d-none d-sm-inline-block align-middle"></i>
                         </a>
                         <div class="dropdown-menu dropdown-menu-end dropdown-menu-animated topbar-dropdown-menu">
 
                             <!-- item-->
                             <a href="javascript:void(0);" class="dropdown-item notify-item">
-                                <img src="{{asset('/')}}admin/assets/images/flags/germany.jpg" alt="user-image" class="me-1" height="12"> <span class="align-middle">German</span>
+                                <img src="{{asset('/')}}admin/assets/images/flags/germany.jpg" alt="user-image"
+                                     class="me-1" height="12"> <span class="align-middle">German</span>
                             </a>
 
                             <!-- item-->
                             <a href="javascript:void(0);" class="dropdown-item notify-item">
-                                <img src="{{asset('/')}}admin/assets/images/flags/italy.jpg" alt="user-image" class="me-1" height="12"> <span class="align-middle">Italian</span>
+                                <img src="{{asset('/')}}admin/assets/images/flags/italy.jpg" alt="user-image"
+                                     class="me-1" height="12"> <span class="align-middle">Italian</span>
                             </a>
 
                             <!-- item-->
                             <a href="javascript:void(0);" class="dropdown-item notify-item">
-                                <img src="{{asset('/')}}admin/assets/images/flags/spain.jpg" alt="user-image" class="me-1" height="12"> <span class="align-middle">Spanish</span>
+                                <img src="{{asset('/')}}admin/assets/images/flags/spain.jpg" alt="user-image"
+                                     class="me-1" height="12"> <span class="align-middle">Spanish</span>
                             </a>
 
                             <!-- item-->
                             <a href="javascript:void(0);" class="dropdown-item notify-item">
-                                <img src="{{asset('/')}}admin/assets/images/flags/russia.jpg" alt="user-image" class="me-1" height="12"> <span class="align-middle">Russian</span>
+                                <img src="{{asset('/')}}admin/assets/images/flags/russia.jpg" alt="user-image"
+                                     class="me-1" height="12"> <span class="align-middle">Russian</span>
                             </a>
 
                         </div>
                     </li>
 
                     <li class="dropdown notification-list">
-                        <a class="nav-link dropdown-toggle arrow-none" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle arrow-none" data-bs-toggle="dropdown" href="#" role="button"
+                           aria-haspopup="false" aria-expanded="false">
                             <i class="dripicons-bell noti-icon"></i>
                             <span class="noti-icon-badge"></span>
                         </a>
@@ -800,7 +835,8 @@
 
                                 <h5 class="text-muted font-13 fw-normal mt-0">Today</h5>
                                 <!-- item-->
-                                <a href="javascript:void(0);" class="dropdown-item p-0 notify-item card unread-noti shadow-none mb-2">
+                                <a href="javascript:void(0);"
+                                   class="dropdown-item p-0 notify-item card unread-noti shadow-none mb-2">
                                     <div class="card-body">
                                         <span class="float-end noti-close-btn text-muted"><i class="mdi mdi-close"></i></span>
                                         <div class="d-flex align-items-center">
@@ -810,15 +846,18 @@
                                                 </div>
                                             </div>
                                             <div class="flex-grow-1 text-truncate ms-2">
-                                                <h5 class="noti-item-title fw-semibold font-14">Datacorp <small class="fw-normal text-muted ms-1">1 min ago</small></h5>
-                                                <small class="noti-item-subtitle text-muted">Caleb Flakelar commented on Admin</small>
+                                                <h5 class="noti-item-title fw-semibold font-14">Datacorp <small
+                                                        class="fw-normal text-muted ms-1">1 min ago</small></h5>
+                                                <small class="noti-item-subtitle text-muted">Caleb Flakelar commented on
+                                                    Admin</small>
                                             </div>
                                         </div>
                                     </div>
                                 </a>
 
                                 <!-- item-->
-                                <a href="javascript:void(0);" class="dropdown-item p-0 notify-item card read-noti shadow-none mb-2">
+                                <a href="javascript:void(0);"
+                                   class="dropdown-item p-0 notify-item card read-noti shadow-none mb-2">
                                     <div class="card-body">
                                         <span class="float-end noti-close-btn text-muted"><i class="mdi mdi-close"></i></span>
                                         <div class="d-flex align-items-center">
@@ -828,7 +867,8 @@
                                                 </div>
                                             </div>
                                             <div class="flex-grow-1 text-truncate ms-2">
-                                                <h5 class="noti-item-title fw-semibold font-14">Admin <small class="fw-normal text-muted ms-1">1 hours ago</small></h5>
+                                                <h5 class="noti-item-title fw-semibold font-14">Admin <small
+                                                        class="fw-normal text-muted ms-1">1 hours ago</small></h5>
                                                 <small class="noti-item-subtitle text-muted">New user registered</small>
                                             </div>
                                         </div>
@@ -838,18 +878,22 @@
                                 <h5 class="text-muted font-13 fw-normal mt-0">Yesterday</h5>
 
                                 <!-- item-->
-                                <a href="javascript:void(0);" class="dropdown-item p-0 notify-item card read-noti shadow-none mb-2">
+                                <a href="javascript:void(0);"
+                                   class="dropdown-item p-0 notify-item card read-noti shadow-none mb-2">
                                     <div class="card-body">
                                         <span class="float-end noti-close-btn text-muted"><i class="mdi mdi-close"></i></span>
                                         <div class="d-flex align-items-center">
                                             <div class="flex-shrink-0">
                                                 <div class="notify-icon">
-                                                    <img src="{{asset('/')}}admin/assets/images/users/avatar-2.jpg" class="img-fluid rounded-circle" alt="" />
+                                                    <img src="{{asset('/')}}admin/assets/images/users/avatar-2.jpg"
+                                                         class="img-fluid rounded-circle" alt=""/>
                                                 </div>
                                             </div>
                                             <div class="flex-grow-1 text-truncate ms-2">
-                                                <h5 class="noti-item-title fw-semibold font-14">Cristina Pride <small class="fw-normal text-muted ms-1">1 day ago</small></h5>
-                                                <small class="noti-item-subtitle text-muted">Hi, How are you? What about our next meeting</small>
+                                                <h5 class="noti-item-title fw-semibold font-14">Cristina Pride <small
+                                                        class="fw-normal text-muted ms-1">1 day ago</small></h5>
+                                                <small class="noti-item-subtitle text-muted">Hi, How are you? What about
+                                                    our next meeting</small>
                                             </div>
                                         </div>
                                     </div>
@@ -858,7 +902,8 @@
                                 <h5 class="text-muted font-13 fw-normal mt-0">30 Dec 2021</h5>
 
                                 <!-- item-->
-                                <a href="javascript:void(0);" class="dropdown-item p-0 notify-item card read-noti shadow-none mb-2">
+                                <a href="javascript:void(0);"
+                                   class="dropdown-item p-0 notify-item card read-noti shadow-none mb-2">
                                     <div class="card-body">
                                         <span class="float-end noti-close-btn text-muted"><i class="mdi mdi-close"></i></span>
                                         <div class="d-flex align-items-center">
@@ -869,25 +914,29 @@
                                             </div>
                                             <div class="flex-grow-1 text-truncate ms-2">
                                                 <h5 class="noti-item-title fw-semibold font-14">Datacorp</h5>
-                                                <small class="noti-item-subtitle text-muted">Caleb Flakelar commented on Admin</small>
+                                                <small class="noti-item-subtitle text-muted">Caleb Flakelar commented on
+                                                    Admin</small>
                                             </div>
                                         </div>
                                     </div>
                                 </a>
 
                                 <!-- item-->
-                                <a href="javascript:void(0);" class="dropdown-item p-0 notify-item card read-noti shadow-none mb-2">
+                                <a href="javascript:void(0);"
+                                   class="dropdown-item p-0 notify-item card read-noti shadow-none mb-2">
                                     <div class="card-body">
                                         <span class="float-end noti-close-btn text-muted"><i class="mdi mdi-close"></i></span>
                                         <div class="d-flex align-items-center">
                                             <div class="flex-shrink-0">
                                                 <div class="notify-icon">
-                                                    <img src="{{asset('/')}}admin/assets/images/users/avatar-4.jpg" class="img-fluid rounded-circle" alt="" />
+                                                    <img src="{{asset('/')}}admin/assets/images/users/avatar-4.jpg"
+                                                         class="img-fluid rounded-circle" alt=""/>
                                                 </div>
                                             </div>
                                             <div class="flex-grow-1 text-truncate ms-2">
                                                 <h5 class="noti-item-title fw-semibold font-14">Karen Robinson</h5>
-                                                <small class="noti-item-subtitle text-muted">Wow ! this admin looks good and awesome design</small>
+                                                <small class="noti-item-subtitle text-muted">Wow ! this admin looks good
+                                                    and awesome design</small>
                                             </div>
                                         </div>
                                     </div>
@@ -899,7 +948,8 @@
                             </div>
 
                             <!-- All-->
-                            <a href="javascript:void(0);" class="dropdown-item text-center text-primary notify-item border-top border-light py-2">
+                            <a href="javascript:void(0);"
+                               class="dropdown-item text-center text-primary notify-item border-top border-light py-2">
                                 View All
                             </a>
 
@@ -907,7 +957,8 @@
                     </li>
 
                     <li class="dropdown notification-list d-none d-sm-inline-block">
-                        <a class="nav-link dropdown-toggle arrow-none" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle arrow-none" data-bs-toggle="dropdown" href="#" role="button"
+                           aria-haspopup="false" aria-expanded="false">
                             <i class="dripicons-view-apps noti-icon"></i>
                         </a>
                         <div class="dropdown-menu dropdown-menu-end dropdown-menu-animated dropdown-lg p-0">
@@ -928,7 +979,8 @@
                                     </div>
                                     <div class="col">
                                         <a class="dropdown-icon-item" href="#">
-                                            <img src="{{asset('/')}}admin/assets/images/brands/dribbble.png" alt="dribbble">
+                                            <img src="{{asset('/')}}admin/assets/images/brands/dribbble.png"
+                                                 alt="dribbble">
                                             <span>Dribbble</span>
                                         </a>
                                     </div>
@@ -937,19 +989,22 @@
                                 <div class="row g-0">
                                     <div class="col">
                                         <a class="dropdown-icon-item" href="#">
-                                            <img src="{{asset('/')}}admin/assets/images/brands/bitbucket.png" alt="bitbucket">
+                                            <img src="{{asset('/')}}admin/assets/images/brands/bitbucket.png"
+                                                 alt="bitbucket">
                                             <span>Bitbucket</span>
                                         </a>
                                     </div>
                                     <div class="col">
                                         <a class="dropdown-icon-item" href="#">
-                                            <img src="{{asset('/')}}admin/assets/images/brands/dropbox.png" alt="dropbox">
+                                            <img src="{{asset('/')}}admin/assets/images/brands/dropbox.png"
+                                                 alt="dropbox">
                                             <span>Dropbox</span>
                                         </a>
                                     </div>
                                     <div class="col">
                                         <a class="dropdown-icon-item" href="#">
-                                            <img src="{{asset('/')}}admin/assets/images/brands/g-suite.png" alt="G Suite">
+                                            <img src="{{asset('/')}}admin/assets/images/brands/g-suite.png"
+                                                 alt="G Suite">
                                             <span>G Suite</span>
                                         </a>
                                     </div>
@@ -966,17 +1021,20 @@
                     </li>
 
                     <li class="dropdown notification-list">
-                        <a class="nav-link dropdown-toggle nav-user arrow-none me-0" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="false"
+                        <a class="nav-link dropdown-toggle nav-user arrow-none me-0" data-bs-toggle="dropdown" href="#"
+                           role="button" aria-haspopup="false"
                            aria-expanded="false">
                                     <span class="account-user-avatar">
-                                        <img src="{{asset('/')}}admin/assets/images/users/avatar-1.jpg" alt="user-image" class="rounded-circle">
+                                        <img src="{{asset('/')}}admin/assets/images/users/avatar-1.jpg" alt="user-image"
+                                             class="rounded-circle">
                                     </span>
                             <span>
                                         <span class="account-user-name">Dominic Keller</span>
                                         <span class="account-position">Founder</span>
                                     </span>
                         </a>
-                        <div class="dropdown-menu dropdown-menu-end dropdown-menu-animated topbar-dropdown-menu profile-dropdown">
+                        <div
+                            class="dropdown-menu dropdown-menu-end dropdown-menu-animated topbar-dropdown-menu profile-dropdown">
                             <!-- item-->
                             <div class=" dropdown-header noti-title">
                                 <h6 class="text-overflow m-0">Welcome !</h6>
@@ -1006,11 +1064,17 @@
                                 <span>Lock Screen</span>
                             </a>
 
+
                             <!-- item-->
-                            <a href="javascript:void(0);" class="dropdown-item notify-item">
-                                <i class="mdi mdi-logout me-1"></i>
-                                <span>Logout</span>
-                            </a>
+                            <form action="{{route('logout')}}" class="dropdown-item notify-item" method="post">
+                                @csrf
+                                <button type="submit" class=" bg-transparent dropdown-item border-0 m-0 p-0"><span>
+                                          <i class="mdi mdi-logout me-1"></i>
+                                      </span>Logout
+                                </button>
+                            </form>
+
+
                         </div>
                     </li>
 
@@ -1021,7 +1085,8 @@
                 <div class="app-search dropdown d-none d-lg-block">
                     <form>
                         <div class="input-group">
-                            <input type="text" class="form-control dropdown-toggle"  placeholder="Search..." id="top-search">
+                            <input type="text" class="form-control dropdown-toggle" placeholder="Search..."
+                                   id="top-search">
                             <span class="mdi mdi-magnify search-icon"></span>
                             <button class="input-group-text btn-primary" type="submit">Search</button>
                         </div>
@@ -1060,7 +1125,9 @@
                             <!-- item-->
                             <a href="javascript:void(0);" class="dropdown-item notify-item">
                                 <div class="d-flex">
-                                    <img class="d-flex me-2 rounded-circle" src="{{asset('/')}}admin/assets/images/users/avatar-2.jpg" alt="Generic placeholder image" height="32">
+                                    <img class="d-flex me-2 rounded-circle"
+                                         src="{{asset('/')}}admin/assets/images/users/avatar-2.jpg"
+                                         alt="Generic placeholder image" height="32">
                                     <div class="w-100">
                                         <h5 class="m-0 font-14">Erwin Brown</h5>
                                         <span class="font-12 mb-0">UI Designer</span>
@@ -1071,7 +1138,9 @@
                             <!-- item-->
                             <a href="javascript:void(0);" class="dropdown-item notify-item">
                                 <div class="d-flex">
-                                    <img class="d-flex me-2 rounded-circle" src="{{asset('/')}}admin/assets/images/users/avatar-5.jpg" alt="Generic placeholder image" height="32">
+                                    <img class="d-flex me-2 rounded-circle"
+                                         src="{{asset('/')}}admin/assets/images/users/avatar-5.jpg"
+                                         alt="Generic placeholder image" height="32">
                                     <div class="w-100">
                                         <h5 class="m-0 font-14">Jacob Deo</h5>
                                         <span class="font-12 mb-0">Developer</span>
@@ -1192,7 +1261,8 @@
                                 <div class="d-flex justify-content-between align-items-center mb-2">
                                     <h4 class="header-title">Projections Vs Actuals</h4>
                                     <div class="dropdown">
-                                        <a href="#" class="dropdown-toggle arrow-none card-drop" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <a href="#" class="dropdown-toggle arrow-none card-drop"
+                                           data-bs-toggle="dropdown" aria-expanded="false">
                                             <i class="mdi mdi-dots-vertical"></i>
                                         </a>
                                         <div class="dropdown-menu dropdown-menu-end">
@@ -1209,7 +1279,8 @@
                                 </div>
 
                                 <div dir="ltr">
-                                    <div id="high-performing-product" class="apex-charts" data-colors="#727cf5,#e3eaef"></div>
+                                    <div id="high-performing-product" class="apex-charts"
+                                         data-colors="#727cf5,#e3eaef"></div>
                                 </div>
 
                             </div> <!-- end card-body-->
@@ -1226,7 +1297,8 @@
                                 <div class="d-flex justify-content-between align-items-center mb-2">
                                     <h4 class="header-title">Revenue</h4>
                                     <div class="dropdown">
-                                        <a href="#" class="dropdown-toggle arrow-none card-drop" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <a href="#" class="dropdown-toggle arrow-none card-drop"
+                                           data-bs-toggle="dropdown" aria-expanded="false">
                                             <i class="mdi mdi-dots-vertical"></i>
                                         </a>
                                         <div class="dropdown-menu dropdown-menu-end">
@@ -1247,14 +1319,16 @@
                                         <div class="col-sm-6">
                                             <p class="text-muted mb-0 mt-3">Current Week</p>
                                             <h2 class="fw-normal mb-3">
-                                                <small class="mdi mdi-checkbox-blank-circle text-primary align-middle me-1"></small>
+                                                <small
+                                                    class="mdi mdi-checkbox-blank-circle text-primary align-middle me-1"></small>
                                                 <span>$58,254</span>
                                             </h2>
                                         </div>
                                         <div class="col-sm-6">
                                             <p class="text-muted mb-0 mt-3">Previous Week</p>
                                             <h2 class="fw-normal mb-3">
-                                                <small class="mdi mdi-checkbox-blank-circle text-success align-middle me-1"></small>
+                                                <small
+                                                    class="mdi mdi-checkbox-blank-circle text-success align-middle me-1"></small>
                                                 <span>$69,524</span>
                                             </h2>
                                         </div>
@@ -1263,14 +1337,16 @@
 
                                 <div class="dash-item-overlay d-none d-md-block" dir="ltr">
                                     <h5>Today's Earning: $2,562.30</h5>
-                                    <p class="text-muted font-13 mb-3 mt-2">Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui.
+                                    <p class="text-muted font-13 mb-3 mt-2">Etiam ultricies nisi vel augue. Curabitur
+                                        ullamcorper ultricies nisi. Nam eget dui.
                                         Etiam rhoncus...</p>
                                     <a href="javascript: void(0);" class="btn btn-outline-primary">View Statements
                                         <i class="mdi mdi-arrow-right ms-2"></i>
                                     </a>
                                 </div>
                                 <div dir="ltr">
-                                    <div id="revenue-chart" class="apex-charts mt-3" data-colors="#727cf5,#0acf97"></div>
+                                    <div id="revenue-chart" class="apex-charts mt-3"
+                                         data-colors="#727cf5,#0acf97"></div>
                                 </div>
                             </div> <!-- end card-body-->
                         </div> <!-- end card-->
@@ -1282,7 +1358,8 @@
                                 <div class="d-flex justify-content-between align-items-center">
                                     <h4 class="header-title">Revenue By Location</h4>
                                     <div class="dropdown">
-                                        <a href="#" class="dropdown-toggle arrow-none card-drop" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <a href="#" class="dropdown-toggle arrow-none card-drop"
+                                           data-bs-toggle="dropdown" aria-expanded="false">
                                             <i class="mdi mdi-dots-vertical"></i>
                                         </a>
                                         <div class="dropdown-menu dropdown-menu-end">
@@ -1305,7 +1382,8 @@
                                 <div class="progress-w-percent">
                                     <span class="progress-value fw-bold">72k </span>
                                     <div class="progress progress-sm">
-                                        <div class="progress-bar" role="progressbar" style="width: 72%;" aria-valuenow="72" aria-valuemin="0" aria-valuemax="100"></div>
+                                        <div class="progress-bar" role="progressbar" style="width: 72%;"
+                                             aria-valuenow="72" aria-valuemin="0" aria-valuemax="100"></div>
                                     </div>
                                 </div>
 
@@ -1313,7 +1391,8 @@
                                 <div class="progress-w-percent">
                                     <span class="progress-value fw-bold">39k </span>
                                     <div class="progress progress-sm">
-                                        <div class="progress-bar" role="progressbar" style="width: 39%;" aria-valuenow="39" aria-valuemin="0" aria-valuemax="100"></div>
+                                        <div class="progress-bar" role="progressbar" style="width: 39%;"
+                                             aria-valuenow="39" aria-valuemin="0" aria-valuemax="100"></div>
                                     </div>
                                 </div>
 
@@ -1321,7 +1400,8 @@
                                 <div class="progress-w-percent">
                                     <span class="progress-value fw-bold">25k </span>
                                     <div class="progress progress-sm">
-                                        <div class="progress-bar" role="progressbar" style="width: 39%;" aria-valuenow="39" aria-valuemin="0" aria-valuemax="100"></div>
+                                        <div class="progress-bar" role="progressbar" style="width: 39%;"
+                                             aria-valuenow="39" aria-valuemin="0" aria-valuemax="100"></div>
                                     </div>
                                 </div>
 
@@ -1329,7 +1409,8 @@
                                 <div class="progress-w-percent mb-0">
                                     <span class="progress-value fw-bold">61k </span>
                                     <div class="progress progress-sm">
-                                        <div class="progress-bar" role="progressbar" style="width: 61%;" aria-valuenow="61" aria-valuemin="0" aria-valuemax="100"></div>
+                                        <div class="progress-bar" role="progressbar" style="width: 61%;"
+                                             aria-valuenow="61" aria-valuemin="0" aria-valuemax="100"></div>
                                     </div>
                                 </div>
                             </div> <!-- end card-body-->
@@ -1344,7 +1425,8 @@
                             <div class="card-body">
                                 <div class="d-flex justify-content-between align-items-center mb-2">
                                     <h4 class="header-title">Top Selling Products</h4>
-                                    <a href="javascript:void(0);" class="btn btn-sm btn-link">Export <i class="mdi mdi-download ms-1"></i></a>
+                                    <a href="javascript:void(0);" class="btn btn-sm btn-link">Export <i
+                                            class="mdi mdi-download ms-1"></i></a>
                                 </div>
 
                                 <div class="table-responsive">
@@ -1454,7 +1536,8 @@
                                 <div class="d-flex justify-content-between align-items-center">
                                     <h4 class="header-title">Total Sales</h4>
                                     <div class="dropdown">
-                                        <a href="#" class="dropdown-toggle arrow-none card-drop" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <a href="#" class="dropdown-toggle arrow-none card-drop"
+                                           data-bs-toggle="dropdown" aria-expanded="false">
                                             <i class="mdi mdi-dots-vertical"></i>
                                         </a>
                                         <div class="dropdown-menu dropdown-menu-end">
@@ -1502,7 +1585,8 @@
                                 <div class="d-flex justify-content-between align-items-center mb-2">
                                     <h4 class="header-title">Recent Activity</h4>
                                     <div class="dropdown">
-                                        <a href="#" class="dropdown-toggle arrow-none card-drop" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <a href="#" class="dropdown-toggle arrow-none card-drop"
+                                           data-bs-toggle="dropdown" aria-expanded="false">
                                             <i class="mdi mdi-dots-vertical"></i>
                                         </a>
                                         <div class="dropdown-menu dropdown-menu-end">
@@ -1524,7 +1608,8 @@
                                     <div class="timeline-item">
                                         <i class="mdi mdi-upload bg-info-lighten text-info timeline-icon"></i>
                                         <div class="timeline-item-info">
-                                            <a href="javascript:void(0);" class="text-info fw-bold mb-1 d-block">You sold an item</a>
+                                            <a href="javascript:void(0);" class="text-info fw-bold mb-1 d-block">You
+                                                sold an item</a>
                                             <small>Paul Burgess just purchased “Hyper - Admin Dashboard”!</small>
                                             <p class="mb-0 pb-2">
                                                 <small class="text-muted">5 minutes ago</small>
@@ -1535,7 +1620,8 @@
                                     <div class="timeline-item">
                                         <i class="mdi mdi-airplane bg-primary-lighten text-primary timeline-icon"></i>
                                         <div class="timeline-item-info">
-                                            <a href="javascript:void(0);" class="text-primary fw-bold mb-1 d-block">Product on the Bootstrap Market</a>
+                                            <a href="javascript:void(0);" class="text-primary fw-bold mb-1 d-block">Product
+                                                on the Bootstrap Market</a>
                                             <small>Dave Gamache added
                                                 <span class="fw-bold">Admin Dashboard</span>
                                             </small>
@@ -1548,7 +1634,8 @@
                                     <div class="timeline-item">
                                         <i class="mdi mdi-microphone bg-info-lighten text-info timeline-icon"></i>
                                         <div class="timeline-item-info">
-                                            <a href="javascript:void(0);" class="text-info fw-bold mb-1 d-block">Robert Delaney</a>
+                                            <a href="javascript:void(0);" class="text-info fw-bold mb-1 d-block">Robert
+                                                Delaney</a>
                                             <small>Send you message
                                                 <span class="fw-bold">"Are you there?"</span>
                                             </small>
@@ -1561,7 +1648,8 @@
                                     <div class="timeline-item">
                                         <i class="mdi mdi-upload bg-primary-lighten text-primary timeline-icon"></i>
                                         <div class="timeline-item-info">
-                                            <a href="javascript:void(0);" class="text-primary fw-bold mb-1 d-block">Audrey Tobey</a>
+                                            <a href="javascript:void(0);" class="text-primary fw-bold mb-1 d-block">Audrey
+                                                Tobey</a>
                                             <small>Uploaded a photo
                                                 <span class="fw-bold">"Error.jpg"</span>
                                             </small>
@@ -1574,7 +1662,8 @@
                                     <div class="timeline-item">
                                         <i class="mdi mdi-upload bg-info-lighten text-info timeline-icon"></i>
                                         <div class="timeline-item-info">
-                                            <a href="javascript:void(0);" class="text-info fw-bold mb-1 d-block">You sold an item</a>
+                                            <a href="javascript:void(0);" class="text-info fw-bold mb-1 d-block">You
+                                                sold an item</a>
                                             <small>Paul Burgess just purchased “Hyper - Admin Dashboard”!</small>
                                             <p class="mb-0 pb-2">
                                                 <small class="text-muted">16 hours ago</small>
@@ -1585,7 +1674,8 @@
                                     <div class="timeline-item">
                                         <i class="mdi mdi-airplane bg-primary-lighten text-primary timeline-icon"></i>
                                         <div class="timeline-item-info">
-                                            <a href="javascript:void(0);" class="text-primary fw-bold mb-1 d-block">Product on the Bootstrap Market</a>
+                                            <a href="javascript:void(0);" class="text-primary fw-bold mb-1 d-block">Product
+                                                on the Bootstrap Market</a>
                                             <small>Dave Gamache added
                                                 <span class="fw-bold">Admin Dashboard</span>
                                             </small>
@@ -1598,7 +1688,8 @@
                                     <div class="timeline-item">
                                         <i class="mdi mdi-microphone bg-info-lighten text-info timeline-icon"></i>
                                         <div class="timeline-item-info">
-                                            <a href="javascript:void(0);" class="text-info fw-bold mb-1 d-block">Robert Delaney</a>
+                                            <a href="javascript:void(0);" class="text-info fw-bold mb-1 d-block">Robert
+                                                Delaney</a>
                                             <small>Send you message
                                                 <span class="fw-bold">"Are you there?"</span>
                                             </small>
@@ -1629,7 +1720,8 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-md-6">
-                        <script>document.write(new Date().getFullYear())</script> © Hyper - Coderthemes.com
+                        <script>document.write(new Date().getFullYear())</script>
+                        © Hyper - Coderthemes.com
                     </div>
                     <div class="col-md-6">
                         <div class="text-md-end footer-links d-none d-md-block">
@@ -1672,22 +1764,24 @@
 
             <!-- Settings -->
             <h5 class="mt-3">Color Scheme</h5>
-            <hr class="mt-1" />
+            <hr class="mt-1"/>
 
             <div class="form-check form-switch mb-1">
-                <input class="form-check-input" type="checkbox" name="color-scheme-mode" value="light" id="light-mode-check" checked>
+                <input class="form-check-input" type="checkbox" name="color-scheme-mode" value="light"
+                       id="light-mode-check" checked>
                 <label class="form-check-label" for="light-mode-check">Light Mode</label>
             </div>
 
             <div class="form-check form-switch mb-1">
-                <input class="form-check-input" type="checkbox" name="color-scheme-mode" value="dark" id="dark-mode-check">
+                <input class="form-check-input" type="checkbox" name="color-scheme-mode" value="dark"
+                       id="dark-mode-check">
                 <label class="form-check-label" for="dark-mode-check">Dark Mode</label>
             </div>
 
 
             <!-- Width -->
             <h5 class="mt-4">Width</h5>
-            <hr class="mt-1" />
+            <hr class="mt-1"/>
             <div class="form-check form-switch mb-1">
                 <input class="form-check-input" type="checkbox" name="width" value="fluid" id="fluid-check" checked>
                 <label class="form-check-label" for="fluid-check">Fluid</label>
@@ -1701,7 +1795,7 @@
 
             <!-- Left Sidebar-->
             <h5 class="mt-4">Left Sidebar</h5>
-            <hr class="mt-1" />
+            <hr class="mt-1"/>
             <div class="form-check form-switch mb-1">
                 <input class="form-check-input" type="checkbox" name="theme" value="default" id="default-check">
                 <label class="form-check-label" for="default-check">Default</label>
