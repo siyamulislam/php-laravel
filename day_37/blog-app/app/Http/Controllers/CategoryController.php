@@ -13,11 +13,11 @@ class CategoryController extends Controller
         return view('category.index');
     }
 
-    public function store(Request $request)
-    {
-        Category::addCategory($request);
-        return redirect('/category/add')->with('message', 'Category Added Successfully');
-    }
+        public function store(Request $request)
+        {
+            Category::addCategory($request);
+            return redirect('/category/add')->with('message', 'Category Added Successfully');
+        }
 
     public function manage()
     {
