@@ -17,5 +17,7 @@ Route::middleware([
     'verified'
 ])->group(function () {
     Route::get('/dashboard',    [DashboardController::class, 'dashboard'])->name('dashboard');
-    Route::get('/add/category', [CategoryController::class, 'addCategory'])->name('add-category');
+    Route::get('/add-category', [CategoryController::class, 'addCategory'])->name('add-category');
+    Route::get('/manage-category', [CategoryController::class, 'manageCategory'])->name('manage-category');
+    Route::post('/new-category', [CategoryController::class, 'newCategory'])->name('new-category');
 });
