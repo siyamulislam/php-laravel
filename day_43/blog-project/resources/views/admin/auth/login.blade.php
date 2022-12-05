@@ -84,7 +84,7 @@
 
                 <!-- Footer-->
                 <footer class="footer footer-alt">
-                    <p class="text-muted">Don't have an account? <a href="{{route('register')}}" class="text-muted ms-1"><b>Sign Up</b></a></p>
+                    <p class="text-muted">Don't have an account? <a href="{{route('register')}}" class="text-muted ms-1"><b>Register Now</b></a></p>
                 </footer>
 
             </div> <!-- end .card-body -->

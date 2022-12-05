@@ -1,59 +1,48 @@
 @extends('admin.master')
-@section('title') Dashboard | Add Category @endsection
+@section('title') Dashboard | Manage Category @endsection
 
 @section('body')
 
     <div class="row">
-        <div class="col-md-8 mx-auto">
-            <div class="card  ">
-                <div class="card-header  ">
+        <div class="col-md-11 mx-auto">
+            <div class="card ">
+                <div class="card-header">
                     <div class="row">
-                        <div class="col-md-3"></div>
-                        <div class="col-md-9">
-                            <div class="fw-normal display-6 text-secondary">Add Category</div>
-                        </div>
+                        <div class=" fw-normal display-6 text-secondary text-center">Manage Category</div>
                     </div>
-
                 </div>
                 <div class="card-body">
-                    <p class="text-center text-success">{{ Session::get('message') }}</p>
-                    <form action="" method="post" enctype="multipart/form-data">
-                        @csrf
-                        <div class="row mb-3">
-                            <label class="col-md-3"> Category Name</label>
-                            <div class="col-md-9">
-                                <input type="text" class="form-control" name="name">
-                            </div>
-                        </div>
-                        <div class="row mb-3">
-                            <div class="col-md-3">
-                                <label for="">Description</label>
-                            </div>
-                            <div class="col-md-9">
-                                <input type="text" class="form-control" name="description">
-                            </div>
-                        </div>
-                        <div class="row mb-3">
-                            <div class="col-md-3">
-                                <label for="">Image</label>
-                            </div>
-                            <div class="col-md-9">
-                                <input type="file" class="form-control" name="image">
-                            </div>
-                        </div>
-                        <div class="row mb-3">
-                            <div class="col-md-3">
-                                <label for=""></label>
-                            </div>
-                            <div class="col-md-9">
-                                <input type="submit" class="btn btn-outline-success" value="Create New Category">
-                            </div>
-                        </div>
-
-                    </form>
+                    <p class="text-success text-center">{{ Session::get('message') }}</p>
+                    <p class="text-danger text-center">{{ Session::get('message_delete') }}</p>
+                    <table class="table table-bordered table-hover  table-striped">
+                        <thead>
+                        <tr>
+                            <th>Sl</th>
+                            <th>Blog Title</th>
+                            <th>Description</th>
+                            <th style="width:10%">Image</th>
+                            <th style="width:25%">Action</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tbody>
+                        @foreach($categories as $category)
+                            <tr>
+                                <td>{{ $loop->iteration }}</td>
+                                <td>{{ $category->name }}</td>
+                                <td>{{ $category->description }}</td>
+                                <td><img src="{{ asset($category->image) }}" alt="" height="50" width="70"></td>
+                                <td>
+                                    <a href="{}" class="btn btn-success btn-sm">Details</a>
+                                    <a href="{{ route('category.edit', ['id'=>$category->id]) }}" class="btn btn-primary btn-sm">Edit</a>
+                                    <a href="{{ route('category.delete', ['id'=>$category->id]) }}" onclick="return confirm('Are you sure to delete this ?')" class="btn btn-danger btn-sm">Delete</a>
+                                </td>
+                            </tr>
+                        @endforeach
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>
-    </div>
 
 @endsection

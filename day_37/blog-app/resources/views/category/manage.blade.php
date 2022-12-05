@@ -10,8 +10,7 @@
                     <div class="card ">
                         <div class="card-header">
                             <div class="row">
-                                <div class=" fw-normal display-6 text-secondary text-center">Manage Category</div>
-{{--                                <div class="card-header fw-bold display-6 text-secondary text-center">Manage Category</div>--}}
+                                <div class=" fw-normal display-6 text-secondary text-center">Manage Category</div> 
                             </div>
                         </div>
                         <div class="card-body">
