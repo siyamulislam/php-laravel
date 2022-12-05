@@ -32,12 +32,12 @@ return view('admin.category.add-category');
     public function update(Request $request, $id)
     {
         Category::updateCategory($request, $id);
-        return redirect('admin.category.manage-category')->with('message', 'Category update successfully');
+        return redirect('/manage-category')->with('message', 'Category update successfully');
     }
 
     public function delete($id)
     {
         Category::deleteCategory($id);
-        return redirect('admin.category.manage-category')->with('message_delete', 'Category delete successfully');
+        return redirect('/manage-category')->with('message_delete', 'Category delete successfully');
     }
 }

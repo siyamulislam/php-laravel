@@ -17,7 +17,7 @@
                 </div>
                 <div class="card-body">
                     <p class="text-center text-success">{{ Session::get('message') }}</p>
-                    <form action="{{route('new-category')}}" method="post" enctype="multipart/form-data">
+                    <form action="{{route('category.update', ['id'=>$category->id])}}" method="post"   enctype="multipart/form-data">
                         @csrf
                         <div class="row mb-3">
                             <label class="col-md-3"> Category Name</label>
@@ -37,8 +37,8 @@
                         <div class="row mb-3">
                             <label class="col-md-3">Status</label>
                             <div class="col-md-9">
-                                <lebel> <input type="radio" name="status" value="{{ $category->chacked }}" checked> Published</lebel>
-                                <lebel> <input type="radio" name="status" value="{{ $category->chacked }}"> unPublished</lebel>
+                                <lebel> <input type="radio" name="status" value="1" {{$category->status==1?'checked':''}}  > Published</lebel>
+                                <lebel> <input type="radio" name="status" value="0" {{$category->status==0?'checked':''}}> unPublished</lebel>
                             </div>
                         </div>
                         <div class="row mb-3">
