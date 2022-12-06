@@ -12,8 +12,8 @@
                     </div>
                 </div>
                 <div class="card-body">
-                    <p class="text-success text-center">{{Session::has('message') ? Session::get('message') :""}}</p>
-                    <p class="text-danger text-center">{{ Session::has('message_delete') ?Session::get('message_delete'):"" }}</p>
+                    <p class="text-success text-center">{{Session::has('success') ? Session::get('success') :""}}</p>
+                    <p class="text-danger text-center">{{ Session::has('delete') ?Session::get('delete'):"" }}</p>
                     {{--                    <table class="table table-bordered table-hover  table-striped">--}}
                     <table id="basic-datatable" class="table dt-responsive nowrap w-100">
                         <thead>

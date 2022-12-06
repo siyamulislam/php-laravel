@@ -16,8 +16,8 @@
 
                 </div>
                 <div class="card-body">
-                    <p class="text-center text-success">{{ Session::has('message') ?Session::get('message'):"" }}</p>
-                    <form action="{{route('new-category')}}" method="post" enctype="multipart/form-data">
+                    <p class="text-center text-success">{{ Session::has('success') ?Session::get('success'):"" }}</p>
+                    <form action="{{route('category.store')}}" method="post" enctype="multipart/form-data">
                         @csrf
                         <div class="row mb-3">
                             <label class="col-md-3"> Category Name</label>

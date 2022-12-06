@@ -46,10 +46,10 @@
                 <div class="collapse" id="sidebarCrm">
                     <ul class="side-nav-second-level">
                         <li>
-                            <a href="{{route('add-category')}}">Add category</a>
+                            <a href="{{route('category.add')}}">Add category</a>
                         </li>
                         <li>
-                            <a href="{{route('manage-category')}}">Manage category</a>
+                            <a href="{{route('category.manage')}}">Manage category</a>
                         </li>
                     </ul>
                 </div>

@@ -4,27 +4,32 @@ namespace App\Http\Controllers;
 
 use App\Models\Category;
 use Illuminate\Http\Request;
+
 class CategoryController extends Controller
 
 {
     public $category;
-    public function addCategory(){
-return view('admin.category.add-category');
-    }
-    public function newCategory(Request $request){
-        Category::createCategory($request);
-        return redirect()->back()->with('message', 'Category Added Successfully');
+
+    public function add()
+    {
+        return view('admin.category.add');
     }
 
-    public function manageCategory()
+    public function store(Request $request)
+    {
+        Category::createCategory($request);
+        return redirect()->back()->with('success', 'Category Added Successfully');
+    }
+
+    public function manage()
     {
 //        $categories = Category::all();
 //        $categories = Category::get(['id','name','status']);
 //        $categories = Category::get(['id','name','description','status','image']);
-        $categories = Category::orderBy('id' ,'DESC')->get();
+        $categories = Category::orderBy('id', 'DESC')->get();
 //        echo '<pre>';
 //        print_r($categories);
-        return view('admin.category.manage-category', ['categories' => $categories]);
+        return view('admin.category.manage', ['categories' => $categories]);
     }
 
     public function edit($id)
@@ -36,24 +41,24 @@ return view('admin.category.add-category');
     public function update(Request $request, $id)
     {
         Category::updateCategory($request, $id);
-        return redirect('/manage-category')->with('message', 'Category update successfully');
+        return redirect('/category/manage')->with('success', 'Category update successfully');
     }
 
     public function delete($id)
     {
         Category::deleteCategory($id);
-        return redirect('/manage-category')->with('message_delete', 'Category delete successfully');
+        return redirect('/category/manage')->with('delete', 'Category delete successfully');
     }
 
-      public function details($id)
+    public function details($id)
     {
-        $this->category=Category::find($id);
+        $this->category = Category::find($id);
 //
 //        $lastUpdate = $this->getLastUpdateDate($this->blog);
 //        $this->blog['lastUpdate']=$lastUpdate;
 //        echo '<pre>';
 //        print_r($dateFormat);
-          return view('admin.category.details',['category'=>$this->category]);
+        return view('admin.category.details', ['category' => $this->category]);
     }
 
 }
