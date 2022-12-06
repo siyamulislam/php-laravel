@@ -13,11 +13,10 @@
                             <div class="fw-normal display-6 text-secondary">Update Category</div>
                         </div>
                     </div>
-
                 </div>
                 <div class="card-body">
                     <p class="text-center text-success">{{ Session::get('message') }}</p>
-                    <form action="{{route('category.update', ['id'=>$category->id])}}" method="post"   enctype="multipart/form-data">
+                    <form action="{{route('category.update', ['id'=>$category->id])}}" method="post" enctype="multipart/form-data">
                         @csrf
                         <div class="row mb-3">
                             <label class="col-md-3"> Category Name</label>

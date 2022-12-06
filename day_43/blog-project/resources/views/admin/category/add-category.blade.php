@@ -16,7 +16,7 @@
 
                 </div>
                 <div class="card-body">
-                    <p class="text-center text-success">{{ Session::get('message') }}</p>
+                    <p class="text-center text-success">{{ Session::has('message') ?Session::get('message'):"" }}</p>
                     <form action="{{route('new-category')}}" method="post" enctype="multipart/form-data">
                         @csrf
                         <div class="row mb-3">

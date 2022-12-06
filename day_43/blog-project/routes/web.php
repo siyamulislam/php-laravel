@@ -16,12 +16,14 @@ Route::middleware([
     config('jetstream.auth_session'),
     'verified'
 ])->group(function () {
-    Route::get('/dashboard',    [DashboardController::class, 'dashboard'])->name('dashboard');
-    Route::get('/add-category', [CategoryController::class, 'addCategory'])->name('add-category');
-    Route::post('/new-category', [CategoryController::class, 'newCategory'])->name('new-category');
-    Route::get('/manage-category', [CategoryController::class, 'manageCategory'])->name('manage-category');
+    Route::get ('/dashboard',               [DashboardController::class, 'dashboard'])->name('dashboard');
 
-    Route::get('/category/edit/{id}', [CategoryController::class, 'edit'])->name('category.edit');
-    Route::post('/category/update/{id}', [CategoryController::class, 'update'])->name('category.update');
-    Route::get('/category/delete/{id}', [CategoryController::class, 'delete'])->name('category.delete');
+    Route::get ('/add-category',            [CategoryController::class, 'addCategory'])->name('add-category');
+    Route::post('/new-category',            [CategoryController::class, 'newCategory'])->name('new-category');
+    Route::get ('/manage-category',         [CategoryController::class, 'manageCategory'])->name('manage-category');
+    Route::get ('/category/edit/{id}',      [CategoryController::class, 'edit'])->name('category.edit');
+    Route::post('/category/update/{id}',    [CategoryController::class, 'update'])->name('category.update');
+    Route::get ('/category/delete/{id}',    [CategoryController::class, 'delete'])->name('category.delete');
+
+    Route::get ('/category/details/{id}',   [CategoryController::class, 'details'])->name('category.details');
 });
