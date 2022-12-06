@@ -12,11 +12,12 @@ Route> web.php
 
 //singular form
 php artisan make:controller FrontController
-php artisan make:controller DashboardController
+php artisan make:controller BrandController
 php artisan make:migration create_students_table
 
 php artisan make:model Product
 php artisan make:model Product -m
+php artisan make:model Brand -mc
 
 php artisan migrate
 php artisan migrate:fresh
