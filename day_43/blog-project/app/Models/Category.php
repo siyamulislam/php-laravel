@@ -14,7 +14,7 @@ class Category extends Model
     public static function getImageUrl($req){
         self::$image=$req->file('image');
         self::$imageName=time().'_'.self::$image->getClientOriginalName();
-        self::$directory="res/img/category/";
+        self::$directory="admin/assets/upload/category/";
         self::$image->move(self::$directory,self::$imageName);
         return self::$directory.self::$imageName;
     }
