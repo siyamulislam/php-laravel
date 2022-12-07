@@ -14,7 +14,7 @@ class Brand extends Model
     public static function getImageUrl($req){
         self::$image=$req->file('image');
         self::$imageName=time().'_'.self::$image->getClientOriginalName();
-        self::$directory="res/img/brand/";
+        self::$directory="admin/assets/upload/brand/";
         self::$image->move(self::$directory,self::$imageName);
         return self::$directory.self::$imageName;
     }

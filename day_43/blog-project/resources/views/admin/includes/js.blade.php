@@ -21,3 +21,8 @@
 <!-- demo app -->
 <script src="{{asset('/')}}admin/assets/js/pages/demo.dashboard.js"></script>
 <!-- end demo js-->
+<!--ck-edit-->
+<script src="https://cdn.ckeditor.com/4.20.1/standard/ckeditor.js"></script>
+<script>
+    CKEDITOR.replace( 'product_description' );
+</script>

@@ -1,0 +1,53 @@
+##PHP ==>
+composer dump-autoload
+php -S 127.0.0.1:800
+
+##LARAVEL ==>
+composer create-project laravel/laravel laravel-app
+cd laravel-app
+php artisan serve
+
+public> index.php
+Route> web.php
+
+//singular form
+php artisan make:controller FrontController
+php artisan make:controller DashboardController
+php artisan make:migration create_students_table
+
+php artisan make:model Product
+php artisan make:model Product -m
+
+php artisan migrate
+php artisan migrate:fresh
+
+php artisan migrate:rollback
+php artisan migrate
+
+composer install
+copy .env.example .env
+php artisan key:generate
+php artisan serve
+
+
+composer install
+
+#auth
+composer require laravel/jetstream
+
+php artisan jetstream:install livewire
+
+vendor>laravel>fortify>src>rule
+
+
+#admin theme
+https://file.fm/u/2dsarkswm
+
+https://freshdesignweb.com/ustora/
+
+https://www.000webhost.com/free-cpanel-hosting
+https://www.hostingadvice.com/how-to/free-cpanel-hosting/
+git add . && git commit -m "ustra mastering 20%" && git push
+
+
+

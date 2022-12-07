@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\BrandController;
+use App\Http\Controllers\ProductController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FrontController;
 use App\Http\Controllers\DashboardController;
@@ -38,4 +39,13 @@ Route::middleware([
     Route::get ('/brand/delete/{id}',       [BrandController::class, 'delete'])    ->name('brand.delete');
 
     Route::get ('/brand/details/{id}',      [BrandController::class, 'details'])   ->name('brand.details');
+    //      Products
+    Route::get ('/product/add',               [ProductController::class, 'add'])       ->name('product.add');
+    Route::post('/product/store',             [ProductController::class, 'store'])     ->name('product.store');
+    Route::get ('/product/manage',            [ProductController::class, 'manage'])    ->name('product.manage');
+    Route::get ('/product/edit/{id}',         [ProductController::class, 'edit'])      ->name('product.edit');
+    Route::post('/product/update/{id}',       [ProductController::class, 'update'])    ->name('product.update');
+    Route::get ('/product/delete/{id}',       [ProductController::class, 'delete'])    ->name('product.delete');
+
+    Route::get ('/product/details/{id}',      [ProductController::class, 'details'])   ->name('product.details');
 });
