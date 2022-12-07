@@ -8,13 +8,14 @@
             <div class="col-md-6 pe-5">
                 <h2 class="">Title: {{ $product->name }}</h2>
                 <small>  Status: {{ $product->status=1?"Published":"Unpublished"  }}
-                || Created at: {{ $product->created_at}}
+                | {{ $product->lastUpdate.' ago'}}
                 </small>
                 <hr class="text-muted">
                 <h4>Product Description</h4>
                 <hr class="text-muted">
                 <p ></p>
                 <div class="lh-base" style="text-align: justify;">
+
 
                     {!!$product->description !!}
 
