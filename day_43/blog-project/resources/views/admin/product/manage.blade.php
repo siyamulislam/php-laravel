@@ -19,26 +19,26 @@
                         <thead>
                         <tr>
                             <th>Sl</th>
+                            <th >Image</th>
                             <th >Product Title</th>
                             <th >Category</th>
                             <th >Brand</th>
                             <th >Price</th>
                             <th >Status</th>
-                            <th >Image</th>
                             <th >Action</th>
                         </tr>
                         </thead>
                         <tbody>
                         @foreach($products as $product)
-                            <tr>
+                            <tr  class="{{ $product->status == 1 ? '' : 'bg-warning text-light' }}">
+
                                 <td>{{ $loop->iteration }}</td>
+                                <td><img src="{{ asset($product->image) }}" alt="" height="50" width="50"></td>
                                 <td>{{\Illuminate\Support\Str::words($product->name,2,'...')}}</td>
                                 <td>{{ $product->category['name'] }}</td>
                                 <td>{{ $product->brand['name'] }}</td>
                                 <td>{{ $product->price}}</td>
                                 <td>{{ $product->status==1?"Published":"Unpublished" }}</td>
-
-                                <td><img src="{{ asset($product->image) }}" alt="" height="50" width="70"></td>
                                 <td>
                                     <a href="{{ route('product.details', ['id'=>$product->id]) }}"
                                        class="btn btn-success btn-sm">Details</a>

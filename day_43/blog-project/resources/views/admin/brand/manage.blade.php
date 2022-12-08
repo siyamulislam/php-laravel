@@ -19,22 +19,21 @@
                         <thead>
                         <tr>
                             <th>Sl</th>
+                            <th style="width:10%">Image</th>
                             <th>Brand Title</th>
                             <th>Description</th>
                             <th>Status</th>
-                            <th style="width:10%">Image</th>
                             <th style="width:30%">Action</th>
                         </tr>
                         </thead>
                         <tbody>
                         @foreach($brands as $brand)
-                            <tr>
+                            <tr  class="{{ $brand->status == 1 ? '' : 'bg-warning text-light' }}">
                                 <td>{{ $loop->iteration }}</td>
+                                <td><img src="{{ asset($brand->image) }}" alt="" height="50" width="70"></td>
                                 <td>{{ $brand->name }}</td>
                                 <td>{{ Illuminate\Support\Str::limit($brand->description,30, '...') }}</td>
                                 <td>{{ $brand->status==1?"Published":"Unpublished" }}</td>
-
-                                <td><img src="{{ asset($brand->image) }}" alt="" height="50" width="70"></td>
                                 <td>
                                     <a href="{{ route('brand.details', ['id'=>$brand->id]) }}"
                                        class="btn btn-success btn-sm">Details</a>

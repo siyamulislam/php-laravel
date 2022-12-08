@@ -19,22 +19,22 @@
                         <thead>
                         <tr>
                             <th>Sl</th>
+                            <th>Image</th>
                             <th>Category Title</th>
                             <th>Description</th>
                             <th>Status</th>
-                            <th style="width:10%">Image</th>
-                            <th style="width:30%">Action</th>
+                            <th>Action</th>
                         </tr>
                         </thead>
                         <tbody>
                         @foreach($categories as $category)
-                            <tr>
+                            <tr  class="{{ $category->status == 1 ? '' : 'bg-warning text-light ' }}">
                                 <td>{{ $loop->iteration }}</td>
+                                <td><img src="{{ asset($category->image) }}" alt="" height="50" width="70"></td>
                                 <td>{{ $category->name }}</td>
                                 <td>{{ Illuminate\Support\Str::limit($category->description,30, '...') }}</td>
                                 <td>{{ $category->status==1?"Published":"Unpublished" }}</td>
 
-                                <td><img src="{{ asset($category->image) }}" alt="" height="50" width="70"></td>
                                 <td>
                                     <a href="{{ route('category.details', ['id'=>$category->id]) }}"
                                        class="btn btn-success btn-sm">Details</a>
