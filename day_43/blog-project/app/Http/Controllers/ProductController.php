@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Brand;
 use App\Models\Category;
 use App\Models\Product;
+use DateTime;
 use Illuminate\Http\Request;
 use function League\Flysystem\get;
 
@@ -56,6 +57,25 @@ class ProductController extends Controller
     public function details($id)
     {
         $this->product = Product::find($id);
+
+        $lastUpdate = $this->getLastUpdateDate($this->product);
+        $this->product['lastUpdate']=$lastUpdate;
+
         return view('admin.product.details', ['product' => $this->product]);
+    }
+
+    public static function getLastUpdateDate($blog)
+    {
+        $dateDiff = date_diff(new DateTime(), $blog->updated_at);
+
+        $dateFormat = '';
+        if ($dateDiff->format('%y') != 0) $dateFormat = $dateFormat . '%y year';
+        if ($dateDiff->format('%m') != 0) $dateFormat = $dateFormat . ' %m month';
+        if ($dateDiff->format('%d') != 0) $dateFormat = $dateFormat . ' %d day';
+        if ($dateDiff->format('%H') != 0) $dateFormat = $dateFormat . ' %Hh';
+        if ($dateDiff->format('%I') != 0) $dateFormat = $dateFormat . ' %Im';
+        if ($dateDiff->format('%S') != 0) $dateFormat = $dateFormat . ' %Ss';
+        $lastUpdate = $dateDiff->format($dateFormat);
+        return $lastUpdate;
     }
 }

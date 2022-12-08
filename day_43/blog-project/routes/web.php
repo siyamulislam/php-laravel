@@ -30,7 +30,7 @@ Route::middleware([
 
     Route::get ('/category/details/{id}',   [CategoryController::class, 'details'])->name('category.details');
 
-//      Brands
+    //      Brands
     Route::get ('/brand/add',               [BrandController::class, 'add'])       ->name('brand.add');
     Route::post('/brand/store',             [BrandController::class, 'store'])     ->name('brand.store');
     Route::get ('/brand/manage',            [BrandController::class, 'manage'])    ->name('brand.manage');
