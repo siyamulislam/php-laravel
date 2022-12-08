@@ -102,6 +102,7 @@
                                         <ins>৳{{$product->price}}.00</ins> <del>৳{{$product->price*2}}.00</del>
                                     </div>
 
+
                                     <form action="" class="cart">
                                         <div class="quantity">
                                             <input type="number" size="4" class="input-text qty text" title="Qty" value="1" name="quantity" min="1" step="1">
@@ -112,6 +113,16 @@
                                     <div class="product-inner-category">
                                         <p>Category: <a href="">{{$product->category->name}}</a>. Brands: <a href="">{{$product->brand->name}}</a>. </p>
                                         <p> Tags: <a href="">{{$product->brand->name}}</a>,<a href=""> {{$product->category->name}}</a>. </p>
+
+                                        <small> {{$product->lastUpdate}} ago </small>
+                                        <div class="product-wid-rating" style="margin-top: 5px">
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <span class="text-info"> (29 rating)</span>
+                                        </div>
                                     </div>
 
                                     <div role="tabpanel">
