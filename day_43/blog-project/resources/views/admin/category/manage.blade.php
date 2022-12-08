@@ -28,7 +28,7 @@
                         </thead>
                         <tbody>
                         @foreach($categories as $category)
-                            <tr  class="{{ $category->status == 1 ? '' : 'bg-warning text-light ' }}">
+                            <tr  class="{{ $category->status == 1 ? '' : 'bg-secondary text-light ' }}">
                                 <td>{{ $loop->iteration }}</td>
                                 <td><img src="{{ asset($category->image) }}" alt="" height="50" width="70"></td>
                                 <td>{{ $category->name }}</td>

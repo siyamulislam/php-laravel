@@ -15,7 +15,8 @@
                     <p class="text-success text-center">{{Session::has('success') ? Session::get('success') :""}}</p>
                     <p class="text-danger text-center">{{ Session::has('delete') ?Session::get('delete'):"" }}</p>
                     {{--                    <table class="table table-bordered table-hover  table-striped">--}}
-                    <table id="basic-datatable" class="table dt-responsive nowrap w-100">
+{{--                    <table id="basic-datatable" class="table dt-responsive nowrap w-100" style="vertical-align: middle;">--}}
+                    <table id="basic-datatable" class="table dt-responsive nowrap table-bordered  w-100"  >
                         <thead>
                         <tr>
                             <th>Sl</th>
@@ -30,7 +31,7 @@
                         </thead>
                         <tbody>
                         @foreach($products as $product)
-                            <tr  class="{{ $product->status == 1 ? '' : 'bg-warning text-light' }}">
+                            <tr  valign="middle" class="{{ $product->status == 1 ? '' : 'bg-secondary text-light' }}">
 
                                 <td>{{ $loop->iteration }}</td>
                                 <td><img src="{{ asset($product->image) }}" alt="" height="50" width="50"></td>
