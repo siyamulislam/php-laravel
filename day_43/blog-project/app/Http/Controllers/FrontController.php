@@ -15,7 +15,7 @@ class FrontController extends Controller
        return view ('front.home.home', ['products' => $products]);
    }
 
-//   public function productDetails($id=4){
+//   public function productDetails($id){
 //       $this->product = Product::find($id);
 //       $lastUpdate = $this->getLastUpdateDate($this->product);
 //       $this->product['lastUpdate']=$lastUpdate;
