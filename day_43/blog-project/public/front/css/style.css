@@ -685,7 +685,8 @@ width: 10px;
   font-size: 50px;
   font-weight: 200;
   margin: 0;
-  padding: 50px 0;color: #fff;
+  /*padding: 50px 0;color: #fff;*/
+  padding: 25px 0;color: #fff;
 }
 
 .single-product-area .zigzag-bottom {background-color: #f4f4f4}

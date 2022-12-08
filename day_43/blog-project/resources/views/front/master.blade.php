@@ -109,7 +109,7 @@
                 <ul class="nav navbar-nav">
                     <li class="active"><a href="{{route('home')}}">Home</a></li>
                     <li><a href="shop.html">Shop page</a></li>
-                    <li><a href="{{route('product-details')}}">Single product</a></li>
+                    <li><a href="">Single product</a></li>
                     <li><a href="cart.html">Cart</a></li>
                     <li><a href="checkout.html">Checkout</a></li>
                     <li><a href="#">Category</a></li>

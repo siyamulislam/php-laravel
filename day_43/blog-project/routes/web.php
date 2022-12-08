@@ -11,8 +11,7 @@ use App\Http\Controllers\CategoryController;
 
 Route::get('/',                         [FrontController::class, 'home'])->                 name('home');
 Route::get('/home',                     [FrontController::class, 'home'])->                 name('home');
-Route::get('/product-details/',         [FrontController::class, 'productDetails'])->       name('product-details');
-//Route::get('/product-details/{id}',     [FrontController::class, 'productDetails'])->       name('product-details');
+Route::get('/products/{id}',      [FrontController::class, 'productDetails'])->             name('products');
 
 Route::middleware([
     'auth:sanctum',
