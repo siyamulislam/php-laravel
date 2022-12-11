@@ -12,8 +12,8 @@
     </a>
     <div class="collapse" id="categoryLayout" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
         <nav class="sb-sidenav-menu-nested nav">
-            <a class="nav-link" href="{{route('category.add')}}">Add category</a>
-            <a class="nav-link" href="{{route('category.manage')}}">Manage category</a>
+            <a class="nav-link" href="{{route('category.add')}}">Add Category</a>
+            <a class="nav-link" href="{{route('category.manage')}}">Manage Category</a>
         </nav>
     </div>
 
@@ -25,8 +25,8 @@
     </a>
     <div class="collapse" id="brandLayout" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
         <nav class="sb-sidenav-menu-nested nav">
-            <a class="nav-link" href="{{route('brand.add')}}">Add brand</a>
-            <a class="nav-link" href="{{route('brand.manage')}}">Manage brand</a>
+            <a class="nav-link" href="{{route('brand.add')}}">Add Brand</a>
+            <a class="nav-link" href="{{route('brand.manage')}}">Manage Brand</a>
         </nav>
     </div>
 
@@ -37,8 +37,8 @@
     </a>
     <div class="collapse" id="productLayout" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
         <nav class="sb-sidenav-menu-nested nav">
-            <a class="nav-link" href="{{route('product.add')}}">Add product</a>
-            <a class="nav-link" href="{{route('product.manage')}}">Manage product</a>
+            <a class="nav-link" href="{{route('product.add')}}">Add Product</a>
+            <a class="nav-link" href="{{route('product.manage')}}">Manage Product</a>
         </nav>
     </div>
 

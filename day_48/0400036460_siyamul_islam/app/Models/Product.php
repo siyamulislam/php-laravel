@@ -13,12 +13,14 @@ class Product extends Model
     protected $fillable=['category_id','brand_id','name','price','description','status','image'];
 
     public static function getImageUrl($req){
-        self::$image=$req->file('image');
-        self::$imageName=time().'_'.self::$image->getClientOriginalName();
-//        self::$directory="admin/assets/up-img/product/";
-        self::$directory="admin/assets/upload/product/";
-        self::$image->move(self::$directory,self::$imageName);
-        return self::$directory.self::$imageName;
+        if($req->file('image')){
+            self::$image=$req->file('image');
+            self::$imageName=time().'_'.self::$image->getClientOriginalName();
+            self::$directory="admin/assets/upload/product/";
+            self::$image->move(self::$directory,self::$imageName);
+            return self::$directory.self::$imageName;
+        }
+        else return '';
     }
 
     public static function createProduct($req){
@@ -38,6 +40,7 @@ class Product extends Model
         if ($req->file('image')){
             if (file_exists(self::$product->image)){
                 unlink(self::$product->image);
+
             }
             self::$imageUrl=self::getImageUrl($req);
         }
