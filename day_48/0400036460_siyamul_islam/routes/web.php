@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\FrontController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,9 +14,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/',                         [FrontController::class, 'home'])->                 name('home');
+Route::get('/home',                     [FrontController::class, 'home'])->                 name('home');
+//Route::get('/products/{id}',      [FrontController::class, 'productDetails'])->             name('products');
 
 Route::middleware([
     'auth:sanctum',
