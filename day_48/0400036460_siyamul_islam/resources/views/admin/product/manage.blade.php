@@ -16,7 +16,7 @@
                     <p class="text-danger text-center">{{ Session::has('delete') ?Session::get('delete'):"" }}</p>
                     {{--                    <table class="table table-bordered table-hover  table-striped">--}}
 {{--                    <table id="basic-datatable" class="table dt-responsive nowrap w-100" style="vertical-align: middle;">--}}
-                    <table id="basic-datatable" class="table dt-responsive nowrap table-bordered  w-100"  >
+                    <table   id="datatablesSimple" class="table dt-responsive nowrap table-bordered  w-100"  >
                         <thead>
                         <tr>
                             <th>Sl</th>

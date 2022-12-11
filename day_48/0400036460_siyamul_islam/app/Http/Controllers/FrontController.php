@@ -2,17 +2,18 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Brand;
+use App\Models\Product;
 use DateTime;
 use Illuminate\Http\Request;
 
 class FrontController extends Controller
 {
     public function home(){
-//        $products = Product::where('status',1)->orderBy('id', 'DESC')->get();
-//        $brands = Brand::where('status',1)->orderBy('id', 'DESC')->get();
-//       print_r($category);
-//        return view ('front.home.home', ['products' => $products,'brands'=>$brands]);
-        return view ('front.home.home');
+        $products = Product::where('status',1)->orderBy('id', 'DESC')->get();
+        $brands = Brand::where('status',1)->orderBy('id', 'DESC')->get();
+        return view ('front.home.home', ['products' => $products,'brands'=>$brands]);
+//        return view ('front.home.home');
     }
 
     public function productDetails($id){
