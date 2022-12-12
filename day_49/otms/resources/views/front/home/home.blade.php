@@ -3,25 +3,33 @@
     OTMS
 @endsection
 @section('body')
-    <nav>
-        <div class="navbar navbar-expand-md bg-dark navbar-dark">
-            <div class="container">
-                <a href="" class="navbar-brand">Logo</a>
-                <ul class="navbar-nav ms-auto ">
-                    <li><a href="" class="nav-link">Home</a></li>
-                    <li class="dropdown">
-                        <a href="" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Course Category</a>
-                        <ul class="dropdown-menu">
-                            <li><a href="" class="dropdown-item">Category One</a></li>
-                            <li><a href="" class="dropdown-item">Category Two</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="" class="nav-link">About</a></li>
-                    <li><a href="" class="nav-link">Contact</a></li>
-                    <li><a href="" class="nav-link">Login</a></li>
-                    <li><a href="" class="nav-link">Register</a></li>
-                </ul>
+
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" data-bs-intervel="100">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="{{asset('/')}}front/img/slider/1.jpg" class="d-block w-100" style="height: 550px" alt="Course Title">
+            </div>
+            <div class="carousel-item">
+                <img src="{{asset('/')}}front/img/slider/2.jpg" class="d-block w-100" style="height: 550px" alt="Course Title">
+            </div>
+            <div class="carousel-item">
+                <img src="{{asset('/')}}front/img/slider/3.jpg" class="d-block w-100" style="height: 550px" alt="Course Title">
             </div>
         </div>
-    </nav>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+</div>
 @endsection
