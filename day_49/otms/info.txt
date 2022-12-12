@@ -1,0 +1,37 @@
+Role:
+1. Admin
+2. Instructor
+3. Student
+
+Module:
+* Category
+    # id
+    * name
+    * slug
+    * status
+* Sub Category
+    # id
+    * category_id
+    * name
+    * slug
+    * status
+* Course
+    # id
+    * category_id
+    * subcategory_id
+    * trainer_id
+    * title
+    * image
+    * price
+    * s description
+    * l description
+    * total hour
+    * start date
+    * end date
+    * slug
+    * status
+    * total apply
+    * hit count
+
+* Enroll
+* Slider
