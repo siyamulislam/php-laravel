@@ -12,7 +12,6 @@ Route> web.php
 
 //singular form
 php artisan make:controller FrontController
-php artisan make:controller BrandController
 php artisan make:migration create_students_table
 
 php artisan make:model Product
@@ -30,13 +29,15 @@ copy .env.example .env
 php artisan key:generate
 php artisan serve
 
-
 composer install
+
 
 #auth
 composer require laravel/jetstream
 
 php artisan jetstream:install livewire
+#uninstall
+composer remove laravel/jetstream
 
 vendor>laravel>fortify>src>rule
 
@@ -48,7 +49,7 @@ https://freshdesignweb.com/ustora/
 
 https://www.000webhost.com/free-cpanel-hosting
 https://www.hostingadvice.com/how-to/free-cpanel-hosting/
-git add . && git commit -m "ustra mastering 20%" && git push
+git add . && git commit -m "front nav and db role" && git push
 
 https://ckeditor.com/
 
