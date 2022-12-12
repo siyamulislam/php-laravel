@@ -53,7 +53,7 @@
                         <div class="card-body">
                             <form action="" method="post">
                                 <div class="row mb-3">
-                                    <label for="" class="col-md-3">Full Name</label>
+                                    <label for="" class="col-md-3"> Name</label>
                                     <div class="col-md-9">
                                         <input type="name" class="form-control" name="name"/>
                                     </div>
