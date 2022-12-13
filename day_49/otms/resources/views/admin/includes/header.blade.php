@@ -302,11 +302,21 @@
                 </a>
 
 
+
                 <!-- item-->
-                <form action="{{route('logout')}}" class="dropdown-item notify-item" method="post">
+{{--                <form action="{{route('logout')}}" class="dropdown-item notify-item" method="post">--}}
+{{--                    @csrf--}}
+{{--                    <button type="submit" class=" bg-transparent dropdown-item border-0 m-0 p-0">--}}
+{{--                        <span><i class="mdi mdi-logout me-1"></i> </span>Logout </button>--}}
+{{--                </form>--}}
+
+                <a href="javascript:void(0);" class="dropdown-item notify-item"; onclick="event.preventDefault();
+                document.getElementById('logoutForm').submit()">
+                    <i class="mdi mdi-lock-outline me-1"></i>
+                    <span>Logout</span>
+                </a>
+                <form action="{{route('logout')}}" class="dropdown-item notify-item" method="post" id="logoutForm">
                     @csrf
-                    <button type="submit" class=" bg-transparent dropdown-item border-0 m-0 p-0">
-                        <span><i class="mdi mdi-logout me-1"></i> </span>Logout </button>
                 </form>
 
             </div>

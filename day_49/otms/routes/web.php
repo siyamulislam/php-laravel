@@ -2,7 +2,8 @@
 
 use App\Http\Controllers\Admin\DashboardController;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\FrontController;
+use App\Http\Controllers\Front\FrontController;
+use App\Http\Controllers\Admin\CourseCategoryController;
 
 
 Route::as('front.')->group(function (){
@@ -17,5 +18,6 @@ Route::middleware([
     config('jetstream.auth_session'),
     'verified'
 ])->group(function () {
-    Route::get ('/dashboard',               [DashboardController::class, 'dashboard'])->name('dashboard');
+    Route::get ('/dashboard',       [DashboardController::class, 'dashboard'])->name('dashboard');
+    Route::resource('course-categories',CourseCategoryController::class);
 });

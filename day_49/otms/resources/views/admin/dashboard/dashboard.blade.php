@@ -1,5 +1,5 @@
 @extends('admin.master')
-@section('title') Dashboard | Hyper - Responsive Bootstrap 5 Admin Dashboard @endsection
+@section('title')Admin Dashboard @endsection
 
 @section('body')
     <!-- start page title -->

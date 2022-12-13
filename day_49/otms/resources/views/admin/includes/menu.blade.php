@@ -40,16 +40,19 @@
                 <a data-bs-toggle="collapse" href="#sidebarCrm" aria-expanded="false" aria-controls="sidebarCrm"
                    class="side-nav-link">
                     <i class="uil uil-tachometer-fast"></i>
-                    <span> Category </span>
+                    <span> Course Module</span>
                     <span class="menu-arrow"></span>
                 </a>
                 <div class="collapse" id="sidebarCrm">
                     <ul class="side-nav-second-level">
                         <li>
-                            <a href="#">Add category</a>
+                            <a href="{{route('course-categories.index')}}">Course Category</a>
                         </li>
                         <li>
-                            <a href="#">Manage category</a>
+                            <a href="#">Course Sub Category</a>
+                        </li>
+                        <li>
+                            <a href="#">Course</a>
                         </li>
                     </ul>
                 </div>
@@ -59,16 +62,16 @@
                 <a data-bs-toggle="collapse" href="#sidebarEcommerce" aria-expanded="false"
                    aria-controls="sidebarEcommerce" class="side-nav-link">
                     <i class="uil-store"></i>
-                    <span> Brand </span>
+                    <span> Slider Module </span>
                     <span class="menu-arrow"></span>
                 </a>
                 <div class="collapse" id="sidebarEcommerce">
                     <ul class="side-nav-second-level">
                         <li>
-                            <a href="#">Add brand</a>
+                            <a href="#">Add Slider</a>
                         </li>
                         <li>
-                            <a href="#">Manage brand</a>
+                            <a href="#">Manage Slider</a>
                         </li>
                     </ul>
                 </div>
@@ -78,7 +81,7 @@
                 <a data-bs-toggle="collapse" href="#sidebarProjects" aria-expanded="false"
                    aria-controls="sidebarProjects" class="side-nav-link">
                     <i class="uil-briefcase"></i>
-                    <span> Product </span>
+                    <span> Contact Module </span>
                     <span class="menu-arrow"></span>
                 </a>
                 <div class="collapse" id="sidebarProjects">
@@ -89,6 +92,24 @@
                         <li>
                             <a href="#">Manage product</a>
                         </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="side-nav-item">
+                <a data-bs-toggle="collapse" href="#sidebarEnroll" aria-expanded="false"
+                   aria-controls="sidebarEnroll" class="side-nav-link">
+                    <i class="uil-briefcase"></i>
+                    <span> Enroll Module </span>
+                    <span class="menu-arrow"></span>
+                </a>
+                <div class="collapse" id="sidebarEnroll">
+                    <ul class="side-nav-second-level">
+{{--                        <li>--}}
+{{--                            <a href="#">Add product</a>--}}
+{{--                        </li>--}}
+{{--                        <li>--}}
+{{--                            <a href="#">Manage product</a>--}}
+{{--                        </li>--}}
                     </ul>
                 </div>
             </li>
