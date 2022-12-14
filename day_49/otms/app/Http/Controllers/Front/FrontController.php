@@ -1,10 +1,9 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Front;
 
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use Illuminate\Routing\Route;
-
 
 class FrontController extends Controller
 {
@@ -14,6 +13,6 @@ class FrontController extends Controller
     public function about(){
         return view ('front.about.about');
     }public function contact(){
-        return view ('front.contact.contact');
-    }
+    return view ('front.contact.contact');
+}
 }

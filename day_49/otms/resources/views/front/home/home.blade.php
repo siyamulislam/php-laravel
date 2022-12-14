@@ -1,6 +1,6 @@
 @extends('front.master')
 @section('title')
-    OTMS
+    Home
 @endsection
 @section('body')
     <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" data-bs-intervel="100">
