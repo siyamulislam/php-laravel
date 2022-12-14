@@ -58,6 +58,7 @@ https://ckeditor.com/
 orm vs query builder
 
 php artisan route:list
+https://zerossl.com/
 
 
 

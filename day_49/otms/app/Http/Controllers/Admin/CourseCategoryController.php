@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\CourseCategory;
 use Illuminate\Http\Request;
 
 class CourseCategoryController extends Controller
@@ -14,8 +15,9 @@ class CourseCategoryController extends Controller
      */
     public function index()
     {
-        //
-        return view('admin.courseCategory.index');
+        return view('admin.courseCategory.index',[
+            'courseCategories'=>CourseCategory::all()
+        ]);
     }
 
     /**
@@ -25,7 +27,7 @@ class CourseCategoryController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.courseCategory.create');
     }
 
     /**
@@ -36,7 +38,10 @@ class CourseCategoryController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        CourseCategory::createOrUpdateCourseCategory($request);
+        return redirect()->back()->with('success', 'Course Category Created Successfully');
+//        return redirect('/category/manage')->with('success', 'Category update successfully');
+//      return $request->all();
     }
 
     /**
