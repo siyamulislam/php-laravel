@@ -12,7 +12,7 @@
                 <div class="col">
                     <div class="card card-body border-dark text-center text-uppercase">
                         <h3>About US</h3>
-                    </div>
+                         </div>
                 </div>
             </div>
             <div class="row">

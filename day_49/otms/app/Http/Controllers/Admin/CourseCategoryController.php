@@ -34,13 +34,11 @@ class CourseCategoryController extends Controller
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
     {
         CourseCategory::createOrUpdateCourseCategory($request);
-        return redirect()->back()->with('success', 'Course Category Created Successfully');
-//        return redirect('/category/manage')->with('success', 'Category update successfully');
+        return redirect()->back()->with('success', 'Category Created Successfully');
 //      return $request->all();
     }
 

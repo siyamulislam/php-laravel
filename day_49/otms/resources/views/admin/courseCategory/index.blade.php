@@ -18,7 +18,7 @@
                 </div>
                 <div class="card-body">
                     <p class="text-success text-center">{{Session::has('success') ? Session::get('success') :""}}</p>
-               {{--                    <table class="table table-bordered table-hover  table-striped">--}}
+                    {{--                    <table class="table table-bordered table-hover  table-striped">--}}
                     <table id="basic-datatable" class="table dt-responsive nowrap w-100">
                         <thead>
                         <tr>
@@ -29,7 +29,7 @@
                         </thead>
                         <tbody>
                         @foreach($courseCategories as $category)
-                            <tr  class="{{ $category->status == 1 ? '' : 'bg-secondary text-light ' }}">
+                            <tr class="{{ $category->status == 1 ? '' : 'bg-secondary text-light ' }}">
                                 <td>{{ $loop->iteration }}</td>
                                 <td>{{ $category->name }}</td>
                                 <td>{{ $category->status==1?"Published":"Unpublished" }}</td>
@@ -51,6 +51,9 @@
                 </div>
             </div>
         </div>
+    </div>
+@endsection
 
+@section('script')
 
 @endsection
