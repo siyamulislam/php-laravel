@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\CourseCategory;
 use App\Models\CourseSubCategory;
 use Illuminate\Http\Request;
 
@@ -28,7 +29,7 @@ class CourseSubCategoryController extends Controller
     public function create()
     {
         return view('admin.courseSubCategory.create', [
-            'courseCategories'  => CourseSubCategory::where('status', 1)->get()
+            'courseCategories'  => CourseCategory::where('status', 1)->get()
         ]);
     }
 

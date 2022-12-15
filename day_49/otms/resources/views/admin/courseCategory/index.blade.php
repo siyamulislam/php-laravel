@@ -6,7 +6,7 @@
 @section('body')
     <!-- start page title -->
     <div class="row">
-        <div class="col-md-11 mx-auto">
+        <div class="col-md-10 mx-auto">
             <div class="card ">
                 <div class="card-header">
                     <div class="row">
@@ -36,17 +36,12 @@
                                 <td>{{ $category->status==1?"Published":"Unpublished" }}</td>
 
                                 <td>
-                                    <a href="{{route('course-categories.edit',$category->id)}}"
-                                       class="btn btn-success btn-sm">
-{{--                                        <a href="#" class="btn btn-success btn-sm">--}}
-                                            <i class="uil-edit-alt"></i>
-                                        </a>
-
+                                    <a href="{{route('course-categories.edit',$category->id)}}"class="btn btn-success btn-sm">
+                                            <i class="uil-edit-alt"></i> </a>
 
                                         <form action="{{route('course-categories.destroy',$category->id)}}"
                                               method="post" style="display: inline-block"
-                                              onsubmit="return confirm('Are you sure to delete this ?')"
-                                        >
+                                              onsubmit="return confirm('Are you sure to delete this ?')">
                                             @csrf
                                             @method('delete')
                                             <button type="submit"
@@ -54,7 +49,6 @@
                                                     class="btn btn-danger btn-sm">
                                                 <i class=" uil-trash-alt"></i></button>
                                         </form>
-
                                 </td>
                             </tr>
                         @endforeach

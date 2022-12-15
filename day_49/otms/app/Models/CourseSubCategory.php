@@ -18,4 +18,8 @@ class CourseSubCategory extends Model
             'status' => $request->status,
         ]);
     }
+
+    public function category(){
+        return $this->belongsTo(CourseCategory::class);
+    }
 }
