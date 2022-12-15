@@ -25,7 +25,7 @@
                             <label  class="col-md-4">Status</label>
                             <div class="col-md-8">
                                 <label ><input type="radio" name="status" value="1" checked > Published</label>
-                                <label class="ms-2"><input type="radio" name="status" value="2" > UnPublished</label>
+                                <label class="ms-2"><input type="radio" name="status" value="0" > UnPublished</label>
                             </div>
                         </div>
                         <div class="row mt-2">

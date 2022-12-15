@@ -1,7 +1,7 @@
 
 @extends('admin.master')
 @section('title')
-    EDit Course Category
+    Add Course Category
 @endsection
 @section('body')
     <div class="row">
@@ -12,9 +12,9 @@
                     <a href="{{route('course-categories.index')}}" class="btn btn-primary float-end">Manage</a>
                 </div>
                 <div class="card-body">
-                        <form action="{{ route('course-categories.update', $courseCategory->id) }}" method="post">
-                            @csrf
-                            @method('put')
+                    <form action="{{ route('course-categories.update', $courseCategory->id) }}" method="post">
+                        @csrf
+                        @method('put')
                         <div class="row mt-2">
                             <label  for="" class="col-md-4">Category Name</label>
                             <div class="col-md-8">

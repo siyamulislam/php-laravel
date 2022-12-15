@@ -1,31 +1,31 @@
 
 @extends('admin.master')
 @section('title')
-    EDit Course Category
+    Add Course Category
 @endsection
 @section('body')
     <div class="row">
         <div class="col-md-6 py-5 mx-auto">
             <div class="card">
                 <div class="card-header">
-                    <h3 class="mx-auto float-start">Edit Course Category</h3>
-                    <a href="{{route('course-categories.index')}}" class="btn btn-primary float-end">Manage</a>
+                    <h3 class="mx-auto float-start">Add Course Category</h3>
+                    <a href="{{route('course-categories.index')}}" class="btn btn-primary float-end"> Manage</a>
                 </div>
                 <div class="card-body">
-                        <form action="{{ route('course-categories.update', $courseCategory->id) }}" method="post">
-                            @csrf
-                            @method('put')
+                    {{--                    <span class="text-success">{{ Session::has('success') ? Session::get('success') : '' }}</span>--}}
+                    <form action="{{route('course-categories.store')}}" method="post">
+                        @csrf
                         <div class="row mt-2">
                             <label  for="" class="col-md-4">Category Name</label>
                             <div class="col-md-8">
-                                <input type="text" name="name" value="{{$courseCategory->name}}" class="form-control" />
+                                <input type="text" name="name" class="form-control" />
                             </div>
                         </div>
                         <div class="row mt-2">
                             <label  class="col-md-4">Status</label>
                             <div class="col-md-8">
-                                <label ><input type="radio" name="status" value="1" {{$courseCategory->status==1? 'checked':''}} > Published</label>
-                                <label class="ms-2"><input type="radio" name="status" value="0"  {{$courseCategory->status==0? 'checked':''}} > UnPublished</label>
+                                <label ><input type="radio" name="status" value="1" checked > Published</label>
+                                <label class="ms-2"><input type="radio" name="status" value="0" > UnPublished</label>
                             </div>
                         </div>
                         <div class="row mt-2">
