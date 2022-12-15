@@ -49,7 +49,7 @@
                             <a href="{{route('course-categories.index')}}">Course Category</a>
                         </li>
                         <li>
-                            <a href="#">Course Sub Category</a>
+                            <a href="{{route('course-sub-categories.index')}}">Course Sub Category</a>
                         </li>
                         <li>
                             <a href="#">Course</a>

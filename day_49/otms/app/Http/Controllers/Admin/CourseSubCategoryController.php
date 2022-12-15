@@ -3,10 +3,10 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use App\Models\CourseCategory;
+use App\Models\CourseSubCategory;
 use Illuminate\Http\Request;
 
-class CourseCategoryController extends Controller
+class CourseSubCategoryController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,8 +15,8 @@ class CourseCategoryController extends Controller
      */
     public function index()
     {
-        return view('admin.courseCategory.index',[
-            'courseCategories'=>CourseCategory::all()
+        return view('admin.courseSubCategory.index', [
+            'courseSubCategories'   => CourseSubCategory::all(),
         ]);
     }
 
@@ -27,19 +27,21 @@ class CourseCategoryController extends Controller
      */
     public function create()
     {
-        return view('admin.courseCategory.create');
+        return view('admin.courseSubCategory.create', [
+            'courseCategories'  => CourseSubCategory::where('status', 1)->get()
+        ]);
     }
 
     /**
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
     {
-        CourseCategory::createOrUpdateCourseCategory($request);
-        return redirect()->back()->with('success', 'Category Created Successfully');
-//      return $request->all();
+        CourseSubCategory::createOrUpdateCourseSubCategory($request);
+        return redirect()->back()->with('success', 'Course Sub Category created successfully.');
     }
 
     /**
@@ -61,8 +63,8 @@ class CourseCategoryController extends Controller
      */
     public function edit($id)
     {
-        return view('admin.courseCategory.edit',[
-            'courseCategory'=>CourseCategory::find($id)
+        return view('admin.courseSubCategory.edit', [
+            'courseSubCategory' => CourseSubCategory::find($id)
         ]);
     }
 
@@ -75,9 +77,8 @@ class CourseCategoryController extends Controller
      */
     public function update(Request $request, $id)
     {
-        CourseCategory::createOrUpdateCourseCategory($request, $id);
-        return redirect()->route('course-categories.index')->with('success', 'Category Updated Successfully.');
-
+        CourseSubCategory::createOrUpdateCourseSubCategory($request, $id);
+        return redirect()->back()->with('success', 'Course Sub Category updated successfully.');
     }
 
     /**
@@ -88,7 +89,7 @@ class CourseCategoryController extends Controller
      */
     public function destroy($id)
     {
-       CourseCategory::find($id)->delete();
-        return redirect()->back()->with('success', 'Category Deleted Successfully');
+        CourseSubCategory::find($id)->delete();
+        return redirect()->back()->with('success', 'Course Sub Category deleted successfully.');
     }
 }

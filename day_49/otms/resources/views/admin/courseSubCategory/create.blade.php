@@ -12,7 +12,7 @@
                     <a href="{{route('course-categories.index')}}" class="btn btn-primary float-end"> Manage</a>
                 </div>
                 <div class="card-body">
-{{--                    <span class="text-success">{{ Session::has('success') ? Session::get('success') : '' }}</span>--}}
+                    {{--                    <span class="text-success">{{ Session::has('success') ? Session::get('success') : '' }}</span>--}}
                     <form action="{{route('course-categories.store')}}" method="post">
                         @csrf
                         <div class="row mt-2">

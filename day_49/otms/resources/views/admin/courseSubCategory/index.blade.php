@@ -1,6 +1,6 @@
 @extends('admin.master')
 @section('title')
-    Course Category
+    Course Sub Category
 @endsection
 
 @section('body')
@@ -10,7 +10,7 @@
             <div class="card ">
                 <div class="card-header">
                     <div class="row">
-                        <div class=" fw-normal display-6 text-secondary float-start">Manage Category
+                        <div class=" fw-normal display-6 text-secondary float-start">Manage Sub Category
                             <a href="{{route('course-categories.create')}}"
                                class="btn btn-primary  float-end">Create</a>
                         </div>
@@ -23,27 +23,28 @@
                         <thead>
                         <tr>
                             <th>Sl</th>
+                            <th>Category</th>
                             <th>Title</th>
                             <th>Status</th>
                             <th>Actions</th>
                         </tr>
                         </thead>
                         <tbody>
-                        @foreach($courseCategories as $category)
-                            <tr class="{{ $category->status == 1 ? '' : 'bg-secondary text-light ' }}">
+                        @foreach($courseSubCategories as $subCategory)
+                            <tr class="{{ $subCategory->status == 1 ? '' : 'bg-secondary text-light ' }}">
                                 <td>{{ $loop->iteration }}</td>
-                                <td>{{ $category->name }}</td>
-                                <td>{{ $category->status==1?"Published":"Unpublished" }}</td>
+                                <td>{{ $subCategory->name }}</td>
+                                <td>{{ $subCategory->status==1?"Published":"Unpublished" }}</td>
 
                                 <td>
-                                    <a href="{{route('course-categories.edit',$category->id)}}"
+                                    <a href="{{route('course-categories.edit',$subCategory->id)}}"
                                        class="btn btn-success btn-sm">
 {{--                                        <a href="#" class="btn btn-success btn-sm">--}}
                                             <i class="uil-edit-alt"></i>
                                         </a>
 
 
-                                        <form action="{{route('course-categories.destroy',$category->id)}}"
+                                        <form action="{{route('course-categories.destroy',$subCategory->id)}}"
                                               method="post" style="display: inline-block"
                                               onsubmit="return confirm('Are you sure to delete this ?')"
                                         >
@@ -66,6 +67,4 @@
     </div>
 @endsection
 
-@section('script')
 
-@endsection
