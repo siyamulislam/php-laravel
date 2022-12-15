@@ -19,7 +19,10 @@ class CourseSubCategory extends Model
         ]);
     }
 
-    public function category(){
-        return $this->belongsTo(CourseCategory::class);
+//    public function category(){
+//        return $this->belongsTo(CourseCategory::class);
+//    }
+    public function courseCategory(){
+        return $this->belongsTo(CourseCategory::class,'category_id','id');
     }
 }

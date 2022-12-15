@@ -42,7 +42,7 @@ class CourseSubCategoryController extends Controller
     public function store(Request $request)
     {
         CourseSubCategory::createOrUpdateCourseSubCategory($request);
-        return redirect()->back()->with('success', 'Course Sub Category created successfully.');
+        return redirect()->back()->with('success', 'Sub-Category created successfully.');
     }
 
     /**
@@ -65,7 +65,8 @@ class CourseSubCategoryController extends Controller
     public function edit($id)
     {
         return view('admin.courseSubCategory.edit', [
-            'courseSubCategory' => CourseSubCategory::find($id)
+            'courseSubCategory' => CourseSubCategory::find($id),
+            'courseCategories'  => CourseCategory::where('status', 1)->get()
         ]);
     }
 
@@ -79,7 +80,7 @@ class CourseSubCategoryController extends Controller
     public function update(Request $request, $id)
     {
         CourseSubCategory::createOrUpdateCourseSubCategory($request, $id);
-        return redirect()->back()->with('success', 'Course Sub Category updated successfully.');
+        return redirect()->back()->with('success', 'Sub-Category updated successfully.');
     }
 
     /**
@@ -91,6 +92,6 @@ class CourseSubCategoryController extends Controller
     public function destroy($id)
     {
         CourseSubCategory::find($id)->delete();
-        return redirect()->back()->with('success', 'Course Sub Category deleted successfully.');
+        return redirect()->back()->with('success', 'Sub-Category deleted successfully.');
     }
 }

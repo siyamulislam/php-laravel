@@ -28,7 +28,6 @@
                             <label class="col-md-3">Category</label>
                             <div class="col-md-9">
                                 <select name="category_id" id="" class="form-control">
-                                    <option value="" selected disabled>{{ $product->category['name'] }}</option>
                                     @foreach($categories as $category)
                                         <option value="{{$category->id}}">{{$category->name}}</option>
                                     @endforeach

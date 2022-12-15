@@ -16,8 +16,15 @@
                     <form action="{{route('course-sub-categories.store')}}" method="post">
                         @csrf
                         <div class="row mt-2">
+                            <label  for="" class="col-md-4">Sub-Category Name</label>
 
-                            <label  for="" class="col-md-4">Category</label>
+                            <div class="col-md-8">
+                                <input type="text" name="name" class="form-control" />
+                            </div>
+                        </div>
+
+                        <div class="row mt-2">
+                            <label  for="" class="col-md-4">Choose Category</label>
                             <div class="col-md-8">
                                 <select name="category_id" id="" class="form-control">
                                     <option value="" selected disabled>--Select a Category--</option>
@@ -27,13 +34,7 @@
                                 </select>
                             </div>
                         </div>
-                        <div class="row mt-2">
-                            <label  for="" class="col-md-4">Sub-Category Name</label>
 
-                            <div class="col-md-8">
-                                <input type="text" name="name" class="form-control" />
-                            </div>
-                        </div>
                         <div class="row mt-2">
                             <label  class="col-md-4">Status</label>
                             <div class="col-md-8">

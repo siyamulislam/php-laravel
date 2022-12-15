@@ -23,7 +23,7 @@
                             <th>Title</th>
                             <th>Category</th>
                             <th>Status</th>
-                            <th>Actions</th>
+                            <th class="float-end">Actions</th>
                         </tr>
                         </thead>
                         <tbody>
@@ -31,10 +31,10 @@
                             <tr class="{{ $subCategory->status == 1 ? '' : 'bg-secondary text-light ' }}">
                                 <td>{{ $loop->iteration }}</td>
                                 <td>{{ $subCategory->name }}</td>
-                                <td>{{ $subCategory->category['name'] }}</td>
+                                <td>{{ $subCategory->courseCategory['name'] }}</td>
                                 <td>{{ $subCategory->status==1?"Published":"Unpublished" }}</td>
 
-                                <td>
+                                <td class="float-end">
                                     <a href="{{route('course-sub-categories.edit',$subCategory->id)}}"
                                        class="btn btn-success btn-sm">
                                             <i class="uil-edit-alt"></i></a>

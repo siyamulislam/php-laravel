@@ -25,7 +25,7 @@
                             <th>Sl</th>
                             <th>Title</th>
                             <th>Status</th>
-                            <th>Actions</th>
+                            <th class="float-end">Actions</th>
                         </tr>
                         </thead>
                         <tbody>
@@ -35,7 +35,7 @@
                                 <td>{{ $category->name }}</td>
                                 <td>{{ $category->status==1?"Published":"Unpublished" }}</td>
 
-                                <td>
+                                <td class="float-end">
                                     <a href="{{route('course-categories.edit',$category->id)}}"class="btn btn-success btn-sm">
                                             <i class="uil-edit-alt"></i> </a>
 
