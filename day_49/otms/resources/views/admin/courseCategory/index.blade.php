@@ -10,9 +10,9 @@
             <div class="card ">
                 <div class="card-header">
                     <div class="row">
-                        <div class=" fw-normal display-6 text-secondary text-center">Manage Category
+                        <div class=" fw-normal display-6 text-secondary float-start">Manage Category
                             <a href="{{route('course-categories.create')}}"
-                               class="btn btn-primary  float-end">Add Course Category</a>
+                               class="btn btn-primary  float-end">Create</a>
                         </div>
                     </div>
                 </div>
@@ -23,8 +23,9 @@
                         <thead>
                         <tr>
                             <th>Sl</th>
-                            <th> Title</th>
+                            <th>Title</th>
                             <th>Status</th>
+                            <th>Actions</th>
                         </tr>
                         </thead>
                         <tbody>
@@ -35,14 +36,25 @@
                                 <td>{{ $category->status==1?"Published":"Unpublished" }}</td>
 
                                 <td>
-                                    <a href="#"
+                                    <a href="{{route('course-categories.edit',$category->id)}}"
                                        class="btn btn-success btn-sm">
-                                        <i class="uil-edit-alt"></i>
-                                    </a>
-                                    <a href="#"
-                                       onclick="return confirm('Are you sure to delete this ?')"
-                                       class="btn btn-danger btn-sm">
-                                        <i class=" uil-trash-alt"></i></a>
+{{--                                        <a href="#" class="btn btn-success btn-sm">--}}
+                                            <i class="uil-edit-alt"></i>
+                                        </a>
+
+
+                                        <form action="{{route('course-categories.destroy',$category->id)}}"
+                                              method="post" style="display: inline-block"
+                                              onsubmit="return confirm('Are you sure to delete this ?')"
+                                        >
+                                            @csrf
+                                            @method('delete')
+                                            <button type="submit"
+                                                    {{--                                                onclick="return confirm('Are you sure to delete this ?')"--}}
+                                                    class="btn btn-danger btn-sm">
+                                                <i class=" uil-trash-alt"></i></button>
+                                        </form>
+
                                 </td>
                             </tr>
                         @endforeach
