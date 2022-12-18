@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\CourseCategory;
 use App\Models\CourseSubCategory;
 use Illuminate\Http\Request;
+use function League\Flysystem\get;
 
 class CourseSubCategoryController extends Controller
 {
@@ -17,7 +18,8 @@ class CourseSubCategoryController extends Controller
     public function index()
     {
         return view('admin.courseSubCategory.index', [
-            'courseSubCategories'   => CourseSubCategory::all(),
+            'courseSubCategories'   => CourseSubCategory::latest()->get(),
+//            'courseSubCategories'   => CourseSubCategory::all(),
         ]);
     }
 
@@ -68,6 +70,9 @@ class CourseSubCategoryController extends Controller
             'courseSubCategory' => CourseSubCategory::find($id),
             'courseCategories'  => CourseCategory::where('status', 1)->get()
         ]);
+//        echo '<pre>';
+//        print_r(CourseCategory::where('status', 1)->get());
+
     }
 
     /**
