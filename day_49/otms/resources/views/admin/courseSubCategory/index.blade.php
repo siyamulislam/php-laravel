@@ -20,27 +20,31 @@
                         <thead>
                         <tr>
                             <th>Sl</th>
-                            <th>Title</th>
                             <th>Category</th>
+                            <th>Sub Category</th>
+                            <th>Slug</th>
                             <th>Status</th>
                             <th class="float-end">Actions</th>
                         </tr>
                         </thead>
                         <tbody>
-                        @foreach($courseSubCategories as $subCategory)
-                            <tr class="{{ $subCategory->status == 1 ? '' : 'bg-secondary text-light ' }}">
+                        @foreach($courseSubCategories as $courseSubCategory)
+                            <tr class="{{ $courseSubCategory->status == 1 ? '' : 'bg-secondary text-light ' }}">
                                 <td>{{ $loop->iteration }}</td>
-                                <td>{{ $subCategory->name }}</td>
-                                <td>{{ $subCategory->courseCategory['name'] }}</td>
-                                <td>{{ $subCategory->status==1?"Published":"Unpublished" }}</td>
+                                <td>{{$courseSubCategory->category->name}}</td>
+{{--                                <td>ok</td>--}}
+                                <td>{{ $courseSubCategory->name }}</td>
+                                <td>{{ $courseSubCategory->slug }}</td>
+
+                                <td>{{ $courseSubCategory->status==1?"Published":"Unpublished" }}</td>
 
                                 <td class="float-end">
-                                    <a href="{{route('course-sub-categories.edit',$subCategory->id)}}"
+                                    <a href="{{route('course-sub-categories.edit',$courseSubCategory->id)}}"
                                        class="btn btn-success btn-sm">
                                             <i class="uil-edit-alt"></i></a>
 
 
-                                        <form action="{{route('course-sub-categories.destroy',$subCategory->id)}}"
+                                        <form action="{{route('course-sub-categories.destroy',$courseSubCategory->id)}}"
                                               method="post" style="display: inline-block"
                                               onsubmit="return confirm('Are you sure to delete this ?')" >
                                             @csrf

@@ -16,6 +16,19 @@
                     <form action="{{route('course-sub-categories.store')}}" method="post">
                         @csrf
                         <div class="row mt-2">
+                            <label  for="" class="col-md-4">Choose Category</label>
+                            <div class="col-md-8">
+                                <select name="category_id" id="" class="form-control select2" data-toggle="select2"
+                                data-placeholder="--Select a Category--"
+                                > <option></option>
+{{--                                    <option value="" selected disabled>--Select a Category--</option>--}}
+                                    @foreach($courseCategories as $category)
+                                        <option value="{{$category->id}}">{{$category->name}}</option>
+                                    @endforeach
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row mt-2">
                             <label  for="" class="col-md-4">Sub-Category Name</label>
 
                             <div class="col-md-8">
@@ -23,17 +36,7 @@
                             </div>
                         </div>
 
-                        <div class="row mt-2">
-                            <label  for="" class="col-md-4">Choose Category</label>
-                            <div class="col-md-8">
-                                <select name="category_id" id="" class="form-control">
-                                    <option value="" selected disabled>--Select a Category--</option>
-                                    @foreach($courseCategories as $category)
-                                        <option value="{{$category->id}}">{{$category->name}}</option>
-                                    @endforeach
-                                </select>
-                            </div>
-                        </div>
+
 
                         <div class="row mt-2">
                             <label  class="col-md-4">Status</label>
