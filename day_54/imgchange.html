@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM JS</title>
+
+</head>
+
+<body>
+  <div class="">
+    <div class="">
+      <img src="img/product1.jpg" id="main" alt="" style="height: 300px; width: 300px;">
+    </div>
+    <div class="">
+      <img src="img/product11.jpg" alt="" id="one" style="height: 60px; width: 50px;">
+      <img src="img/product2.jpg" alt="" id="two" style="height: 60px; width: 50px;">
+      <img src="img/product4.jpg" alt="" id="three" style="height: 60px; width: 50px;">
+      <img src="img/product7.jpg" alt="" id="four" style="height: 60px; width: 50px;">
+    </div>
+  </div>
+
+
+  <script>
+    var mainImg = document.getElementById('main');
+    var mainImgSrc = mainImg.getAttribute('src');
+    var imgOne = document.getElementById('one');
+    var imgTwo = document.getElementById('two');
+
+    imgOne.onclick = () => {
+      var thisImg = imgOne.getAttribute('src'); 
+      // alert(imgSrc);
+      mainImg.setAttribute('src',thisImg);
+    }  
+    
+    imgTwo.onclick = () => {
+      var thisImg = imgTwo.getAttribute('src'); 
+      mainImg.setAttribute('src',thisImg);
+    }
+    
+  </script>
+</body>
+
+</html>
