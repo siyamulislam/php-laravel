@@ -48,7 +48,7 @@
                         <div class="row mt-2">
                             <label  for="" class="col-md-4"></label>
                             <div class="col-md-8">
-                                <input type="submit"  class="btn btn-success" value="Create Sub-Category" />
+                                <input type="submit"  class="btn btn-success" value="Update Sub-Category" />
                             </div>
                         </div>
                     </form>

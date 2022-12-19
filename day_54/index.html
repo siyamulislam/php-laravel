@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic JS</title>
+    <style>
+        .m-t-0 {
+            margin-top: 0px;
+        }
+
+        .m-b-0 {
+            margin-bottom: 0px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 
+        #raw javascript
+            *syntax, var, operator,statement, 
+            array,event & listener,object,
+            DOM, Basic input & output.
+
+        #JS library
+            *jquery, 
+
+        #JS framwork
+            *vue,angular,liveware,react
+
+        #JS process
+            *ajax
+
+
+        #info
+        document.   ->DOM er object 
+        write()     ->DOM er function
+    -->
+
+    <script>
+        createDiv();
+        function createDiv() {
+            var div = document.createElement('div');
+            div.style.height = '300px';
+            div.style.width = '300px';
+            div.style.background = 'red';
+            // document.getElementsByTagName('body')[0].appendChild(div);
+            document.body.appendChild(div);
+        }
+
+
+        // function
+        let x = 10; y = 20;
+        function sum(a, b) {
+            return a + b;
+        }
+        // document.write(sum(x,y));
+
+
+
+        // document.write("hello World");
+
+        // for(let i = 0; i<=15; i++){
+        //     document.write('.m-t-'+i+' {margin-top: '+i*10+'px;}</br>');
+        // }
+
+        // aray
+        let student = ["adam", "alex", "bob", "smith", "eva", "lawe", 'hura', 'kochu'];
+
+        // for (let i = 0; i < student.length; i++) {
+        //     document.write(student[i] + '</br>');
+        // }
+        // for(s in student)document.write(student[s] + '</br>');
+
+        // object
+        let studentInfo = { name: "adam", age: 23, email: "bob@eva.com" };
+        // document.write(studentInfo.age);
+
+        let studentInfos = [
+            { name: "adam", age: 23, email: "bob@eva.com" },
+            { name: "alex", age: 25, email: "alex@eva.com" },
+            { name: "bob", age: 13, email: "bob@eva.com" },
+            { name: "smith", age: 43, email: "smith@eva.com" },
+        ];
+        // for(st in studentInfos)document.write(studentInfos[st].email + '</br>');
+
+    </script>
+</body>
+
+</html>
