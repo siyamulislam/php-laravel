@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Event JS</title>
+
+</head>
+
+<body>
+  <!-- <h1 id="name" onclick="alertName()">Hello World</h1> -->
+  <h1 id="name">Hello World</h1>
+  <input id="title" type="text">
+  <span id="printHere"></span>
+  <div class="" id="parent"></div>
+
+  <script>
+    const nameH1 = document.getElementById('name');
+
+    const input = document.getElementById('title');
+    const output = document.getElementById('printHere');
+    input.onkeyup=function(){
+      let inputValue=input.value;
+      nameH1.innerHTML=inputValue;
+      output.innerHTML=inputValue;
+    }
+    output.innerHTML=input.value;
+
+
+
+    nameH1.onclick = () => change();
+
+    function change() {
+      nameH1.style.color = 'red';
+    }
+    nameH1.onmouseover = () => {
+      nameH1.innerHTML = "amar Vhul Hoyece";
+    }
+    nameH1.onmouseleave = () => {
+      nameH1.innerHTML = "Maf kore din";
+    }
+    function alertName() {
+      alert("habibur Rahman");
+    }
+  </script>
+</body>
+
+</html>
