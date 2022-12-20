@@ -1,2 +1,26 @@
 https://send-anywhere.com/
 https://www.youtube.com/watch?v=TNhaISOUy6Q
+https://www.jqueryscript.net/
+
+raw js
+ 
+ js library
+ js framwork
+ js process
+
+class      : represent of object like blueprint
+libray     : compleate structure  of object
+framework  : compleate speacification of object
+
+jQuery js er library
+why jQuery?
+*browser capablity
+*write less code
+*huge resource {plagin}
+
+
+
+$/Jquery = jquery object
+id/class = jQuery Selector
+.        = jQuery object sign
+action   = event / jQuery method

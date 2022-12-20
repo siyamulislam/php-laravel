@@ -1,3 +1,17 @@
+// jQuery
+
+// var text= document.getElementById('lorem');
+// text.onclick= function(){
+//     text.style.color='red'
+// }
+
+// $(selector).action();
+
+$('#lorem').click(function(){
+$(this).css('color','red');
+});
+
+
 // var clock = document.getElementById('clock').value;
 setInterval( getTime, 1000);
 function getTime(){
