@@ -24,4 +24,6 @@ Route::middleware([
     Route::resource('course-categories',CourseCategoryController::class);
     Route::resource('course-sub-categories',CourseSubCategoryController::class);
     Route::resource('courses',CourseController::class);
+
+    Route::get('/get-sub-category-by-category-id',[CourseController::class,'getSubCategory'])->name('get-sub-category-by-category-id');
 });

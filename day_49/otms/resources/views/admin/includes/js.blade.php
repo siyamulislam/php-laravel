@@ -24,9 +24,8 @@
 <!--ck-edit-->
 <script src="https://cdn.ckeditor.com/4.20.1/standard/ckeditor.js"></script>
 <script>
-    CKEDITOR.replace( 'product_description' );
+    CKEDITOR.replace( 'long_description' );
 </script>
-
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"
         integrity="sha512-VEd+nq25CkR676O+pLBnDW09R7VQX9Mdiij052gVCp5yVH3jGtH70Ho/UUv4mJDsEdTvqRCFZg0NKGiojGnUCw=="

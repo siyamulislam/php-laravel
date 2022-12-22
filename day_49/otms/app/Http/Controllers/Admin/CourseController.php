@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Models\Course;
 use App\Models\CourseCategory;
+use App\Models\CourseSubCategory;
 use Illuminate\Http\Request;
 
 class CourseController extends Controller
@@ -14,7 +15,7 @@ class CourseController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public $course;
+    public $course, $subCategories;
 
     public function index()
     {
@@ -33,6 +34,7 @@ class CourseController extends Controller
         //
         return view('admin.course.create', [
             'courseCategories' => CourseCategory::where('status', 1)->get(),
+            'courseSubCategories' => CourseSubCategory::where('status', 1)->get(),
         ]);
     }
 
@@ -101,5 +103,13 @@ class CourseController extends Controller
             }
         }
         return redirect()->back()->with('success', 'Course deleted successfully.');
+    }
+
+    public function getSubCategory(Request $request)
+    {
+//        return json_encode($request->category_id);
+//         $this->subCategories= CourseSubCategory::where('category_id',$request->category_id)->get(['id','name']);
+        $this->subCategories = CourseSubCategory::where('category_id', $request->category_id);
+        return response()->json($this->subCategories);
     }
 }

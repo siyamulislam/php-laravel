@@ -15,8 +15,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="card-body">
+                <div class="card-body table-responsive">
                     <table id="basic-datatable" class="table dt-responsive nowrap w-100">
+{{--                    <table id="scroll-horizontal-datatable" class="table dt-responsive nowrap w-100">--}}
                         <thead>
                         <tr>
                             <th>#</th>
