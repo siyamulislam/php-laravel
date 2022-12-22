@@ -46,13 +46,13 @@ class Course extends Model
         ]);
     }
     public function category(){
-        return $this->belongsTo(CourseCategory::class);
+        return $this->belongsTo(CourseCategory::class,'course_category_id','id');
     }
     public function subCategory(){
-        return $this->belongsTo(CourseSubCategory::class);
+        return $this->belongsTo(CourseSubCategory::class,'course_sub_category_id','id');
     }
     public function trainer(){
-        return $this->belongsTo(User::class);
+        return $this->belongsTo(User::class,'user_id','id');
     }
 
 }

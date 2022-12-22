@@ -5,7 +5,7 @@
 
 @section('body')
     <div class="row">
-        <div class="col-md-10 mx-auto">
+        <div class="col-md-12 mx-auto">
             <div class="card ">
                 <div class="card-header">
                     <div class="row">
@@ -24,7 +24,7 @@
                             <th>Category</th>
                             <th>Sub Category</th>
                             @if(auth()->user()->role_type==1)
-                                <th>P.By</th>
+                                <th>Publisher</th>
                             @endif
                             <th>Title</th>
                             <th>Price</th>
@@ -40,11 +40,14 @@
                         @foreach($courses as $course)
                             <tr class="{{ $course->status == 1 ? '' : 'bg-secondary text-light ' }}">
                                 <td>{{ $loop->iteration }}</td>
-                                <td><img src="{{asset($course->image)}}" alt=" " style="height: 70px"></td>
+                                <td><img src="{{asset($course->image)}}" alt="" style="height: 70px;width: 70px"></td>
 
+{{--                                <td>{{$course->course_category_id}}</td>--}}
                                 <td>{{$course->category->name}}</td>
+{{--                                <td>{{$course->subCategory->name}}</td>--}}
                                 <td>{{$course->subCategory->name}}</td>
                                 @if(auth()->user()->role_type==1)
+{{--                                    <td>{{$course->user_id}}</td>@endif--}}
                                     <td>{{$course->trainer->name}}</td>@endif
                                 <td>{{ $course->title }}</td>
                                 <td>{{ $course->price }}</td>
