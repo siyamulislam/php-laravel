@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Front\FrontController;
 use App\Http\Controllers\Admin\CourseCategoryController;
 use App\Http\Controllers\Admin\CourseSubCategoryController;
+use App\Http\Controllers\Admin\CourseController;
 
 
 Route::as('front.')->group(function (){
@@ -22,4 +23,7 @@ Route::middleware([
     Route::get ('/dashboard',       [DashboardController::class, 'dashboard'])->name('dashboard');
     Route::resource('course-categories',CourseCategoryController::class);
     Route::resource('course-sub-categories',CourseSubCategoryController::class);
+    Route::resource('courses',CourseController::class);
+
+    Route::get('/get-sub-category-by-category-id',[CourseController::class,'getSubCategory'])->name('get-sub-category-by-category-id');
 });
