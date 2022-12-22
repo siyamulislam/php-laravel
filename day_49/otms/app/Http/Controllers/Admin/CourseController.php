@@ -102,14 +102,13 @@ class CourseController extends Controller
                 unlink($this->course->images);
             }
         }
-        return redirect()->back()->with('success', 'Course deleted successfully.');
+        return redirect()->back()->with('success','Course deleted successfully.');
     }
 
     public function getSubCategory(Request $request)
     {
 //        return json_encode($request->category_id);
-//         $this->subCategories= CourseSubCategory::where('category_id',$request->category_id)->get(['id','name']);
-        $this->subCategories = CourseSubCategory::where('category_id', $request->category_id);
+        $this->subCategories = CourseSubCategory::where('category_id',$request->category_id)->get(['id','name']);
         return response()->json($this->subCategories);
     }
 }
