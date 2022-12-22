@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\Course;
+use App\Models\CourseCategory;
 use Illuminate\Http\Request;
 
 class CourseController extends Controller
@@ -12,9 +14,13 @@ class CourseController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    public $course;
+
     public function index()
     {
-        //
+        return view('admin.course.index', [
+            'courses' => Course::latest()->get(),
+        ]);
     }
 
     /**
@@ -25,23 +31,27 @@ class CourseController extends Controller
     public function create()
     {
         //
+        return view('admin.course.create', [
+            'courseCategories' => CourseCategory::where('status', 1)->get(),
+        ]);
     }
 
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
     {
-        //
+        Course::createOrUpdateCourse($request);
+        return redirect()->back()->with('success', 'Course created successfully.');
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param int $id
      * @return \Illuminate\Http\Response
      */
     public function show($id)
@@ -52,34 +62,44 @@ class CourseController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param int $id
      * @return \Illuminate\Http\Response
      */
     public function edit($id)
     {
-        //
+        return view('admin.course.edit', [
+            'course' => Course::find($id),
+            'courseCategories' => CourseCategory::where('status', 1)->get()
+        ]);
     }
 
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param \Illuminate\Http\Request $request
+     * @param int $id
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $id)
     {
-        //
+        Course::createOrUpdateCourse($request, $id);
+        return redirect()->route('courses.index')->with('success', 'Course updated successfully.');
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param int $id
      * @return \Illuminate\Http\Response
      */
     public function destroy($id)
     {
-        //
+        $this->course = Course::find($id);
+        if (isset($this->course->images)) {
+            if (file_exists($this->course->images)) {
+                unlink($this->course->images);
+            }
+        }
+        return redirect()->back()->with('success', 'Course deleted successfully.');
     }
 }

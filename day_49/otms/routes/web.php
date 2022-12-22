@@ -23,5 +23,5 @@ Route::middleware([
     Route::get ('/dashboard',       [DashboardController::class, 'dashboard'])->name('dashboard');
     Route::resource('course-categories',CourseCategoryController::class);
     Route::resource('course-sub-categories',CourseSubCategoryController::class);
-    Route::resource('course',CourseController::class);
+    Route::resource('courses',CourseController::class);
 });
