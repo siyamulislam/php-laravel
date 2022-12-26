@@ -32,6 +32,15 @@
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 @yield('script')
 
+//x-csrfToken
+<script>
+    $.ajaxSetup({
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        }
+});
+</script>
+
 //toastr
 @if(Session::has('error'))
     <script>

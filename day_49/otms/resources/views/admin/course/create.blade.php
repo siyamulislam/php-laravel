@@ -11,6 +11,9 @@
                     <a href="{{route('courses.index')}}" class="btn btn-primary float-end">Manage</a>
                 </div>
                 <div class="card-body">
+{{--                    @foreach($errors->all() as $error)--}}
+{{--                        <span class="text-danger">{{$error}}</span> <br>--}}
+{{--                        @endforeach--}}
                     <form action="{{route('courses.store')}}" method="post" enctype="multipart/form-data">
                         @csrf
                         <div class="row mt-1">
@@ -25,40 +28,34 @@
                                         <option value="{{$category->id}}">{{$category->name}}</option>
                                     @endforeach
                                 </select>
+                                @error('course_category_id') <span class="text-danger">{{$errors->first('course_category_id')}}</span> @enderror
+
                             </div>
                         </div>
-                        {{--                        <div class="row mt-1">--}}
-                        {{--                            <label  for="" class="col-md-4">Sub Category</label>--}}
-                        {{--                            <div class="col-md-8">--}}
-                        {{--                                <select name="course_sub_category_id" id="" class="form-control select2" data-toggle="select2"--}}
-                        {{--                                        data-placeholder="--Select a Sub Category--"--}}
-                        {{--                                > <option></option>--}}
-                        {{--                                    @foreach($courseSubCategories as $category)--}}
-                        {{--                                        <option value="{{$category->id}}">{{$category->name}}</option>--}}
-                        {{--                                    @endforeach--}}
-                        {{--                                </select>--}}
-                        {{--                            </div>--}}
-                        {{--                        </div>--}}
-
                         <div class="row mt-1">
                             <label for="" class="col-md-4">Sub Category 2</label>
                             <div class="col-md-8">
-                                <select name="course_sub_category_id" id="" class="form-control select2"
+                                <select name="course_sub_category_id" id="subCategory" class="form-control select2"
                                         data-toggle="select2"
                                         data-placeholder="--Select a Sub Category--"
                                 >
                                     <option></option>
-                                    @foreach($courseSubCategories as $category)
-                                        <option value="{{$category->id}}">{{$category->name}}</option>
-                                    @endforeach
+{{--                                    @foreach($courseSubCategories as $category)--}}
+{{--                                        <option value="{{$category->id}}">{{$category->name}}</option>--}}
+{{--                                    @endforeach--}}
                                 </select>
+                                @error('course_category_id') <span class="text-danger">{{$message}}</span> @enderror
+
                             </div>
                         </div>
                         <div class="row mt-1">
                             <label for="" class="col-md-4">Title</label>
                             <div class="col-md-8">
                                 <input type="text" name="title" class="form-control"/>
+                                @error('title') <span class="text-danger">{{$errors->first('title')}}</span> @enderror
+
                             </div>
+
                         </div>
                         <div class="row mt-1">
                             <label for="" class="col-md-4">Price</label>
@@ -112,6 +109,8 @@
                             <label for="" class="col-md-4">Image</label>
                             <div class="col-md-8">
                                 <input type="file" name="image"/>
+                                <br> @error('image') <span class="text-danger">{{$message}}</span> @enderror
+
                             </div>
                         </div>
                         <div class="row mt-2">
@@ -137,12 +136,21 @@
                 // url: "/get-sub-category-by-category-id/"+categoryId,
                 {{--url:"{{route("ggfgf")}}",--}}
                 url: "/get-sub-category-by-category-id",
-                method: "GET",
+                // method: "GET",
+                method: "POST",
                 dataType: "JSON",
                 data:{category_id:categoryId},
                 success: function (response) {
                     console.log(response);
 
+                    var option = '';
+                    option += '<option  class="text-muted">Select a sub Category</option>';
+                    $.each(response, function (index, value) {
+                        option += '<option value="'+value.id+'">'+value.name+'</option>';
+                    })
+                    $('#subCategory').empty().append(option); //empty akta delete kore
+                    // $('#subCategory').empty().append(option);  //remove full element delete kore
+                    // $.eah(response, (key,value))
                 }
             })
         });

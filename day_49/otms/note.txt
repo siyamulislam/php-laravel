@@ -63,3 +63,7 @@ https://zerossl.com/
 
 
 
+intitle:index(of)? mp4 Avater 2
+
+user crud . name, email,role_type,password
+md5()/sha1() / hash:: make(string) / bcrypt() for password

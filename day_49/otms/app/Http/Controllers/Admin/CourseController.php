@@ -46,8 +46,19 @@ class CourseController extends Controller
      */
     public function store(Request $request)
     {
+        $this->validate($request,[
+//            'course_category_id'=>'required |numeric',
+//            'course_sub_category_id'=>'required',
+//            'title'=>'required |string|Alpha',
+            'image'=>'required|image',
+        ],
+        [
+            'image.required'=>'image koi aaa?',
+            'image.image'=>'onno file ken den?'
+        ]);
         Course::createOrUpdateCourse($request);
         return redirect()->back()->with('success', 'Course created successfully.');
+//        return $request->all();
     }
 
     /**
@@ -59,6 +70,10 @@ class CourseController extends Controller
     public function show($id)
     {
         //
+        return view('admin.course.courses.edit', [
+            'course' => course::find($id),
+            'courseCategories' => CourseCategory::where('status', 1)->get(),
+        ]);
     }
 
     /**
@@ -71,8 +86,13 @@ class CourseController extends Controller
     {
         return view('admin.course.edit', [
             'course' => Course::find($id),
-            'courseCategories' => CourseCategory::where('status', 1)->get()
+            'courseCategories' => CourseCategory::where('status', 1)->get(),
+            'courseCategory' => Course::where('id', $id)->get("course_category_id"),
+
         ]);
+
+
+//        return Course::where('id', $id)->get("course_category_id");
     }
 
     /**
@@ -110,5 +130,20 @@ class CourseController extends Controller
 //        return json_encode($request->category_id);
         $this->subCategories = CourseSubCategory::where('category_id',$request->category_id)->get(['id','name']);
         return response()->json($this->subCategories);
+    }
+
+    public function approveCourse($id){
+        $this->course=Course::where('id',$id)->first();
+        if (  $this->course->status=1){
+            $this->course->status=0;
+        }
+        else{
+            $this->course->status=1;
+        }
+
+//        $this->course->status=0 ?    $this->course->status=1:   $this->course->status=0;
+
+        $this->course->save();
+        return redirect()->back()->with('success','Course approve successfully.');
     }
 }

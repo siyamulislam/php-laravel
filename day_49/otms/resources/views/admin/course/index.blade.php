@@ -3,6 +3,10 @@
     Manage Course
 @endsection
 
+@section("link")
+    <link rel="stylesheet" href="//cdn.datatables.net/1.13.1/css/jquery.dataTables.min.css">
+@endsection
+
 @section('body')
     <div class="row">
         <div class="col-md-12 mx-auto">
@@ -16,7 +20,8 @@
                     </div>
                 </div>
                 <div class="card-body table-responsive">
-                    <table id="basic-datatable" class="table dt-responsive nowrap w-100">
+                    <table id="courseTable" class="table  dt-responsive nowrap w-100">
+{{--                    <table id="basic-datatable" class="table dt-responsive nowrap w-100">--}}
 {{--                    <table id="scroll-horizontal-datatable" class="table dt-responsive nowrap w-100">--}}
                         <thead>
                         <tr>
@@ -34,7 +39,7 @@
                             <th>Short Description</th>
                             <th>Long Description</th>
                             <th>Status</th>
-                            <th class="float-end">Actions</th>
+                            <th class="">Actions</th>
                         </tr>
                         </thead>
                         <tbody>
@@ -60,11 +65,16 @@
 
                                 <td>{{ $course->status==1?"Published":"Unpublished" }}</td>
 
-                                <td class="float-end">
+                                <td class=" ">
+                                    <a href="{{route('courses.approve',['id'=>$course->id])}}"
+                                       class="btn btn-secondary btn-sm" title="Change Course Status ">
+                                            <i class="uil-ball"></i></a>
+                                    <a href="{{route('courses.show',$course->id)}}"
+                                       class="btn btn-primary btn-sm">
+                                        <i class="uil-keyboard-show"></i></a>
                                     <a href="{{route('courses.edit',$course->id)}}"
                                        class="btn btn-success btn-sm">
                                             <i class="uil-edit-alt"></i></a>
-
 
                                         <form action="{{route('courses.destroy',$course->id)}}"
                                               method="post" style="display: inline-block"
@@ -83,6 +93,18 @@
             </div>
         </div>
     </div>
+@endsection
+
+@section("script")
+{{--    <link rel="stylesheet" href="//cdn.datatables.net/1.13.1/css/jquery.dataTables.min.css">--}}
+    <script src="//cdn.datatables.net/1.13.1/js/jquery.dataTables.min.js"> </script>
+    <script>
+        $(document).ready( function () {
+            $('#courseTable').DataTable( {
+                scrollX:true,
+            } );
+        } );
+    </script>
 @endsection
 
 

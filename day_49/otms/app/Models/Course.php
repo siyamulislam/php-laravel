@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use App\helper\Helper;
+use App\Models\User;
 
 class Course extends Model
 {
@@ -33,12 +34,14 @@ class Course extends Model
         Course::updateOrCreate(['id' => $id], [
             'course_category_id' => $request->course_category_id,
             'course_sub_category_id' => $request->course_sub_category_id,
-            'user_id' => auth()->id,
+//            'user_id' => auth()->user()->id,
+            'user_id' =>empty($id)? auth()->user()->id:Course::find($id)->user_id,
             'title' => $request->title,
             'price' => $request->price,
             'short_description' => $request->short_description,
             'long_description' => $request->long_description,
-            'image' =>Helper:: uploadFile($request->file('image'),'course'),
+//            'image' =>Helper:: uploadFile($request->file('image'),'course'),
+            'image' =>Helper:: uploadFile($request->file('image'),'course'),isset($id)?Course::find($id)->image:null,
             'starting_date' => $request->starting_date,
             'ending_date' => $request->ending_date,
             'total_hour' => $request->total_hour,
