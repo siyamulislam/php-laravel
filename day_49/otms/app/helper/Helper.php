@@ -19,7 +19,7 @@ class Helper
             $fileUrl=$fileDirectory.$fileName ;
         }
         else{
-            if(!$exitFileUrl){
+            if($exitFileUrl){
                 $fileUrl=$exitFileUrl;
             }
             else{
