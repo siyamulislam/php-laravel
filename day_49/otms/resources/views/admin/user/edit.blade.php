@@ -18,22 +18,21 @@
                             <label for="" class="col-md-4">Name</label>
                             <div class="col-md-8">
                                 <input type="text" name="name" class="form-control" value="{{$user->name}}"/>
+                                @error('name') <span class="text-danger">{{$message}}</span> @enderror
                             </div>
-                            @error('name') <span class="text-danger">{$message}}</span> @enderror
                         </div>
                         <div class="row mt-1">
                             <label for="" class="col-md-4">Email</label>
                             <div class="col-md-8">
                                 <input type="email" name="email" class="form-control" value="{{$user->email}}"/>
+                                @error('email') <span class="text-danger">{{$message}}</span> @enderror
                             </div>
-                            @error('email') <span class="text-danger">{$message}}</span> @enderror
                         </div>
-                        <div class="row mt-1">
-                            <label for="" class="col-md-4">Password</label>
+                        <div class="row mt-0">
+{{--                            <label for="" class="col-md-4">Password</label>--}}
                             <div class="col-md-8">
-                                <input type="text" name="password" class="form-control" value="{{$user->password}}"/>
+                                <input type="hidden" name="password" class="form-control" value="{{$user->password}}"/>
                             </div>
-                            @error('password') <span class="text-danger">{$message}}</span> @enderror
                         </div>
 
                         <div class="row mt-1">
@@ -47,7 +46,7 @@
                                         <option value="{{$role->id}}" {{$role->id==$user->role_type?'selected':''}}>{{$role->role_name}}</option>
                                     @endforeach
                                 </select>
-                                @error('role') <span class="text-danger">{$message}}</span> @enderror
+                                @error('role') <span class="text-danger">{{$message}}</span> @enderror
                             </div>
                         </div>
 

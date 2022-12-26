@@ -43,6 +43,17 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
+        $this->validate($request, [
+            'name'=>'required ',
+            'email'=>'required |email|unique:users',
+            'password'=>'required ',
+            'role'=>'required|numeric',
+        ],
+            [
+                'role.required' => 'role e dhoren?',
+                'role.numeric' => 'ekhono role dekhen nai bolod?'
+            ]);
+
         User::createOrUpdateUser($request);
         return redirect()->back()->with('success', 'User Created Successfully');
 //        return $request;
@@ -67,6 +78,7 @@ class UserController extends Controller
      */
     public function edit($id)
     {
+
         return view('admin.user.edit',[
             'user'=>User::find($id),
             'roles'=>User::getRoles()
@@ -83,6 +95,16 @@ class UserController extends Controller
      */
     public function update(Request $request, $id)
     {
+        $this->validate($request, [
+            'name'=>'required',
+            'email'=>'required|email|unique:users,email,$id',
+            'password'=>'required',
+            'role'=>'required|numeric',
+        ],
+            [
+                'role.required' => 'role e dhoren?',
+                'role.numeric' => 'ekhono role dekhen nai bolod?'
+            ]);
         User::createOrUpdateUser($request, $id);
         return redirect()->route('users.index')->with('success', 'User Updated Successfully.');
     }
