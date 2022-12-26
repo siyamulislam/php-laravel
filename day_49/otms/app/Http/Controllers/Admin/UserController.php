@@ -29,7 +29,10 @@ class UserController extends Controller
      */
     public function create()
     {
-        return 'hi index';
+        $roles=User::getRoles();
+        return view('admin.user.create', [
+            'roles' => $roles,
+        ]);
     }
 
     /**
@@ -40,7 +43,9 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        User::createOrUpdateUser($request);
+        return redirect()->back()->with('success', 'Category Created Successfully');
+//        return $request;
     }
 
     /**

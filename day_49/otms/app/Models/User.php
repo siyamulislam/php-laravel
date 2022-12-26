@@ -59,4 +59,30 @@ class User extends Authenticatable
     protected $appends = [
         'profile_photo_url',
     ];
+
+    public static function getRoles()
+    {
+        $arr = [
+            ["id" => "1", "role_name" => "Admin"],
+            ["id" => "2", "role_name" => "Teacher"],
+            ["id" => "3", "role_name" => "Student"]
+        ];
+//        return json_encode($arr);
+//        return $arr;
+        return json_decode(json_encode($arr), false);
+    }
+
+    public static function createOrUpdateUser($request, $id = null)
+    {
+        User::updateOrCreate(['id' => $id], [
+            'name' => $request->name,
+            'email' => $request->email,
+            'password' => bcrypt($request->password),
+            'role_type' => $request->role,
+        ]);
+    }
+
+
 }
+
+
