@@ -46,8 +46,14 @@ class CourseController extends Controller
      */
     public function store(Request $request)
     {
-        Course::createOrUpdateCourse($request);
-        return redirect()->back()->with('success', 'Course created successfully.');
+        $this->validate($request,[
+//            'course_category_id'=>'required |numeric',
+//            'course_sub_category_id'=>'required',
+            'title'=>'required |string|Alpha',
+        ]);
+//        Course::createOrUpdateCourse($request);
+//        return redirect()->back()->with('success', 'Course created successfully.');
+        return $request->all();
     }
 
     /**
