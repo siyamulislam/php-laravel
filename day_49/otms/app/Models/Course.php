@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use App\helper\Helper;
+use App\Models\User;
 
 class Course extends Model
 {
@@ -33,7 +34,7 @@ class Course extends Model
         Course::updateOrCreate(['id' => $id], [
             'course_category_id' => $request->course_category_id,
             'course_sub_category_id' => $request->course_sub_category_id,
-            'user_id' => auth()->id,
+            'user_id' => auth()->user()->id,
             'title' => $request->title,
             'price' => $request->price,
             'short_description' => $request->short_description,

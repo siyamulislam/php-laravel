@@ -16,7 +16,8 @@
                     </div>
                 </div>
                 <div class="card-body table-responsive">
-                    <table id="basic-datatable" class="table dt-responsive nowrap w-100">
+                    <table id="courseTable" class="table dt-responsive nowrap w-100">
+{{--                    <table id="basic-datatable" class="table dt-responsive nowrap w-100">--}}
 {{--                    <table id="scroll-horizontal-datatable" class="table dt-responsive nowrap w-100">--}}
                         <thead>
                         <tr>
@@ -83,6 +84,18 @@
             </div>
         </div>
     </div>
+@endsection
+
+@section("script")
+    <link rel="stylesheet" href="//cdn.datatables.net/1.13.1/css/jquery.dataTables.min.css">
+    <script src="//cdn.datatables.net/1.13.1/js/jquery.dataTables.min.js"> </script>
+    <script>
+        $(document).ready( function () {
+            $('#courseTable').DataTable( {
+                scrollX:true,
+            } );
+        } );
+    </script>
 @endsection
 
 

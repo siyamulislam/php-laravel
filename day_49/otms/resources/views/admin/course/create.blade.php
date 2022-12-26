@@ -109,6 +109,8 @@
                             <label for="" class="col-md-4">Image</label>
                             <div class="col-md-8">
                                 <input type="file" name="image"/>
+                                <br> @error('image') <span class="text-danger">{{$message}}</span> @enderror
+
                             </div>
                         </div>
                         <div class="row mt-2">

@@ -49,11 +49,16 @@ class CourseController extends Controller
         $this->validate($request,[
 //            'course_category_id'=>'required |numeric',
 //            'course_sub_category_id'=>'required',
-            'title'=>'required |string|Alpha',
+//            'title'=>'required |string|Alpha',
+            'image'=>'required|image',
+        ],
+        [
+            'image.required'=>'image koi aaa?',
+            'image.image'=>'onno file ken den?'
         ]);
-//        Course::createOrUpdateCourse($request);
-//        return redirect()->back()->with('success', 'Course created successfully.');
-        return $request->all();
+        Course::createOrUpdateCourse($request);
+        return redirect()->back()->with('success', 'Course created successfully.');
+//        return $request->all();
     }
 
     /**
