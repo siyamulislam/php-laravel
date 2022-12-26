@@ -6,6 +6,7 @@ php -S 127.0.0.1:800
 composer create-project laravel/laravel laravel-app
 cd laravel-app
 php artisan serve
+php artisan serve --port=8080
 
 public> index.php
 Route> web.php

@@ -9,7 +9,6 @@
                         <img src="{{asset('/')}}admin/assets/images/logo_sm.png" alt="" height="16">
                     </span>
     </a>
-
     <!-- LOGO -->
     <a href="{{route('dashboard')}}" class="logo text-center logo-dark">
                     <span class="logo-lg">
@@ -58,6 +57,24 @@
                 </div>
             </li>
 
+            <li class="side-nav-item">
+                <a data-bs-toggle="collapse" href="#sidebarUser" aria-expanded="false"
+                   aria-controls="sidebarEcommerce" class="side-nav-link">
+                    <i class="uil-user"></i>
+                    <span> User Module </span>
+                    <span class="menu-arrow"></span>
+                </a>
+                <div class="collapse" id="sidebarUser">
+                    <ul class="side-nav-second-level">
+                        <li>
+                            <a href="{{route('users.create')}}">Add User</a>
+                        </li>
+                        <li>
+                            <a href="{{route('users.index')}}">Manage User</a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
             <li class="side-nav-item">
                 <a data-bs-toggle="collapse" href="#sidebarEcommerce" aria-expanded="false"
                    aria-controls="sidebarEcommerce" class="side-nav-link">

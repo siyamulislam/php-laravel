@@ -19,8 +19,6 @@ class CourseController extends Controller
 
     public function index()
     {
-
-
         $auth_id=auth()->user()->id;
         $this->course=Course::latest()->get();
 
@@ -40,7 +38,6 @@ class CourseController extends Controller
      */
     public function create()
     {
-        //
         return view('admin.course.create', [
             'courseCategories' => CourseCategory::where('status', 1)->get(),
             'courseSubCategories' => CourseSubCategory::where('status', 1)->get(),

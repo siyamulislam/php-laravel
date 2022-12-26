@@ -6,7 +6,7 @@ use App\Http\Controllers\Front\FrontController;
 use App\Http\Controllers\Admin\CourseCategoryController;
 use App\Http\Controllers\Admin\CourseSubCategoryController;
 use App\Http\Controllers\Admin\CourseController;
-
+use App\Http\Controllers\Admin\UserController;
 
 Route::as('front.')->group(function (){
     Route::get('/',                 [FrontController::class,'home'])->name('home');
@@ -25,7 +25,9 @@ Route::middleware([
     Route::resource('course-sub-categories',CourseSubCategoryController::class);
     Route::resource('courses',CourseController::class);
 
-//    Route::get('/get-sub-category-by-category-id',[CourseController::class,'getSubCategory'])->name('get-sub-category-by-category-id');
     Route::post('/get-sub-category-by-category-id',[CourseController::class,'getSubCategory'])->name('get-sub-category-by-category-id');
     Route::get('/approve-course/{id}',[CourseController::class,'approveCourse'])->name('courses.approve');
+
+    Route::resource('users',UserController::class);
+
 });
