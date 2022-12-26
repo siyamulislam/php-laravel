@@ -136,7 +136,8 @@
                 // url: "/get-sub-category-by-category-id/"+categoryId,
                 {{--url:"{{route("ggfgf")}}",--}}
                 url: "/get-sub-category-by-category-id",
-                method: "GET",
+                // method: "GET",
+                method: "POST",
                 dataType: "JSON",
                 data:{category_id:categoryId},
                 success: function (response) {

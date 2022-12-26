@@ -35,7 +35,7 @@
                             <th>Short Description</th>
                             <th>Long Description</th>
                             <th>Status</th>
-                            <th class="float-end">Actions</th>
+                            <th class="">Actions</th>
                         </tr>
                         </thead>
                         <tbody>
@@ -61,7 +61,7 @@
 
                                 <td>{{ $course->status==1?"Published":"Unpublished" }}</td>
 
-                                <td class="float-end">
+                                <td class=" ">
                                     <a href="{{route('courses.edit',$course->id)}}"
                                        class="btn btn-success btn-sm">
                                             <i class="uil-edit-alt"></i></a>
