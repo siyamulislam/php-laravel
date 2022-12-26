@@ -62,20 +62,21 @@
 {{--                                <td>{{ $course->short_description }}</td>--}}
 {{--                                <td>{!! \Illuminate\Support\Str::words( $course->long_description,20) !!}</td>--}}
 
-
                                 <td>{{ $course->status==1?"Published":"Unpublished" }}</td>
-
                                 <td class=" ">
+                                    @if(auth()->user()->role_type==1)
                                     <a href="{{route('courses.approve',['id'=>$course->id])}}"
                                        class="btn btn-sm {{ $course->status == 1 ? 'btn-secondary' : 'btn-warning' }}"  title="Change Course Status ">
                                             <i class="uil-ball"></i></a>
+                                    @endif
                                     <a href="{{route('courses.show',$course->id)}}"
                                        class="btn btn-primary btn-sm">
                                         <i class="uil-keyboard-show"></i></a>
+{{--                                        @if(auth()->user()->role_type==2)--}}
                                     <a href="{{route('courses.edit',$course->id)}}"
                                        class="btn btn-success btn-sm">
                                             <i class="uil-edit-alt"></i></a>
-
+{{--                                        @endif--}}
                                         <form action="{{route('courses.destroy',$course->id)}}"
                                               method="post" style="display: inline-block"
                                               onsubmit="return confirm('Are you sure to delete this ?')" >

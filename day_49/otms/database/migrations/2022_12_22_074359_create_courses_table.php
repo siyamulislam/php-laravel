@@ -27,7 +27,7 @@ return new class extends Migration
             $table->string('ending_date')->nullable();
             $table->string('total_hour')->nullable();
             $table->string('slug')->nullable();
-            $table->tinyInteger('status')->default()->comment('0=>Unpublished 1=>Published');
+            $table->tinyInteger('status')->default(0)->comment('0=>Unpublished 1=>Published');
             $table->integer('hit_count')->default(0);
             $table->integer('apply_count')->default(0);
             $table->timestamps();

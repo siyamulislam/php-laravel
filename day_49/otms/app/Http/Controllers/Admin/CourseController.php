@@ -19,9 +19,18 @@ class CourseController extends Controller
 
     public function index()
     {
+
+
+        $auth_id=auth()->user()->id;
+        $this->course=Course::latest()->get();
+
+        if (auth()->user()->role_type==2){
+            $this->course=Course::where('user_id', $auth_id)->get();
+        }
         return view('admin.course.index', [
-            'courses' => Course::latest()->get(),
+            'courses' => $this->course,
         ]);
+//        return $auth_user;
     }
 
     /**
