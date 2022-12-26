@@ -20,7 +20,7 @@
                     </div>
                 </div>
                 <div class="card-body table-responsive">
-                    <table id="courseTable" class="table  dt-responsive nowrap w-100">
+                    <table id="courseTable" class="table  table-striped dt-responsive table-hover nowrap w-100">
 {{--                    <table id="basic-datatable" class="table dt-responsive nowrap w-100">--}}
 {{--                    <table id="scroll-horizontal-datatable" class="table dt-responsive nowrap w-100">--}}
                         <thead>
@@ -44,7 +44,7 @@
                         </thead>
                         <tbody>
                         @foreach($courses as $course)
-                            <tr class="{{ $course->status == 1 ? '' : 'bg-secondary text-light ' }}">
+                            <tr >
                                 <td>{{ $loop->iteration }}</td>
                                 <td><img src="{{asset($course->image)}}" alt="" style="height: 70px;width: 70px"></td>
 
@@ -67,7 +67,7 @@
 
                                 <td class=" ">
                                     <a href="{{route('courses.approve',['id'=>$course->id])}}"
-                                       class="btn btn-secondary btn-sm" title="Change Course Status ">
+                                       class="btn btn-sm {{ $course->status == 1 ? 'btn-secondary' : 'btn-warning' }}"  title="Change Course Status ">
                                             <i class="uil-ball"></i></a>
                                     <a href="{{route('courses.show',$course->id)}}"
                                        class="btn btn-primary btn-sm">

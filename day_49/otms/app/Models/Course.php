@@ -41,7 +41,7 @@ class Course extends Model
             'short_description' => $request->short_description,
             'long_description' => $request->long_description,
 //            'image' =>Helper:: uploadFile($request->file('image'),'course'),
-            'image' =>Helper:: uploadFile($request->file('image'),'course'),isset($id)?Course::find($id)->image:null,
+            'image' =>Helper:: uploadFile($request->file('image'),'course',isset($id)?Course::find($id)->image:null),
             'starting_date' => $request->starting_date,
             'ending_date' => $request->ending_date,
             'total_hour' => $request->total_hour,

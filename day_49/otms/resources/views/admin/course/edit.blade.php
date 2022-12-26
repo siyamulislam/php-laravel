@@ -19,12 +19,12 @@
                             <div class="col-md-8">
                                 <select name="course_category_id" id="category_id" class="form-control select2"
                                         data-toggle="select2"
-                                        data-placeholder="--Select a Category--"
+{{--                                        data-placeholder="--Select a Category--"--}}
                                 >
-                                    <option></option>
+{{--                                    <option></option>--}}
                                     @foreach($courseCategories as $category)
 {{--                                        <option value="{{$category->id}}">{{$category->name}}</option>--}}
-{{--                                        <option value="{{$category->id}}"{{$courseCategory->id==$course->course_category_id?'selected':''}}>{{$category->name}}</option>--}}
+                                        <option value="{{$category->id}} "  {{$category->id==$courseCategory->course_category_id?'selected':''}}>{{$category->name}}</option>
                                     @endforeach
                                 </select>
                                 @error('course_category_id') <span class="text-danger">{{$errors->first('course_category_id')}}</span> @enderror

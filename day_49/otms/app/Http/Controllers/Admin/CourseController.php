@@ -87,12 +87,10 @@ class CourseController extends Controller
         return view('admin.course.edit', [
             'course' => Course::find($id),
             'courseCategories' => CourseCategory::where('status', 1)->get(),
-            'courseCategory' => Course::where('id', $id)->get("course_category_id"),
-
+            'courseCategory' => Course::find($id)->where('id', $id)->get("course_category_id")->first()
         ]);
 
 
-//        return Course::where('id', $id)->get("course_category_id");
     }
 
     /**
@@ -134,14 +132,14 @@ class CourseController extends Controller
 
     public function approveCourse($id){
         $this->course=Course::where('id',$id)->first();
-        if (  $this->course->status=1){
-            $this->course->status=0;
-        }
-        else{
-            $this->course->status=1;
-        }
+//        if (  $this->course->status=1){
+//            $this->course->status=0;
+//        }
+//        else{
+//            $this->course->status=1;
+//        }
 
-//        $this->course->status=0 ?    $this->course->status=1:   $this->course->status=0;
+        $this->course->status==0 ?    $this->course->status=1:   $this->course->status=0;
 
         $this->course->save();
         return redirect()->back()->with('success','Course approve successfully.');

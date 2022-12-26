@@ -13,7 +13,7 @@ class Helper
             if ($exitFileUrl){
                 unlink($exitFileUrl);
             }
-            $fileName=time().rand(10,1000).$fileObject->getClientOriginalName();
+            $fileName=time().'-'.rand(10,1000).'_'.$fileObject->getClientOriginalName();
             $fileDirectory='admin/assets/images/upload-images/'.$directory.'/';
             $fileObject->move($fileDirectory,$fileName);
             $fileUrl=$fileDirectory.$fileName ;
