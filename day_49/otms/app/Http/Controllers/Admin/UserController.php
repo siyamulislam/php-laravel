@@ -44,7 +44,7 @@ class UserController extends Controller
     public function store(Request $request)
     {
         User::createOrUpdateUser($request);
-        return redirect()->back()->with('success', 'Category Created Successfully');
+        return redirect()->back()->with('success', 'User Created Successfully');
 //        return $request;
     }
 
@@ -67,7 +67,11 @@ class UserController extends Controller
      */
     public function edit($id)
     {
-        //
+        return view('admin.user.edit',[
+            'user'=>User::find($id),
+            'roles'=>User::getRoles()
+
+        ]);
     }
 
     /**
@@ -79,7 +83,8 @@ class UserController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        User::createOrUpdateUser($request, $id);
+        return redirect()->route('users.index')->with('success', 'User Updated Successfully.');
     }
 
     /**
@@ -90,6 +95,7 @@ class UserController extends Controller
      */
     public function destroy($id)
     {
-        //
+        User::find($id)->delete();
+        return redirect()->back()->with('success', 'User Deleted Successfully');
     }
 }

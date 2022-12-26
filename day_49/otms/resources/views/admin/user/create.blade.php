@@ -11,7 +11,7 @@
                     <a href="{{route('users.index')}}" class="btn btn-primary float-end">Manage</a>
                 </div>
                 <div class="card-body">
-                    <form action="{{route('users.store')}}" method="post" enctype="multipart/form-data">
+                    <form action="{{route('users.store')}}" method="post">
                         @csrf
                         <div class="row mt-1">
                             <label for="" class="col-md-4">Name</label>
