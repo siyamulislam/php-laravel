@@ -46,16 +46,16 @@ class CourseController extends Controller
      */
     public function store(Request $request)
     {
-        $this->validate($request,[
-//            'course_category_id'=>'required |numeric',
-//            'course_sub_category_id'=>'required',
+        $this->validate($request, [
+            'course_category_id'=>'required |numeric',
+            'course_sub_category_id'=>'required |numeric',
 //            'title'=>'required |string|Alpha',
-            'image'=>'required|image',
+            'image' => 'required|image',
         ],
-        [
-            'image.required'=>'image koi aaa?',
-            'image.image'=>'onno file ken den?'
-        ]);
+            [
+                'image.required' => 'image koi aaa?',
+                'image.image' => 'onno file ken den?'
+            ]);
         Course::createOrUpdateCourse($request);
         return redirect()->back()->with('success', 'Course created successfully.');
 //        return $request->all();
@@ -102,6 +102,14 @@ class CourseController extends Controller
      */
     public function update(Request $request, $id)
     {
+        $this->validate($request, [
+            'course_category_id'=>'required |numeric',
+            'course_sub_category_id'=>'required |numeric',
+            'title'=>'required |string',
+        ],
+            [
+                'course_sub_category_id.numeric' => ' category paltiya sub category vhule jan keno?',
+            ]);
         Course::createOrUpdateCourse($request, $id);
         return redirect()->route('courses.index')->with('success', 'Course updated successfully.');
     }
@@ -115,33 +123,27 @@ class CourseController extends Controller
     public function destroy($id)
     {
         $this->course = Course::find($id);
-        if (isset($this->course->images)) {
-            if (file_exists($this->course->images)) {
-                unlink($this->course->images);
+        if (isset($this->course->image)) {
+            if (file_exists($this->course->image)) {
+                unlink($this->course->image);
             }
         }
+        $this->course->delete();
         return redirect()->back()->with('success','Course deleted successfully.');
     }
 
     public function getSubCategory(Request $request)
     {
 //        return json_encode($request->category_id);
-        $this->subCategories = CourseSubCategory::where('category_id',$request->category_id)->get(['id','name']);
+        $this->subCategories = CourseSubCategory::where('category_id', $request->category_id)->get(['id', 'name']);
         return response()->json($this->subCategories);
     }
 
-    public function approveCourse($id){
-        $this->course=Course::where('id',$id)->first();
-//        if (  $this->course->status=1){
-//            $this->course->status=0;
-//        }
-//        else{
-//            $this->course->status=1;
-//        }
-
-        $this->course->status==0 ?    $this->course->status=1:   $this->course->status=0;
-
+    public function approveCourse($id)
+    {
+        $this->course = Course::where('id', $id)->first();
+        $this->course->status == 0 ? $this->course->status = 1 : $this->course->status = 0;
         $this->course->save();
-        return redirect()->back()->with('success','Course approve successfully.');
+        return redirect()->back()->with('success', 'Course approve successfully.');
     }
 }

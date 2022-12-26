@@ -35,9 +35,9 @@
                             <th>Title</th>
                             <th>Price</th>
                             <th>Total Hours</th>
-                            <th>Duration</th>
-                            <th>Short Description</th>
-                            <th>Long Description</th>
+{{--                            <th>Duration</th>--}}
+{{--                            <th>Short Description</th>--}}
+{{--                            <th>Long Description</th>--}}
                             <th>Status</th>
                             <th class="">Actions</th>
                         </tr>
@@ -55,12 +55,12 @@
                                 @if(auth()->user()->role_type==1)
 {{--                                    <td>{{$course->user_id}}</td>@endif--}}
                                     <td>{{$course->trainer->name}}</td>@endif
-                                <td>{{ $course->title }}</td>
+                                <td>{{\Illuminate\Support\Str::limit($course->title,15)}}</td>
                                 <td>{{ $course->price }}</td>
                                 <td>{{ $course->total_hour }}</td>
-                                <td>{{ $course->starting_date.' to '.$course->ending_date }}</td>
-                                <td>{{ $course->short_description }}</td>
-                                <td>{!! \Illuminate\Support\Str::words( $course->long_description,20) !!}</td>
+{{--                                <td>{{ $course->starting_date.' to '.$course->ending_date }}</td>--}}
+{{--                                <td>{{ $course->short_description }}</td>--}}
+{{--                                <td>{!! \Illuminate\Support\Str::words( $course->long_description,20) !!}</td>--}}
 
 
                                 <td>{{ $course->status==1?"Published":"Unpublished" }}</td>
