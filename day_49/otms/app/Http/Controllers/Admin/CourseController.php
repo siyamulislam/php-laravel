@@ -76,9 +76,10 @@ class CourseController extends Controller
     public function show($id)
     {
         //
-        return view('admin.course.courses.edit', [
-            'course' => course::find($id),
+        return view('admin.course.show', [
+            'course' => Course::find($id),
             'courseCategories' => CourseCategory::where('status', 1)->get(),
+            'courseCategory' => Course::find($id)->where('id', $id)->get("course_category_id")->first()
         ]);
     }
 

@@ -45,7 +45,6 @@ composer remove laravel/jetstream
 
 vendor>laravel>fortify>src>rule
 
-
 #admin theme
 https://file.fm/u/2dsarkswm
 
@@ -68,3 +67,9 @@ intitle:index(of)? mp4 Avater 2
 
 user crud . name, email,role_type,password
 md5()/sha1() / hash:: make(string) / bcrypt() for password
+
+
+->get() array of collection
+->first() first object of array collection
+->take(2) 2 out of N -- Similar as limit()
+->skip(2) skip first 2 out of N

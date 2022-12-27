@@ -40,13 +40,12 @@
                                 <td>{{$user->name}}</td>
                                 <td>{{$user->email}}</td>
                                 <td>{{$user->role_type==1?"Admin":($user->role_type==2?"Teacher":"Student")}}</td>
-                                <td>{{$user->password}}</td>
+                                <td>{{\Illuminate\Support\Str::limit($user->password,35)}}</td>
 
-                                <td class=" ">
-
+                                <td class="">
                                     <a href="{{route('users.show',$user->id)}}"
                                        class="btn btn-primary btn-sm">
-                                        <i class="uil-unlock"></i></a>
+                                        <i class="uil-eye-slash"></i></a>
                                     <a href="{{route('users.edit',$user->id)}}"
                                        class="btn btn-success btn-sm">
                                             <i class="uil-edit-alt"></i></a>
