@@ -7,8 +7,10 @@
                 <li class="dropdown">
                     <a href="" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Course Category</a>
                     <ul class="dropdown-menu">
-                        <li><a href="" class="dropdown-item">Category One</a></li>
-                        <li><a href="" class="dropdown-item">Category Two</a></li>
+
+                        @foreach($categories as $category)
+                            <li><a href="{{route('front.course-category',['id'=>$category->id])}}" class="dropdown-item">{{$category->name}}</a></li>
+                        @endforeach
                     </ul>
                 </li>
                 <li><a href="{{route('front.about')}}" class="nav-link">About</a></li>

@@ -28,13 +28,13 @@
                             <th>#</th>
                             <th>Image</th>
                             <th>Category</th>
-                            <th>Sub Category</th>
+                            <th>Sub Cat.</th>
                             @if(auth()->user()->role_type==1)
                                 <th>Publisher</th>
                             @endif
                             <th>Title</th>
                             <th>Price</th>
-                            <th>Total Hours</th>
+                            <th>Hours</th>
 {{--                            <th>Duration</th>--}}
 {{--                            <th>Short Description</th>--}}
 {{--                            <th>Long Description</th>--}}
@@ -55,7 +55,7 @@
                                 @if(auth()->user()->role_type==1)
 {{--                                    <td>{{$course->user_id}}</td>@endif--}}
                                     <td>{{$course->trainer->name}}</td>@endif
-                                <td>{{\Illuminate\Support\Str::limit($course->title,15)}}</td>
+                                <td>{{\Illuminate\Support\Str::limit($course->title,12)}}</td>
                                 <td>{{ $course->price }}</td>
                                 <td>{{ $course->total_hour }}</td>
 {{--                                <td>{{ $course->starting_date.' to '.$course->ending_date }}</td>--}}
