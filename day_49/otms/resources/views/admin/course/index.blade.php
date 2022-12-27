@@ -67,11 +67,11 @@
                                     @if(auth()->user()->role_type==1)
                                     <a href="{{route('courses.approve',['id'=>$course->id])}}"
                                        class="btn btn-sm {{ $course->status == 1 ? 'btn-secondary' : 'btn-warning' }}"  title="Change Course Status ">
-                                            <i class="uil-ball"></i></a>
+                                            <i class="{{ $course->status == 1 ? 'uil-arrow-up' : 'uil-arrow-down' }}"></i></a>
                                     @endif
                                     <a href="{{route('courses.show',$course->id)}}"
                                        class="btn btn-primary btn-sm">
-                                        <i class="uil-keyboard-show"></i></a>
+                                        <i class="uil-eye"></i></a>
 {{--                                        @if(auth()->user()->role_type==2)--}}
                                     <a href="{{route('courses.edit',$course->id)}}"
                                        class="btn btn-success btn-sm">
