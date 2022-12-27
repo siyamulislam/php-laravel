@@ -12,7 +12,7 @@ class FrontController extends Controller
     public function home(){
         return view ('front.home.home',[
             'courses'=>Course::where('status',1)->get(),
-            'categories'=>CourseCategory::where('status',1)->get(),
+//            'categories'=>CourseCategory::where('status',1)->get(),
 
         ]);
     }
@@ -31,7 +31,7 @@ class FrontController extends Controller
         return view('front.category.index',[
             'courses'=>Course::where('course_category_id',$categoryID)->where('status',1)->get(),
             'category'=>CourseCategory::find($categoryID),
-            'categories'=>CourseCategory::where('status',1)->get(),
+//            'categories'=>CourseCategory::where('status',1)->get(),
 
         ]);
     }
