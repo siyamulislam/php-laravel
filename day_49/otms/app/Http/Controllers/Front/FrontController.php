@@ -35,4 +35,10 @@ class FrontController extends Controller
 
         ]);
     }
+    public function courseDetails($slug)
+    {
+        return view('front.course.details',[
+            'courses'=>Course::where('slug',$slug)->where('status',1)->first(),
+        ]);
+    }
 }

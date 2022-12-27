@@ -56,7 +56,7 @@
                                         <p>Total hours: {{$course->total_hour}} hours</p>
                                     </div>
                                     <div class="card-footer">
-                                        <a href="" class="btn btn-success">Enroll Now</a>
+                                        <a href="{{route('front.course.details',['slug'=>$course->slug])}}" class="btn btn-success">Enroll Now</a>
                                     </div>
                                 </div>
                             </div>
