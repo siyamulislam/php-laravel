@@ -45,7 +45,6 @@ composer remove laravel/jetstream
 
 vendor>laravel>fortify>src>rule
 
-
 #admin theme
 https://file.fm/u/2dsarkswm
 
