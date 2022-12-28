@@ -15,5 +15,6 @@ Route::as('front.')->group(function (){
     Route::get('/contact',          [FrontController::class,'contact'])->name('contact');
     Route::get('/course-category/{id}',   [FrontController::class,'courseCategory'])->name('course-category');
     Route::get('/course/{slug}',   [FrontController::class,'courseDetails'])->name('course.details');
+    Route::get('/checkout/{slug}',   [FrontController::class,'checkoutPage'])->name('checkout-page');
 });
 
