@@ -37,7 +37,7 @@
             </div>
             <div class="row">
                 <div class="col-md-12">
-                    <form action="" method="post">
+                    <form action="{{route('front.course.order')}}" method="post">
                     @csrf
                     <div class="">
                         <label for="">Payment Method</label>

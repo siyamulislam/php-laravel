@@ -27,6 +27,10 @@ php artisan migrate:fresh
 php artisan migrate:rollback
 php artisan migrate
 
+migratrion file create
+php artisan make:migration  add_column_to_enrolls_table --table=enrolls
+
+
 composer install
 copy .env.example .env
 php artisan key:generate

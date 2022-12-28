@@ -17,6 +17,7 @@
                 <li><a href="{{route('front.contact')}}" class="nav-link">Contact</a></li>
                 <li><a href="{{route('login')}}" class="nav-link">Login</a></li>
                 <li><a href="{{route('register')}}" class="nav-link">Register</a></li>
+                <li><a href="#" class="nav-link">Logout</a></li>
             </ul>
         </div>
     </div>
