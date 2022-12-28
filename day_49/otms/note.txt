@@ -27,7 +27,13 @@ php artisan migrate:fresh
 php artisan migrate:rollback
 php artisan migrate
 
+php artisan make:middleware TeacherMiddle
+php artisan make:middleware StudentMiddle
+php artisan make:middleware AdminMiddle
 migratrion file create
+
+
+
 php artisan make:migration  add_column_to_enrolls_table --table=enrolls
 
 
