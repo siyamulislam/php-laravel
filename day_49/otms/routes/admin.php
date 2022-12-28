@@ -22,5 +22,6 @@ Route::middleware([
     Route::get('/approve-course/{id}',[CourseController::class,'approveCourse'])->name('courses.approve');
 
     Route::resource('users',UserController::class);
+    Route::get('/manage-enrolls',[\App\Http\Controllers\EnrollController::class,'manageEnroll'])->name('mange-enroll');
 
 });

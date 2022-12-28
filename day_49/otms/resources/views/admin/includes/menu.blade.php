@@ -121,9 +121,9 @@
                 </a>
                 <div class="collapse" id="sidebarEnroll">
                     <ul class="side-nav-second-level">
-{{--                        <li>--}}
-{{--                            <a href="#">Add product</a>--}}
-{{--                        </li>--}}
+                        <li>
+                            <a href="{{route('mange-enroll')}}">Add Manage</a>
+                        </li>
 {{--                        <li>--}}
 {{--                            <a href="#">Manage product</a>--}}
 {{--                        </li>--}}

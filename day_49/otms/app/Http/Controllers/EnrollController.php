@@ -36,7 +36,11 @@ class EnrollController extends Controller
 
     }
 
-
+public function manageEnroll(){
+        return view('admin.enroll.manage',[
+            'enrolls'=>Enroll::latest()->get(),
+        ]);
+}
 
 
 }
