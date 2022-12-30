@@ -13,7 +13,6 @@ class FrontController extends Controller
         return view ('front.home.home',[
             'courses'=>Course::where('status',1)->get(),
 //            'categories'=>CourseCategory::where('status',1)->get(),
-
         ]);
     }
 

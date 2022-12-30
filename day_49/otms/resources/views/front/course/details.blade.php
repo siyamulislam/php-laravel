@@ -1,1 +1,10 @@
-<h1>hi</h1>
+@section('title')
+    Course Details
+@endsection
+
+@section('body')
+    
+    Course Details
+@endsection
+
+
