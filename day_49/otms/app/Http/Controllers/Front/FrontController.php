@@ -9,6 +9,7 @@ use Illuminate\Http\Request;
 
 class FrontController extends Controller
 {
+    public $course;
     public function home(){
         return view ('front.home.home',[
             'courses'=>Course::where('status',1)->get(),
@@ -36,8 +37,18 @@ class FrontController extends Controller
     }
     public function courseDetails($slug)
     {
+        $this->course=Course::where('slug',$slug)->where('status',1)->first();
+        $this->course->hit_count=$this->course->hit_count+1;
         return view('front.course.details',[
-            'courses'=>Course::where('slug',$slug)->where('status',1)->first(),
+            'course'=> $this->course,
+        ]);
+    }
+    public function checkoutPage($slug)
+    {
+        $this->course=Course::where('slug',$slug)->first();
+        return view('front.course.checkout',[
+            'course'=> $this->course,
         ]);
     }
 }
+
