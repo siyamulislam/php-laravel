@@ -10,7 +10,6 @@
             <div class="row">
                 <div class="col-md-12">
                     <img src="{{asset(($course->image))}}" alt="" style="height: 100px">
-
                     <table class="table ">
                         <thead>
                         <tr>
@@ -30,17 +29,15 @@
                             <td>{{$course->total_hour}}</td>
                         </tr>
                         </tbody>
-
                     </table>
-
                 </div>
             </div>
-            <div class="row">
-                <div class="col-md-12">
-                    <form action="{{route('front.course.order')}}" method="post">
+            <div class="row ">
+                <div class="col-md-12 ">
+                    <form action="{{route('front.course.order')}}" method="post" class="d-flex">
                     @csrf
-                    <div class="">
-                        <label for="">Payment Method</label>
+                    <div class="  ms-auto" style="max-width: 200px">
+                        <label for="" class="">Payment Method</label>
                         <div class="mt-3">
                             <label for=""><input type="radio" name="payment_method" value="cash"> Cash</label><br>
                             <label for=""><input type="radio" name="payment_method" value="ssl"> SSLCOMMERZ</label>
