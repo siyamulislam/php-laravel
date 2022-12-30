@@ -39,6 +39,7 @@ class FrontController extends Controller
     {
         $this->course=Course::where('slug',$slug)->where('status',1)->first();
         $this->course->hit_count=$this->course->hit_count+1;
+        $this->course->save();
         return view('front.course.details',[
             'course'=> $this->course,
         ]);

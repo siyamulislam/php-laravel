@@ -1,15 +1,7 @@
-<<<<<<< HEAD
 @section('title')
     Course Details
 @endsection
 
-@section('body')
-    
-    Course Details
-@endsection
-
-
-=======
 @extends('front.master')
 
 @section('title')
@@ -18,45 +10,108 @@
 
 @section('body')
     <section class="py-5">
-        <div class="container">
+        <div class="container-fluid">
+            <!-- start page title -->
             <div class="row">
-                <div class="col-md-3">
-                    <img src="{{asset(($course->image))}}" alt="" style="height: 100px">
-
-                </div>
-                <div class="col-md-9">
-                    <h3>{{$course->title}}</h3>
-                    <p>{{$course->short_description}}</p>
+                <div class="col-12">
+                    <div class="d-flex justify-content-between ">
+                        <h4 class="px-5">Course Details</h4>
+                        <div class=" px-5">
+                            <ol class="breadcrumb m-0">
+                                <li class="breadcrumb-item"><a href="javascript: void(0);">{{$course->category->name}}</a></li>
+                                <li class="breadcrumb-item"><a href="javascript: void(0);">{{$course->subCategory->name }}</a></li>
+                                <li class="breadcrumb-item active">Course Details</li>
+                            </ol>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="row bg-light">
-                <div class="col-md-8 ">
-                        <p>
-                            <span>Price: {{$course->price}} BDT</span> <br>
-                            <span>Duration: {{$course->total_hour}} Hours</span> <br>
-                            <span>Starting: {{\Illuminate\Support\Carbon::parse($course->starting_date)->format('d-m-Y')}}</span> to
-                            <span>{{\Illuminate\Support\Carbon::parse($course->ending_date)->format('d-m-Y')}}</span>
-                        </p>
-                </div>
-                <div class="col-md-4 mt-4 ">
-                        <a href="{{route('front.checkout-page',['slug'=>$course->slug])}}" class="btn btn-success ">Enroll Now</a>
-                </div>
-
-            </div>
-        </div>
-    </section>
-    <section class="py-3">
-        <div class="container">
+            <!-- end page title -->
             <div class="row">
-                <div class="col-md-10">
-                    {!! $course->long_description !!}}
-                </div>
-                <div class="col-md-2">
-                    <h5>Trainer name</h5>
-                    <h1>{{$course->trainer->name}}</h1>
-                </div>
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-lg-5">
+                                    <!-- Course image -->
+                                    <a href="javascript: void(0);" class="text-center d-block mb-4">
+                                        <img src="{{asset($course->image)}}" class="img-fluid" style="max-width: 280px;" alt="Course-img" />
+                                    </a>
+                                    <div class="d-lg-flex d-none justify-content-center">
+                                        <a href="javascript: void(0);">
+                                            <img src="{{asset($course->image)}}" class="img-fluid img-thumbnail p-2" style="max-width: 75px;" alt="Course-img" />
+                                        </a>
+                                        <a href="javascript: void(0);" class="ms-2">
+                                            <img src="{{asset($course->image)}}" class="img-fluid img-thumbnail p-2" style="max-width: 75px;" alt="Course-img" />
+                                        </a>
+                                        <a href="javascript: void(0);" class="ms-2">
+                                            <img src="{{asset($course->image)}}" class="img-fluid img-thumbnail p-2" style="max-width: 75px;" alt="Course-img" />
+                                        </a>
+                                    </div>
+
+                                    <!-- Course View -->
+                                    <div class="my-4">
+                                        <h5>Trainer: {{$course->trainer->name}}</h5>
+                                        <h6 >Total View: {{$course->hit_count}}</h6>
+                                    </div>
+
+                                </div> <!-- end col -->
+                                <div class="col-lg-7">
+                                    <form class="ps-lg-4">
+                                        <!-- Course title -->
+                                        <h3 class="mt-0">{{$course->title}}</h3>
+                                        <p class="mb-1">Added Date: 09/12/2018</p>
+                                        <p class="mb-1">Course Duration: {{$course->total_hour}}</p>
+                                        <p class="mb-1">Starting: {{$course->starting_date}}</p>
+                                        <p class="mb-1">Ending: {{$course->ending_date}}</p>
+                                        <p style="font-size: 25px">
+                                            <span class="text-warning">&#9733;</span>
+                                            <span class="text-warning">&#9733;</span>
+                                            <span class="text-warning">&#9733;</span>
+                                            <span class="text-warning">&#9733;</span>
+                                            <span class="text-warning">&#9733;</span>
+                                        </p>
+                                        <!-- Course price -->
+                                        <div class="mt-2">
+                                            <h6 class="font-14">Course Price:</h6>
+                                            <h3> ${{$course->price}}</h3>
+                                        </div>
+                                        <!-- Enroll -->
+                                        <div class="mt-4">
+                                            <a href="{{route('front.checkout-page',['slug'=>$course->slug])}}" class="btn btn-success ">Enroll Now</a>
+                                        </div>
+                                        <!-- Course information -->
+                                        <div class="mt-4">
+                                            <div class="row">
+                                                <div class="col-md-4">
+                                                    <h6 class="font-14">Total Seat:</h6>
+                                                    <p class="text-sm lh-150">40</p>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <h6 class="font-14">Available Seat:</h6>
+                                                    <p class="text-sm lh-150">{{40-$course->apply_count}}</p>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <h6 class="font-14">Number of Enrolled:</h6>
+                                                    <p class="text-sm lh-150">{{$course->apply_count}}</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- Course description -->
+                                        <div class="mt-4">
+                                            <h6 class="font-14">Description:</h6>
+                                            <p>{{$course->short_description}}</p>
+                                            <br>
+                                            {!!$course->long_description!!}
+                                        </div>
+                                    </form>
+                                </div> <!-- end col -->
+                            </div> <!-- end row-->
+
+                        </div> <!-- end card-body-->
+                    </div> <!-- end card-->
+                </div> <!-- end col-->
             </div>
+            <!-- end row-->
         </div>
-    </section>
 @endsection
->>>>>>> 2819615d9caefd67bc97f0e6a1ee380e78126cd2
