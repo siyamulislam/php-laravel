@@ -122,7 +122,7 @@
                 <div class="collapse" id="sidebarEnroll">
                     <ul class="side-nav-second-level">
                         <li>
-                            <a href="{{route('mange-enroll')}}">Add Manage</a>
+                            <a href="{{route('mange-enroll')}}">Manage Enroll</a>
                         </li>
 {{--                        <li>--}}
 {{--                            <a href="#">Manage product</a>--}}

@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\Auth;
 
 class EnrollController extends Controller
 {
-    public $user;
+    public $user,$enroll;
 
     public function placeOrder(Request $request)
     {
@@ -41,6 +41,24 @@ public function manageEnroll(){
             'enrolls'=>Enroll::latest()->get(),
         ]);
 }
+    public function approveEnroll($id)
+    {
+        $this->enroll = Enroll::where('id', $id)->first();
+        $this->enroll->status == 1 ? $this->enroll->status = 2 : ($this->enroll->status = 0?$this->enroll->status = 0:$this->enroll->status = 1);
+        $this->enroll->save();
+        return $this->enroll->status == 1 ?
+            redirect()->back()->with('error', 'Enroll Pending!'):
+            redirect()->back()->with('success', 'Enroll Approve Successfully!');
+    }
+    public function rejectEnroll($id)
+    {
+        $this->enroll = Enroll::where('id', $id)->first();
+        $this->enroll->status == 0 ? $this->enroll->status = 2 : ($this->enroll->status = 2?$this->enroll->status = 0:$this->enroll->status = 1);
+        $this->enroll->save();
 
+        return $this->enroll->status == 0 ?
+            redirect()->back()->with('error', 'Enroll Rejected!'):
+            redirect()->back()->with('success', 'Enroll Approve Successfully!');
+    }
 
 }

@@ -6,6 +6,7 @@ use App\Http\Controllers\Admin\CourseSubCategoryController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\UserController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\EnrollController;
 
 
 Route::middleware([
@@ -22,6 +23,9 @@ Route::middleware([
     Route::get('/approve-course/{id}',[CourseController::class,'approveCourse'])->name('courses.approve')->middleware('admin');
 
     Route::resource('users',UserController::class);
-    Route::get('/manage-enrolls',[\App\Http\Controllers\EnrollController::class,'manageEnroll'])->name('mange-enroll')->middleware('admin');
+    Route::get('/manage-enrolls',[EnrollController::class,'manageEnroll'])->name('mange-enroll')->middleware('admin');
+    Route::get('/approve-enroll/{id}',[EnrollController::class,'approveEnroll'])->name('enroll.approve')->middleware('admin');
+    Route::get('/reject-enroll/{id}',[EnrollController::class,'rejectEnroll'])->name('enroll.reject')->middleware('admin');
+
 
 });

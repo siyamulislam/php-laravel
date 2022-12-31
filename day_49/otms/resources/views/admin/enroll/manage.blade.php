@@ -6,26 +6,25 @@
 @section('body')
     <!-- start page title -->
     <div class="row">
-        <div class="col-md-10 mx-auto">
+        <div class="col-md-12 mx-auto">
             <div class="card ">
                 <div class="card-header">
                     <div class="row">
-                        <div class=" fw-normal display-6 text-secondary float-start">Manage Category
-                            <a href="#"
-                               class="btn btn-primary  float-end">Create</a>
+                        <div class=" fw-normal display-6 text-secondary float-start">Manage Enroll
+
                         </div>
                     </div>
                 </div>
                 <div class="card-body">
-                    <p class="text-success text-center">{{Session::has('success') ? Session::get('success') :""}}</p>
                     <table id="basic-datatable" class="table dt-responsive nowrap w-100">
                         <thead>
                         <tr>
-                            <th>Sl</th>
+                            <th>#</th>
                             <th>Title</th>
-                            <th>Student Name</th>
-                            <th>Course Name</th>
-
+                            <th>Trainer</th>
+                            <th>Student</th>
+                            <th>Price</th>
+                            <th>Applied Date</th>
                             <th>Payment Method</th>
                             <th>Status</th>
                             <th class="float-end">Actions</th>
@@ -34,30 +33,25 @@
                         <tbody>
                         @foreach($enrolls as $enroll)
                             <tr class="">
-                                  <td>{{ $loop->iteration }}</td>
-                                <td>{{ $enroll->id }}</td>
-
+                                <td>{{ $loop->iteration }}</td>
+                                <td>{{ $enroll->course->title }}</td>
+                                <td>{{ $enroll->course->trainer->name}}</td>
                                 <td>{{ $enroll->student->name }}</td>
-                                <td>{{ $enroll->id }}</td>
-
-
+                                <td>{{ $enroll->course->price }}</td>
+                                <td>{{ $enroll->created_at->format('d-m-Y') }}</td>
                                 <td>{{ $enroll->payment_method }}</td>
-{{--                                <td>{{ $category->status==1?"Published":"Unpublished" }}</td>--}}
-                                <td>{{ $enroll->status==1?"Pending":"Rejected" }}</td>
-
+                                <td>{{ $enroll->status==0?"Rejected":($enroll->status==1?"Pending":"Approved") }}</td>
                                 <td class="float-end">
-                                    <a href=""class="btn btn-success btn-sm">
-                                        <i class="uil-edit-alt"></i> </a>
-
-                                    <form action=""
-                                          method="post" style="display: inline-block"
-                                          onsubmit="return confirm('Are you sure to delete this ?')">
-                                        @csrf
-                                        @method('delete')
-                                        <button type="submit"
-                                                   class="btn btn-danger btn-sm">
-                                            <i class=" uil-trash-alt"></i></button>
-                                    </form>
+                                <td>
+                                    @if(!$enroll->status==0)
+                                        <a href="{{route('enroll.approve',['id'=>$enroll->id])}}"
+                                           class="me-1 btn btn-sm {{ $enroll->status==1 ? 'btn-warning' : 'btn-success' }}"
+                                           title="update enroll">
+                                            <i class="{{ $enroll->status==1 ? 'uil-arrow-down' : 'uil-arrow-up' }}"></i></a>
+                                    @endif
+                                    <a href="{{route('enroll.reject',['id'=>$enroll->id])}}"
+                                       class="btn btn-{{ $enroll->status==0 ? 'danger' : 'light' }} btn-sm "><i
+                                            class="{{ $enroll->status==0 ? 'uil-lock-alt' : 'uil-unlock-alt' }}"></i></a>
                                 </td>
                             </tr>
                         @endforeach
