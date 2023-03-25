@@ -267,7 +267,7 @@
                                     </span>
                 <span>
                                         <span class="account-user-name">{{auth()->user()->name}}</span>
-                                        <span class="account-position">Founder</span>
+                                        <span class="account-position">{{auth()->user()->role_type==1?"Admin":(auth()->user()->role_type==2?"Teacher":"Student")}}</span>
                                     </span>
             </a>
             <div
