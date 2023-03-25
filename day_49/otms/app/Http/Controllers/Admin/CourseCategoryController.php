@@ -77,7 +77,6 @@ class CourseCategoryController extends Controller
     {
         CourseCategory::createOrUpdateCourseCategory($request, $id);
         return redirect()->route('course-categories.index')->with('success', 'Category Updated Successfully.');
-
     }
 
     /**

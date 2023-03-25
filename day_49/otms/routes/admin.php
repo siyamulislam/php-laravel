@@ -17,7 +17,7 @@ Route::middleware([
     Route::get ('/dashboard',       [DashboardController::class, 'dashboard'])->name('dashboard');
     Route::resource('course-categories',CourseCategoryController::class);
     Route::resource('course-sub-categories',CourseSubCategoryController::class);
-    Route::resource('courses',CourseController::class)->middleware('teacher');;
+    Route::resource('courses',CourseController::class)->middleware('teacher');
 
     Route::post('/get-sub-category-by-category-id',[CourseController::class,'getSubCategory'])->name('get-sub-category-by-category-id');
     Route::get('/approve-course/{id}',[CourseController::class,'approveCourse'])->name('courses.approve')->middleware('admin');
