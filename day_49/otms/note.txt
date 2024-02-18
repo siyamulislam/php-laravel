@@ -47,6 +47,9 @@ composer install
  Skills for Employment Investment Program
  BASIS Institute of Technology & Management
 #auth
+
+composer require laravel/jetstream:*
+
 composer require laravel/jetstream
 
 php artisan jetstream:install livewire
